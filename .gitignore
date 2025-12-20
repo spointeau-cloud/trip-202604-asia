@@ -1,0 +1,32 @@
+# OS files
+.DS_Store
+Thumbs.db
+
+# Editor / IDE settings
+.vscode/
+.idea/
+*.swp
+
+# Logs
+*.log
+
+# Environment files (just in case)
+.env
+.env.*
+
+# Temporary / backup files
+*~
+*.bak
+
+# Node / build artifacts (if added later)
+node_modules/
+dist/
+build/
+.cache/
+
+# Mac metadata
+.AppleDouble
+.LSOverride
+
+# Windows shortcuts
+*.lnk
