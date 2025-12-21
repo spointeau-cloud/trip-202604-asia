@@ -1,46 +1,80 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
-  background-color: #f4f6f8;
-  color: #333;
+:root {
+  /* Colors */
+  --color-primary: #1f2937;
+  --color-secondary: #0d9488;
+  --color-background: #f4f6f8;
+  --color-surface: #ffffff;
+  --color-text-main: #374151;
+  --color-text-muted: #6b7280;
+
+  /* Typography */
+  --font-base: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+
+  /* Layout */
+  --content-width: 960px;
 }
 
+/* Base styles */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-base);
+  background-color: var(--color-background);
+  color: var(--color-text-main);
+  line-height: 1.6;
+}
+
+/* Headings & text hierarchy */
+h1, h2, h3 {
+  margin-top: 0;
+  line-height: 1.3;
+}
+
+h1 {
+  font-size: 2rem;
+}
+
+h2 {
+  font-size: 1.4rem;
+  margin-bottom: 0.5rem;
+}
+
+h3 {
+  font-size: 1.1rem;
+}
+
+p {
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+.small,
+.text-muted {
+  color: var(--color-text-muted);
+  font-size: 0.9rem;
+}
+
+/* Header & navigation */
 header {
-  background-color: #1f2937;
+  background-color: var(--color-primary);
   color: white;
   padding: 2rem 1rem;
   text-align: center;
 }
 
-main {
-  max-width: 90%;
-  margin: 2rem auto;
-  padding: 0 1rem;
+header h1 {
+  color: white;
 }
 
-section {
-  background: white;
-  padding: 1.5rem;
-  border-radius: 8px;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
-  margin-bottom: 1.5rem;
+header p {
+  color: #d1d5db;
 }
 
-h1, h2 {
-  margin-top: 0;
-}
-
-footer {
-  text-align: center;
-  padding: 1rem;
-  font-size: 0.9rem;
-  color: #666;
-}
-
-/* Navigation menu */
 .main-nav {
   background-color: #111827;
-	font-size: 2rem;
 }
 
 .main-nav ul {
@@ -49,10 +83,6 @@ footer {
   list-style: none;
   margin: 0;
   padding: 0;
-}
-
-.main-nav li {
-  margin: 0;
 }
 
 .main-nav a {
@@ -65,4 +95,34 @@ footer {
 
 .main-nav a:hover {
   background-color: #374151;
+}
+
+/* Main content & sections */
+main {
+	width: 100%;
+  max-width: var(--content-width);
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+main h1,
+main h2,
+main h3 {
+  color: var(--color-primary);
+}
+
+section {
+  background-color: var(--color-surface);
+  padding: 1.5rem;
+  border-radius: 8px;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 1.5rem 1rem;
+  color: var(--color-text-muted);
+  font-size: 0.9rem;
 }
