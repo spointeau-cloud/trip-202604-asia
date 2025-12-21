@@ -40,6 +40,7 @@ footer {
 /* Navigation menu */
 .main-nav {
   background-color: #111827;
+	font-size: 2rem;
 }
 
 .main-nav ul {
