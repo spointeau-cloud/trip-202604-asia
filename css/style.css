@@ -208,20 +208,20 @@ footer {
 
 .info-label {
 	font-weight: bold;
-	color: var(--color-primary);
+	color: var(--color-text-main);
 	margin-bottom: 5px;
 }
 
 /* Chips */
 .group-france {
 	background: #e3f2fd !important;
-	color: #1976d2 !important;
+	/*color: #1976d2 !important;*/
 	border: 1px solid #1976d2;
 }
 
 .group-philippines {
 	background: #f3e5f5 !important;
-	color: #7b1fa2 !important;
+	/*color: #7b1fa2 !important;*/
 	border: 1px solid #7b1fa2;
 }
 				
@@ -231,10 +231,11 @@ footer {
 	width: 150px;
 	height: 50px;
 	font-size: 0.8rem;
+	font-weight: 600;
 	line-height: 50px;
 	border-radius: 25px;
 	background-color: #ffffff;
-	color: black;
+	color: var(--color-text-main);
 	margin: 0 0 10px 0;
 }
 
