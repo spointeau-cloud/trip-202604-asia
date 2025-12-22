@@ -94,6 +94,26 @@ li {
   margin: 0 0 0.5rem 0;
 }
 
+nav a {
+  text-decoration: none;
+  color: var(--color-text-main);
+  padding: 0.5rem 0.75rem;
+  /*border-radius: 6px;*/
+  transition: background-color 0.15s ease, color 0.15s ease;
+}
+
+nav a:hover,
+nav a:focus-visible {
+  background-color: var(--color-primary);
+  color: var(--color-text-main);
+}
+
+nav a.active {
+  background-color: var(--color-primary);
+  color: #ffffff;
+  font-weight: 600;
+}
+
 .main-nav {
   background-color: var(--color-navigation);
 }
@@ -205,7 +225,7 @@ footer {
 .chip {
 	display: inline-block;
 	padding: 0 25px;
-	width: 145px;
+	width: 150px;
 	height: 50px;
 	font-size: 0.8rem;
 	line-height: 50px;
