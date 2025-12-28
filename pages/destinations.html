@@ -8,6 +8,24 @@
 	<link rel="icon" type="image/x-icon" href="../images/favicon.png">
   <link rel="stylesheet" href="../css/style.css">
 	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<script>
+		function showTab(name) {
+			// Hide all tab contents
+			var tabContents = document.getElementsByClassName("country-section");
+			for (var i = 0; i < tabContents.length; i++) {
+				tabContents[i].style.display = "none";
+			}
+			document.getElementById(name).style.display = "block";
+			
+			// Remove active class from all buttons
+			var tabButtons = document.getElementsByClassName("country-bar");
+			for (var i = 0; i < tabButtons.length; i++) {
+				tabButtons[i].classList.remove("active");
+			}
+			// Show current tab and mark button as active
+			document.getElementById(name + "-tab").classList.add("active");
+		}
+	</script>
 </head>
 
 <body>
@@ -31,10 +49,71 @@
 
   <main>
 
-    <section>
-      <h2>About this page</h2>
-      <p>This page will give information about each destination.</p>
+    <section class="country-tab">
+			<button id="vietnam-tab" class="country-bar active" onclick="showTab('vietnam')"><span class="country-flag">🇻🇳</span>Vietnam</button>
+			<button id="laos-tab" class="country-bar" onclick="showTab('laos')"><span class="country-flag">🇱🇦</span>Laos</button>
     </section>
+		
+		<section id="vietnam" class="country-section">
+			<h2>Vietnam: The Dragon of Southeast Asia</h2>
+			<p>Vietnam is a country of breathtaking contrasts and resilient spirit. Stretching like an elegant S-curve along the South China Sea, this dynamic nation captivates with its stunning natural beauty - from the otherworldly limestone karsts of Ha Long Bay to pristine beaches and emerald rice paddies. Beyond the landscapes, Vietnam pulses with energy: motorbikes weave through chaotic streets, street vendors serve steaming bowls of phở on tiny plastic stools, and ancient temples stand beside gleaming skyscrapers. The Vietnamese people, shaped by millennia of Chinese influence and decades of French colonization, have forged a unique culture that honors tradition while embracing modernity with remarkable enthusiasm.</p>
+			
+			<h3>Historical Journey</h3>
+			<p>Over 4,000 years of history, including 1,000 years of Chinese rule, French colonization (1887-1954), partition into North and South, the devastating Vietnam War (1955-1975), and reunification. From this turbulent past emerged a proud nation that's now one of Southeast Asia's fastest-growing economies.</p>
+			
+			<h3>Cultural Essence</h3>
+			<p>Confucian values meet French elegance; Buddhist temples alongside Catholic cathedrals; family bonds remain sacred; respect for elders is fundamental; the concept of "saving face" guides social interactions; coffee culture thrives (Vietnam is the world's second-largest coffee producer); and an incredible food culture where every region has its distinct flavors.</p>
+			
+			<h3>Language</h3>
+			<p>Vietnamese (official) - a tonal language with six tones that can completely change word meanings. French influence remains in vocabulary. English increasingly spoken in cities and tourist areas.</p>
+			
+			<h3>What Makes Vietnam Special</h3>
+			<p>
+				<ul>
+					<li>Incredible geographical diversity - mountains, deltas, beaches, islands</li>
+					<li>3,000+ kilometers of stunning coastline</li>
+					<li>Eight UNESCO World Heritage Sites</li>
+					<li>One of the world's greatest food cultures</li>
+					<li>Warm, hospitable people with infectious energy</li>
+					<li>Seamless blend of ancient traditions and modern ambitions</li>
+					<li>Exceptional value for travelers</li>
+					<li>Rich artistic heritage - water puppetry, lacquerware, silk painting</li>
+				</ul>
+			</p>
+		</section>
+		
+		<section id="laos" class="country-section hide">
+			<h2>Laos: The Land of a Million Elephants</h2>
+			<p>Laos is Southeast Asia's best-kept secret - a landlocked jewel where time moves slowly, smiles come easily, and Buddhism infuses every aspect of daily life. This serene nation, sandwiched between Thailand, Vietnam, Cambodia, Myanmar, and China, offers something increasingly rare in our modern world: authentic tranquility. Monks in saffron robes walk barefoot through morning mist, the mighty Mekong River flows peacefully through jungle-clad mountains, and golden temple spires glitter against impossibly blue skies. The Lao people embody "bor pen nyang" (no worries) - a gentle philosophy that reminds visitors to slow down, breathe deeply, and savor life's simple pleasures. This is a country that heals the soul.</p>
+			
+			<h3>Historical Journey</h3>
+			<p>Ancient kingdoms dating back to the 14th century, notably the powerful Lan Xang Kingdom (1353-1707) meaning "Million Elephants." Centuries of regional conflicts, Siamese and Vietnamese influence, French colonization (1893-1953), secret bombing during the Vietnam War (Laos became the most heavily bombed country per capita in history), communist revolution in 1975, and gradual opening to tourism since the 1990s.</p>
+			
+			<h3>Cultural Essence</h3>
+			<p>Theravada Buddhism is the heartbeat of Lao culture - temples (wats) anchor every community, merit-making guides daily life, and monks are deeply revered. The traditional alms-giving ceremony (tak bat) continues unchanged for centuries. Lao culture emphasizes humility, gentleness, and community harmony. Family and village bonds are sacred. Despite hardships, the Lao maintain remarkable optimism and warmth toward visitors.</p>
+			
+			<h3>Language</h3>
+			<p>Lao (official) - closely related to Thai with its own script. French spoken by older generation. English increasingly common in tourist areas, though less widespread than in Vietnam or Thailand.</p>
+			
+			<h3>What Makes Laos Special</h3>
+			<p>
+				<ul>
+					<li>Genuine authenticity - tourism hasn't overwhelmed traditional culture</li>
+					<li>Spiritual atmosphere - Buddhism is truly lived, not performed</li>
+					<li>Stunning natural beauty - jungles, waterfalls, rivers, karst mountains</li>
+					<li>Luang Prabang - one of Southeast Asia's most beautiful towns (UNESCO)</li>
+					<li>The mighty Mekong River - lifeblood of the nation</li>
+					<li>Warm, gentle people who embody kindness</li>
+					<li>Slower pace of life - perfect antidote to modern stress</li>
+					<li>Excellent coffee and French-influenced cuisine</li>
+					<li>Adventure opportunities - caves, trekking, kayaking</li>
+					<li>One of the world's most peaceful countries</li>
+				</ul>
+			</p>
+			
+			<h3>Important Context</h3>
+			<p>Laos remains one of the world's poorest countries and carries heavy scars from the Secret War - millions of unexploded bombs (UXO) still contaminate the countryside. Visiting Laos supports a nation rebuilding with grace and dignity. The Lao people's resilience and positivity despite historical trauma is truly inspiring.</p>
+		</section>
 
   </main>
 

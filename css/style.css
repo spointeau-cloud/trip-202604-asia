@@ -225,3 +225,37 @@ footer {
 	width: 50px;
 	border-radius: 50%;
 }
+
+/* Destinations */
+.country-tab {
+	padding: 5px 40px 5px 10px;
+}
+
+.country-bar {
+	font-size: 1.2em;
+	background: white;
+	border: none;
+	color: var(--color-text-main);
+	font-weight: normal;
+	cursor: pointer;
+}
+
+.country-bar.active {
+	background: white;
+	border-bottom: 3px solid var(--color-primary);
+	color: var(--color-primary);
+	font-weight: bold;
+}
+
+.country-flag {
+	font-size: 1.2em;
+	margin-right: 10px;
+}
+
+.country-section {
+	
+}
+
+.country-section.hide {
+	display: none;
+}
