@@ -260,14 +260,6 @@ footer {
 	display: none;
 }
 
-.city-card {
-	background: white;
-	padding: 25px;
-	margin: 20px 0;
-	border-radius: 10px;
-	box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-}
-
 .city-header {
 	display: flex;
 	justify-content: space-between;
@@ -278,18 +270,18 @@ footer {
 }
 
 .city-name {
-	font-size: 1.8em;
+	font-size: 1.2em;
 	color: #764ba2;
 }
 
 .city-dates {
 	color: #666;
-	font-size: 0.9em;
+	font-size: 0.8em;
 }
 
 .city-description {
 	margin: 20px 0;
-	line-height: 1.8;
+	line-height: 1.2;
 	color: #555;
 }
 
@@ -383,7 +375,6 @@ input[type="radio"] {
   grid-column-start: 1;
   grid-row-start: 2;
   grid-column-end: span 2;
-  padding: 1.5rem;
   display: none;
 	background-color: var(--color-surface);
 }
