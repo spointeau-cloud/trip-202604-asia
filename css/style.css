@@ -283,7 +283,6 @@ footer {
 .city-description {
 	margin: 20px 0;
 	line-height: 1.2;
-	color: #555;
 }
 
 .highlight-box {
@@ -392,6 +391,7 @@ input[type="radio"].country-nav:checked + .page{
 }
 
 label.city-nav {
+	font-size: 0.8rem;
   display: flex;
   align-items: center;
   justify-content: center;
