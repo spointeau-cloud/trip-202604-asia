@@ -384,32 +384,12 @@ input[type="radio"] {
   grid-row-start: 2;
   grid-column-end: span 2;
   padding: 1.5rem;
-  display: flex;
+  display: none;
 	background-color: var(--color-surface);
 }
 
-.page-contents > *{
-  opacity: 0;
-  transform: translateY(20px);
-  transition: opacity 0.2s, transform 0.2s;
-  @for $c from 1 through 20{
-    &:nth-child(#{$c}){
-      transition-delay: 0.2s + ($c * 0.2s);
-    }
-  }
-}
-
-input[type="radio"] + .page{
-  transition: transform 0.2s;
-  transform: translateX(100%);
-}
-
 input[type="radio"]:checked + .page{
-  transform: translateX(0%);
-  .page-contents > *{
-    opacity: 1;
-    transform: translateY(0px);
-  }
+	display: flex;
 }
 
 .page-contents{
