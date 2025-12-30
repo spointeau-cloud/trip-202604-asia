@@ -1,0 +1,202 @@
+.itinerary-city-section {
+	background: white;
+	margin-bottom: 30px;
+	border-radius: 20px;
+	overflow: hidden;
+	box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+}
+
+.itinerary-city-header {
+	background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+	color: white;
+	padding: 30px 40px;
+}
+
+.itinerary-city-header h2 {
+	font-size: 2em;
+	margin-bottom: 5px;
+	color: white;
+}
+
+.itinerary-city-header p {
+	font-size: 1.1em;
+	opacity: 0.95;
+}
+
+.day-card {
+	border-bottom: 1px solid #e0e0e0;
+	padding: 30px 40px;
+}
+
+.day-card:last-child {
+	border-bottom: none;
+}
+
+.day-header {
+	display: flex;
+	align-items: center;
+	margin-bottom: 25px;
+	padding-bottom: 15px;
+	border-bottom: 3px solid #f4a261;
+}
+
+.day-number {
+	background: linear-gradient(135deg, #f4a261 0%, #e76f51 100%);
+	color: white;
+	width: 60px;
+	height: 60px;
+	border-radius: 50%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 1.5em;
+	font-weight: bold;
+	margin-right: 20px;
+	flex-shrink: 0;
+}
+
+.day-info h3 {
+	color: #667eea;
+	font-size: 1.5em;
+	margin-bottom: 5px;
+}
+
+.day-info p {
+	color: #666;
+	font-size: 0.95em;
+}
+
+.time-block {
+	margin-bottom: 10px;
+	padding-left: 10px;
+}
+
+.time-label {
+	display: inline;
+	background: darkgrey;
+	color: white;
+	padding: 6px 15px;
+	border-radius: 20px;
+	font-weight: 600;
+	font-size: 0.9em;
+	margin-bottom: 5px;
+}
+
+.activity {
+	background: white;
+	padding: 20px;
+	border-radius: 12px;
+	margin-top: 0px;
+	border: 2px solid #667eea;
+	border-left: 10px solid #667eea;
+}
+
+.activity h4 {
+	display: inline;
+	color: #667eea;
+	margin-bottom: 10px;
+	margin-top: 5px;
+	padding-left: 5px;
+	font-size: 1.2em;
+}
+
+.activity p {
+	margin: 8px 0;
+	line-height: 1.6;
+}
+
+.activity ul {
+	margin: 10px 0 10px 20px;
+	line-height: 1.8;
+}
+
+.note {
+	background: #fff9e6;
+	padding: 15px;
+	border-radius: 8px;
+	margin-top: 10px;
+	border-left: 4px solid #f4a261;
+}
+
+.note strong {
+	color: #e76f51;
+}
+
+.warning {
+	background: #ffe8e8;
+	padding: 15px;
+	border-radius: 8px;
+	margin-top: 10px;
+	border-left: 4px solid #d63031;
+}
+
+.warning strong {
+	color: #d63031;
+}
+
+.kid-friendly {
+	background: #e8f5e9;
+	padding: 15px;
+	border-radius: 8px;
+	margin-top: 10px;
+	border-left: 4px solid #4caf50;
+}
+
+.kid-friendly strong {
+	color: #2e7d32;
+}
+
+.budget {
+	display: inline-block;
+	background: #e8f5e9;
+	color: #2e7d32;
+	padding: 4px 12px;
+	border-radius: 15px;
+	font-size: 0.85em;
+	font-weight: 600;
+	margin-top: 8px;
+}
+
+.transport {
+	display: inline-block;
+	background: #e3f2fd;
+	color: #1565c0;
+	padding: 4px 12px;
+	border-radius: 15px;
+	font-size: 0.85em;
+	font-weight: 600;
+	margin-top: 8px;
+	margin-right: 8px;
+}
+
+.duration {
+	display: inline-block;
+	background: #f3e5f5;
+	color: #6a1b9a;
+	padding: 4px 12px;
+	border-radius: 15px;
+	font-size: 0.85em;
+	font-weight: 600;
+	margin-top: 8px;
+}
+
+.meal {
+	border: 2px solid #d63031;
+	border-left: 10px solid #d63031;
+}
+
+.summary-box {
+	padding: 15px;
+	border-radius: 15px;
+	margin-top: 0;
+	border: 2px solid #fdcb6e;
+	border-left: 10px solid #fdcb6e;
+}
+
+.summary-box h4 {
+	color: #d63031;
+	margin-bottom: 10px;
+	margin-top: 5px;
+	padding-left: 0px;
+	font-size: 1.2em;
+}
