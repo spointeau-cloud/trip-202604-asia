@@ -1,74 +1,98 @@
 .itinerary-city-section {
 	background: white;
-	margin-bottom: 30px;
+	margin-bottom: 10px;
 	border-radius: 20px;
 	overflow: hidden;
 	box-shadow: 0 10px 40px rgba(0,0,0,0.2);
 }
 
 .itinerary-city-header {
-	background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+	/*background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);*/
+	background: var(--color-primary);
 	color: white;
-	padding: 30px 40px;
+	padding: 10px 15px;
 }
 
 .itinerary-city-header h2 {
-	font-size: 2em;
+	font-size: 1.5em;
 	margin-bottom: 5px;
 	color: white;
 }
 
 .itinerary-city-header p {
-	font-size: 1.1em;
+	font-size: 0.8em;
 	opacity: 0.95;
+}
+
+.city-header-checkbox {
+	position: absolute;
+	margin-top: 20px;
+}
+
+input[type="checkbox"].city-header-checkbox {
+	display: none;
+}
+input[type="checkbox"].city-header-checkbox:checked ~ .day-card {
+	display: block;
 }
 
 .day-card {
 	border-bottom: 1px solid #e0e0e0;
-	padding: 30px 40px;
+	padding: 10px 15px;
+	display: none;
 }
 
 .day-card:last-child {
 	border-bottom: none;
 }
 
+input[type="checkbox"].day-checkbox {
+	display: none;
+}
+input[type="checkbox"].day-checkbox:checked ~ .time-block {
+	display: block;
+}
+
 .day-header {
 	display: flex;
 	align-items: center;
-	margin-bottom: 25px;
-	padding-bottom: 15px;
-	border-bottom: 3px solid #f4a261;
+	margin-bottom: 10px;
+	padding-bottom: 5px;
+	border-bottom: 3px solid var(--color-secondary);
 }
 
 .day-number {
-	background: linear-gradient(135deg, #f4a261 0%, #e76f51 100%);
+	/*background: linear-gradient(135deg, #f4a261 0%, #e76f51 100%);*/
+	background: var(--color-secondary);
 	color: white;
-	width: 60px;
-	height: 60px;
+	width: 40px;
+	height: 40px;
 	border-radius: 50%;
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	font-size: 1.5em;
+	font-size: 1.2em;
 	font-weight: bold;
-	margin-right: 20px;
+	margin-right: 10px;
 	flex-shrink: 0;
 }
 
 .day-info h3 {
 	color: #667eea;
-	font-size: 1.5em;
+	font-size: 1.2em;
 	margin-bottom: 5px;
+	margin-top: 5px;
 }
 
 .day-info p {
 	color: #666;
-	font-size: 0.95em;
+	font-size: 0.8em;
 }
 
 .time-block {
 	margin-bottom: 10px;
 	padding-left: 10px;
+	display: none;
 }
 
 .time-label {
@@ -89,14 +113,15 @@
 	margin-top: 0px;
 	border: 2px solid #667eea;
 	border-left: 10px solid #667eea;
+	font-size: 0.9em;
 }
 
 .activity h4 {
-	color: #667eea;
+	color: var(--color-primary);
 	margin-bottom: 10px;
 	margin-top: 5px;
 	padding-left: 5px;
-	font-size: 1.2em;
+	font-size: 1.1em;
 }
 
 .activity p {
