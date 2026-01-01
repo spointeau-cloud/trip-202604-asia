@@ -215,6 +215,7 @@ input[type="checkbox"].day-checkbox:checked ~ .time-block {
 	margin-top: 0;
 	border: 2px solid #fdcb6e;
 	border-left: 10px solid #fdcb6e;
+	font-size: 0.9em;
 }
 
 .summary-box h4 {
@@ -222,5 +223,5 @@ input[type="checkbox"].day-checkbox:checked ~ .time-block {
 	margin-bottom: 10px;
 	margin-top: 5px;
 	padding-left: 0px;
-	font-size: 1.2em;
+	font-size: 1.1em;
 }
