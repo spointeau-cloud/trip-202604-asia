@@ -14,13 +14,13 @@
 }
 
 .itinerary-city-header h2 {
-	font-size: 1.5em;
+	font-size: clamp(0.8rem, 3vw, 1.5rem);
 	margin-bottom: 5px;
 	color: white;
 }
 
 .itinerary-city-header p {
-	font-size: 0.8em;
+	font-size: clamp(0.5rem, 3vw, 0.8rem);
 	opacity: 0.95;
 }
 
@@ -79,14 +79,14 @@ input[type="checkbox"].day-checkbox:checked ~ .time-block {
 
 .day-info h3 {
 	color: #667eea;
-	font-size: 1.2em;
+	font-size: clamp(0.6rem, 3vw, 1.2rem);
 	margin-bottom: 5px;
 	margin-top: 5px;
 }
 
 .day-info p {
 	color: #666;
-	font-size: 0.8em;
+	font-size: clamp(0.4rem, 3vw, 0.8rem);
 }
 
 .time-block {
@@ -102,7 +102,7 @@ input[type="checkbox"].day-checkbox:checked ~ .time-block {
 	padding: 6px 15px;
 	border-radius: 20px;
 	font-weight: 600;
-	font-size: 0.9em;
+	font-size: clamp(0.5rem, 3vw, 0.9rem);
 	margin-bottom: 5px;
 }
 
@@ -113,7 +113,7 @@ input[type="checkbox"].day-checkbox:checked ~ .time-block {
 	margin-top: 0px;
 	border: 2px solid #667eea;
 	border-left: 10px solid #667eea;
-	font-size: 0.9em;
+	font-size: clamp(0.5rem, 3vw, 0.9rem);
 }
 
 .activity h4 {
@@ -121,7 +121,7 @@ input[type="checkbox"].day-checkbox:checked ~ .time-block {
 	margin-bottom: 10px;
 	margin-top: 5px;
 	padding-left: 5px;
-	font-size: 1.1em;
+	font-size: clamp(0.6rem, 3vw, 1.1rem);
 }
 
 .activity p {
@@ -176,7 +176,7 @@ input[type="checkbox"].day-checkbox:checked ~ .time-block {
 	color: #2e7d32;
 	padding: 4px 12px;
 	border-radius: 15px;
-	font-size: 0.85em;
+	font-size: clamp(0.4rem, 3vw, 0.8rem);
 	font-weight: 600;
 	margin-top: 8px;
 }
@@ -187,7 +187,7 @@ input[type="checkbox"].day-checkbox:checked ~ .time-block {
 	color: #1565c0;
 	padding: 4px 12px;
 	border-radius: 15px;
-	font-size: 0.85em;
+	font-size: clamp(0.4rem, 3vw, 0.8rem);
 	font-weight: 600;
 	margin-top: 8px;
 	margin-right: 8px;
@@ -199,7 +199,7 @@ input[type="checkbox"].day-checkbox:checked ~ .time-block {
 	color: #6a1b9a;
 	padding: 4px 12px;
 	border-radius: 15px;
-	font-size: 0.85em;
+	font-size: clamp(0.4rem, 3vw, 0.8rem);
 	font-weight: 600;
 	margin-top: 8px;
 }
@@ -215,7 +215,7 @@ input[type="checkbox"].day-checkbox:checked ~ .time-block {
 	margin-top: 0;
 	border: 2px solid #fdcb6e;
 	border-left: 10px solid #fdcb6e;
-	font-size: 0.9em;
+	font-size: clamp(0.4rem, 3vw, 0.8rem);
 }
 
 .summary-box h4 {
@@ -223,5 +223,5 @@ input[type="checkbox"].day-checkbox:checked ~ .time-block {
 	margin-bottom: 10px;
 	margin-top: 5px;
 	padding-left: 0px;
-	font-size: 1.1em;
+	font-size: clamp(0.6rem, 3vw, 1.1rem);
 }

@@ -7,7 +7,9 @@
   <title>Asia Trip – April 2026</title>
 	<link rel="icon" type="image/x-icon" href="../images/favicon.png">
   <link rel="stylesheet" href="../css/style.css">
+	<link rel="stylesheet" href="../css/budget.css">
 	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<script src="https://cdn.jsdelivr.net/npm/echarts@5/dist/echarts.min.js"></script>
 </head>
 
 <body>
@@ -31,10 +33,195 @@
 
   <main>
 
-    <section>
-      <h2>About this page</h2>
-      <p>This page will give information about the budget.</p>
-    </section>
+		<!-- ===================== -->
+		<!-- Charts section -->
+		<!-- ===================== -->
+		<section aria-labelledby="budget-charts-title">
+			<h2 id="budget-charts-title">Budget breakdown</h2>
+			<div id="budget-by-category" style="width:100%; max-width:600px; height:400px;"></div>
+		</section>
+		<!-- ===================== -->
+		<!-- Budget table -->
+		<!-- ===================== -->
+		<section id="budget-table-container" aria-labelledby="budget-table-title">
+			<h2 id="budget-table-title">Detailed expenses</h2>
+
+			<table id="budget-table">
+				<thead>
+					<tr>
+						<th>Date</th>
+						<th>Category</th>
+						<th>Subcategory</th>
+						<th>Country</th>
+						<th>City</th>
+						<th>Description</th>
+						<th>Price / Adult (€)</th>
+						<th>Price / Rafael (€)</th>
+						<th>Adults</th>
+						<th>Children</th>
+						<th>Total (€)</th>
+						<th>Notes</th>
+					</tr>
+				</thead>
+
+				<tbody>
+					<!-- Flights -->
+					<tr data-category="Flights (Intl)">
+						<td data-date>2026-04-10</td>
+						<td data-category>Flights (Intl)</td>
+						<td data-subcategory>International</td>
+						<td data-country>France</td>
+						<td data-city>Marseille</td>
+						<td data-description>Marseille (MRS) - Ho Chi Minh (SGN), Vientiane (VTE) - Marseille (MRS)</td>
+						<td data-price-adult>1624.24</td>
+						<td data-price-child>0</td>
+						<td data-qty-adults>2</td>
+						<td data-qty-children>0</td>
+						<td class="row-total" data-total></td>
+						<td data-note>Estimated, incl. luggage</td>
+					</tr>
+					<tr data-category="Flights (Intl)">
+						<td data-date>2026-04-11</td>
+						<td data-category>Flights (Intl)</td>
+						<td data-subcategory>International</td>
+						<td data-country>Philippines</td>
+						<td data-city>Manila</td>
+						<td data-description>Manila (MNL) - Ho Chi Minh (SGN)</td>
+						<td data-price-adult>95.83</td>
+						<td data-price-child>76.83</td>
+						<td data-qty-adults>5</td>
+						<td data-qty-children>1</td>
+						<td class="row-total" data-total></td>
+						<td data-note>Estimated, incl. luggage</td>
+					</tr>
+					
+					<tr data-category="Flights (Local)">
+						<td data-date>2026-04-13</td>
+						<td data-category>Flights (Local)</td>
+						<td data-subcategory>Domestic</td>
+						<td data-country>Vietnam</td>
+						<td data-city>Ho Chi Minh</td>
+						<td data-description>Ho Chi Minh (SGN) - Da Nang (DAD)</td>
+						<td data-price-adult>49.97</td>
+						<td data-price-child>48.02</td>
+						<td data-qty-adults>7</td>
+						<td data-qty-children>1</td>
+						<td class="row-total" data-total></td>
+						<td data-note>Estimated, incl. luggage</td>
+					</tr>
+					
+					<tr data-category="Flights (Local)">
+						<td data-date>2026-04-19</td>
+						<td data-category>Flights (Local)</td>
+						<td data-subcategory>Domestic</td>
+						<td data-country>Vietnam</td>
+						<td data-city>Da Nang</td>
+						<td data-description>Da Nang (DAD) - Hanoi (HAN)</td>
+						<td data-price-adult>82.37</td>
+						<td data-price-child>73.94</td>
+						<td data-qty-adults>7</td>
+						<td data-qty-children>1</td>
+						<td class="row-total" data-total></td>
+						<td data-note>Estimated, incl. luggage</td>
+					</tr>
+					
+					<tr data-category="Flights (Local)">
+						<td data-date>2026-04-24</td>
+						<td data-category>Flights (Local)</td>
+						<td data-subcategory>International</td>
+						<td data-country>Vietnam</td>
+						<td data-city>Hanoi</td>
+						<td data-description>Hanoi (HAN) - Luang Prabang (LPQ)</td>
+						<td data-price-adult>132.77</td>
+						<td data-price-child>104.17</td>
+						<td data-qty-adults>7</td>
+						<td data-qty-children>1</td>
+						<td class="row-total" data-total></td>
+						<td data-note>Estimated, incl. luggage</td>
+					</tr>
+					
+					<tr data-category="Trains">
+						<td data-date>2026-04-28</td>
+						<td data-category>Trains</td>
+						<td data-subcategory>Local</td>
+						<td data-country>Laos</td>
+						<td data-city>Luang Prabang</td>
+						<td data-description>Luang Prabang - Vientiane</td>
+						<td data-price-adult>27.00</td>
+						<td data-price-child>27.00</td>
+						<td data-qty-adults>7</td>
+						<td data-qty-children>1</td>
+						<td class="row-total" data-total></td>
+						<td data-note></td>
+					</tr>
+
+					<!-- Accommodation -->
+					<tr data-category="Accommodation">
+						<td>2026-02-02</td>
+						<td>Accommodation</td>
+						<td>Hotel</td>
+						<td>Vietnam</td>
+						<td>Hanoi</td>
+						<td>Hotel 4 nights</td>
+						<td data-price-adult>120</td>
+						<td data-price-child>0</td>
+						<td data-qty-adults>2</td>
+						<td data-qty-children>1</td>
+						<td class="row-total"></td>
+						<td>Child free</td>
+					</tr>
+
+					<!-- Meals -->
+					<tr data-category="Meals">
+						<td>2026-02-03</td>
+						<td>Meals</td>
+						<td>Daily food</td>
+						<td>Vietnam</td>
+						<td>Hanoi</td>
+						<td>Food estimate per day</td>
+						<td data-price-adult>25</td>
+						<td data-price-child>15</td>
+						<td data-qty-adults>2</td>
+						<td data-qty-children>1</td>
+						<td class="row-total"></td>
+						<td>Average estimate</td>
+					</tr>
+
+					<!-- Activities -->
+					<tr data-category="Activities & entrance fees">
+						<td>2026-02-04</td>
+						<td>Activities</td>
+						<td>Culture</td>
+						<td>Vietnam</td>
+						<td>Hanoi</td>
+						<td>Museum + temples</td>
+						<td data-price-adult>18</td>
+						<td data-price-child>10</td>
+						<td data-qty-adults>2</td>
+						<td data-qty-children>1</td>
+						<td class="row-total"></td>
+						<td>Child discount applied</td>
+					</tr>
+
+					<!-- Local transport -->
+					<tr data-category="Local transport">
+						<td>2026-02-05</td>
+						<td>Local transport</td>
+						<td>Taxi / Grab</td>
+						<td>Vietnam</td>
+						<td>Hanoi</td>
+						<td>Daily transport</td>
+						<td data-price-adult>10</td>
+						<td data-price-child>0</td>
+						<td data-qty-adults>2</td>
+						<td data-qty-children>1</td>
+						<td class="row-total"></td>
+						<td>Estimate</td>
+					</tr>
+
+				</tbody>
+			</table>
+		</section>
 
   </main>
 
@@ -42,6 +229,70 @@
 		<p>This itinerary prepared with care for the family adventure of a lifetime.</p>
     <p>© 2026 – Asia Trip Planning</p>
   </footer>
+
+	<!-- ===================== -->
+<!-- JS: totals + chart -->
+<!-- ===================== -->
+<script>
+(function () {
+
+  const rows = document.querySelectorAll('#budget-table tbody tr');
+  const categoryTotals = {};
+
+  rows.forEach(row => {
+    const priceAdult = Number(row.querySelector('[data-price-adult]').textContent);
+    const priceChild = Number(row.querySelector('[data-price-child]').textContent);
+    const qtyAdults = Number(row.querySelector('[data-qty-adults]').textContent);
+    const qtyChildren = Number(row.querySelector('[data-qty-children]').textContent);
+
+    const total =
+      (priceAdult * qtyAdults) +
+      (priceChild * qtyChildren);
+
+    row.querySelector('.row-total').textContent = total.toFixed(2);
+
+    const category = row.dataset.category;
+    categoryTotals[category] = (categoryTotals[category] || 0) + total;
+  });
+
+  // Prepare data for ECharts
+  const chartData = Object.entries(categoryTotals).map(
+    ([name, value]) => ({ name, value })
+  );
+
+  // Init donut chart
+  const chart = echarts.init(document.getElementById('budget-by-category'));
+
+  chart.setOption({
+    tooltip: {
+      trigger: 'item',
+      formatter: '{b}: €{c} ({d}%)'
+    },
+    legend: {
+      top: 'bottom'
+    },
+    series: [
+      {
+        name: 'Budget by category',
+        type: 'pie',
+        radius: ['45%', '70%'],
+        avoidLabelOverlap: true,
+        itemStyle: {
+          borderRadius: 6,
+          borderColor: '#fff',
+          borderWidth: 2
+        },
+        label: {
+          show: true,
+          formatter: '{b}\n€{c}'
+        },
+        data: chartData
+      }
+    ]
+  });
+
+})();
+</script>
 
 </body>
 </html>
