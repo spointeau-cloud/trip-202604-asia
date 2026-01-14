@@ -5,11 +5,21 @@
 	overflow: auto;
 }
 
+#budget-graphs {
+	display: flex;
+}
+
+#budget-by-category {
+	width: 50%; 
+	max-width: 50%; 
+	height: 400px;
+}
+
 #budget-table {
   width: 100%;
   border-collapse: collapse;
   margin-top: 1.5rem;
-  font-size: 0.95rem;
+  font-size: 0.9rem;
   line-height: 1.4;
 }
 
@@ -45,6 +55,39 @@
   }
 }
 
+#budget-table td:nth-child(1), #budget-table th:nth-child(1) {
+	width: 10%;
+	min-width: 100px;
+}
+#budget-table td:nth-child(2), #budget-table th:nth-child(2) {
+	width: 10%;
+	min-width: 100px;
+}
+#budget-table td:nth-child(4), #budget-table th:nth-child(4) {
+	width: 10%;
+	min-width: 100px;
+}
+#budget-table td:nth-child(5), #budget-table th:nth-child(5) {
+	width: 10%;
+	min-width: 100px;
+}
+#budget-table td:nth-child(6), #budget-table th:nth-child(6) {
+	width: 30%;
+	min-width: 200px;
+}
+#budget-table td:nth-child(7), #budget-table th:nth-child(7) {
+	width: 10%;
+	min-width: 100px;
+}
+#budget-table td:nth-child(8), #budget-table th:nth-child(8) {
+	width: 10%;
+	min-width: 100px;
+}
+#budget-table td:nth-child(11), #budget-table th:nth-child(11) {
+	width: 10%;
+	min-width: 100px;
+}
+
 /* Numeric alignment */
 #budget-table td:nth-child(7),
 #budget-table td:nth-child(8),
@@ -77,6 +120,54 @@
 /* Reduce visual noise for long tables */
 #budget-table tbody tr td:first-child {
   white-space: nowrap;
+}
+
+#budget-table td:nth-child(2) span {
+	display: inline-block;
+	padding: 2px 5px;
+	border-radius: 15px;
+	font-weight: 500;
+	font-size: 0.75rem;
+}
+
+.category-flight {
+	background: #e3f2fd;
+	color: #1565c0;
+}
+.category-flight:before {
+	content: "🛬 ";
+}
+
+.category-train {
+	background: #f3e5f5;
+	color: #6a1b9a;
+}
+.category-train:before {
+	content: "🚆 ";
+}
+
+.category-taxi {
+	background: #f3e5cc;
+	color: #6a1bcc;
+}
+.category-taxi:before {
+	content: "🚕 ";
+}
+
+.category-hotel {
+	background: #e8f5e9;
+	color: #2e7d32;
+}
+.category-hotel:before {
+	content: "🏨 ";
+}
+
+.category-activity {
+	background: #fff9e6;
+	color: #e76f51;
+}
+.category-activity:before {
+	content: "🚶 ";
 }
 
 /* Responsive fallback (not mobile-first, just survivable) */

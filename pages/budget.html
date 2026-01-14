@@ -38,7 +38,9 @@
 		<!-- ===================== -->
 		<section aria-labelledby="budget-charts-title">
 			<h2 id="budget-charts-title">Budget breakdown</h2>
-			<div id="budget-by-category" style="width:100%; max-width:600px; height:400px;"></div>
+			<div id="budget-graphs">
+				<div id="budget-by-category" style=""></div>
+			</div>
 		</section>
 		<!-- ===================== -->
 		<!-- Budget table -->
@@ -55,7 +57,7 @@
 						<th>Country</th>
 						<th>City</th>
 						<th>Description</th>
-						<th>Price / Adult (€)</th>
+						<th>Price / Adult or Night (€)</th>
 						<th>Price / Rafael (€)</th>
 						<th>Adults</th>
 						<th>Children</th>
@@ -65,12 +67,12 @@
 				</thead>
 
 				<tbody>
-					<!-- Flights -->
+					<!-- 2026-04-10 -->
 					<tr data-category="Flights (Intl)">
 						<td data-date>2026-04-10</td>
-						<td data-category>Flights (Intl)</td>
+						<td data-category><span class="category-flight">Flight</span></td>
 						<td data-subcategory>International</td>
-						<td data-country>France</td>
+						<td data-country>🇫🇷 France</td>
 						<td data-city>Marseille</td>
 						<td data-description>Marseille (MRS) - Ho Chi Minh (SGN), Vientiane (VTE) - Marseille (MRS)</td>
 						<td data-price-adult>1624.24</td>
@@ -80,11 +82,12 @@
 						<td class="row-total" data-total></td>
 						<td data-note>Estimated, incl. luggage</td>
 					</tr>
+					<!-- 2026-04-11 -->
 					<tr data-category="Flights (Intl)">
 						<td data-date>2026-04-11</td>
-						<td data-category>Flights (Intl)</td>
+						<td data-category><span class="category-flight">Flight</span></td>
 						<td data-subcategory>International</td>
-						<td data-country>Philippines</td>
+						<td data-country>🇵🇭 Philippines</td>
 						<td data-city>Manila</td>
 						<td data-description>Manila (MNL) - Ho Chi Minh (SGN)</td>
 						<td data-price-adult>95.83</td>
@@ -94,12 +97,54 @@
 						<td class="row-total" data-total></td>
 						<td data-note>Estimated, incl. luggage</td>
 					</tr>
+					<tr data-category="Taxi">
+						<td data-date>2026-04-11</td>
+						<td data-category><span class="category-taxi">Grab</span></td>
+						<td data-subcategory>Taxi</td>
+						<td data-country>🇻🇳 Vietnam</td>
+						<td data-city>Ho Chi Minh</td>
+						<td data-description>Airport to hotel</td>
+						<td data-price-adult>4.50</td>
+						<td data-price-child>0.00</td>
+						<td data-qty-adults>1</td>
+						<td data-qty-children>0</td>
+						<td class="row-total" data-total></td>
+						<td data-note>100000 to 150000 VND</td>
+					</tr>
+					<tr data-category="Hotel">
+						<td data-date>2026-04-11</td>
+						<td data-category><span class="category-hotel">Hotel</span></td>
+						<td data-subcategory>Hotel</td>
+						<td data-country>🇻🇳 Vietnam</td>
+						<td data-city>Ho Chi Minh</td>
+						<td data-description><a href="https://www.sherwoodresidence.com/">Hotel Sherwood Residence</a> - 2 nights</td>
+						<td data-price-adult>137.44</td>
+						<td data-price-child>0.00</td>
+						<td data-qty-adults>2</td>
+						<td data-qty-children>0</td>
+						<td class="row-total" data-total></td>
+						<td data-note></td>
+					</tr>
+					<tr data-category="Activities">
+						<td data-date>2026-04-11</td>
+						<td data-category><span class="category-activity">Activity</span></td>
+						<td data-subcategory>Visit</td>
+						<td data-country>🇻🇳 Vietnam</td>
+						<td data-city>Ho Chi Minh</td>
+						<td data-description>Colonial Quarter Walking Tour</td>
+						<td data-price-adult>0.00</td>
+						<td data-price-child>0.00</td>
+						<td data-qty-adults>1</td>
+						<td data-qty-children>0</td>
+						<td class="row-total" data-total></td>
+						<td data-note>Notre-Dame Cathedral, Central Post Office, Book Street</td>
+					</tr>
 					
 					<tr data-category="Flights (Local)">
 						<td data-date>2026-04-13</td>
-						<td data-category>Flights (Local)</td>
+						<td data-category><span class="category-flight">Flight</span></td>
 						<td data-subcategory>Domestic</td>
-						<td data-country>Vietnam</td>
+						<td data-country>🇻🇳 Vietnam</td>
 						<td data-city>Ho Chi Minh</td>
 						<td data-description>Ho Chi Minh (SGN) - Da Nang (DAD)</td>
 						<td data-price-adult>49.97</td>
@@ -112,9 +157,9 @@
 					
 					<tr data-category="Flights (Local)">
 						<td data-date>2026-04-19</td>
-						<td data-category>Flights (Local)</td>
+						<td data-category><span class="category-flight">Flight</span></td>
 						<td data-subcategory>Domestic</td>
-						<td data-country>Vietnam</td>
+						<td data-country>🇻🇳 Vietnam</td>
 						<td data-city>Da Nang</td>
 						<td data-description>Da Nang (DAD) - Hanoi (HAN)</td>
 						<td data-price-adult>82.37</td>
@@ -127,9 +172,9 @@
 					
 					<tr data-category="Flights (Local)">
 						<td data-date>2026-04-24</td>
-						<td data-category>Flights (Local)</td>
+						<td data-category><span class="category-flight">Flight</span></td>
 						<td data-subcategory>International</td>
-						<td data-country>Vietnam</td>
+						<td data-country>🇻🇳 Vietnam</td>
 						<td data-city>Hanoi</td>
 						<td data-description>Hanoi (HAN) - Luang Prabang (LPQ)</td>
 						<td data-price-adult>132.77</td>
@@ -142,9 +187,9 @@
 					
 					<tr data-category="Trains">
 						<td data-date>2026-04-28</td>
-						<td data-category>Trains</td>
+						<td data-category><span class="category-train">Train</span></td>
 						<td data-subcategory>Local</td>
-						<td data-country>Laos</td>
+						<td data-country>🇱🇦 Laos</td>
 						<td data-city>Luang Prabang</td>
 						<td data-description>Luang Prabang - Vientiane</td>
 						<td data-price-adult>27.00</td>
@@ -155,7 +200,7 @@
 						<td data-note></td>
 					</tr>
 
-					<!-- Accommodation -->
+					<!-- Accommodation 
 					<tr data-category="Accommodation">
 						<td>2026-02-02</td>
 						<td>Accommodation</td>
@@ -170,8 +215,6 @@
 						<td class="row-total"></td>
 						<td>Child free</td>
 					</tr>
-
-					<!-- Meals -->
 					<tr data-category="Meals">
 						<td>2026-02-03</td>
 						<td>Meals</td>
@@ -186,8 +229,6 @@
 						<td class="row-total"></td>
 						<td>Average estimate</td>
 					</tr>
-
-					<!-- Activities -->
 					<tr data-category="Activities & entrance fees">
 						<td>2026-02-04</td>
 						<td>Activities</td>
@@ -202,8 +243,6 @@
 						<td class="row-total"></td>
 						<td>Child discount applied</td>
 					</tr>
-
-					<!-- Local transport -->
 					<tr data-category="Local transport">
 						<td>2026-02-05</td>
 						<td>Local transport</td>
@@ -217,7 +256,7 @@
 						<td data-qty-children>1</td>
 						<td class="row-total"></td>
 						<td>Estimate</td>
-					</tr>
+					</tr> -->
 
 				</tbody>
 			</table>
@@ -230,7 +269,7 @@
     <p>© 2026 – Asia Trip Planning</p>
   </footer>
 
-	<!-- ===================== -->
+<!-- ===================== -->
 <!-- JS: totals + chart -->
 <!-- ===================== -->
 <script>
@@ -275,7 +314,7 @@
       {
         name: 'Budget by category',
         type: 'pie',
-        radius: ['45%', '70%'],
+        radius: ['25%', '50%'],
         avoidLabelOverlap: true,
         itemStyle: {
           borderRadius: 6,
