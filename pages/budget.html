@@ -40,6 +40,7 @@
 			<h2 id="budget-charts-title">Budget breakdown</h2>
 			<div id="budget-graphs">
 				<div id="budget-by-category" style=""></div>
+				<div id="budget-by-person" style=""></div>
 			</div>
 		</section>
 		<!-- ===================== -->
@@ -68,7 +69,7 @@
 
 				<tbody>
 					<!-- 2026-04-10 -->
-					<tr data-category="Flights (Intl)">
+					<tr data-category="Flights (🇫🇷)">
 						<td data-date>2026-04-10</td>
 						<td data-category><span class="category-flight">Flight</span></td>
 						<td data-subcategory>International</td>
@@ -76,14 +77,14 @@
 						<td data-city>Marseille</td>
 						<td data-description>Marseille (MRS) - Ho Chi Minh (SGN), Vientiane (VTE) - Marseille (MRS)</td>
 						<td data-price-adult>1624.24</td>
-						<td data-price-child>0</td>
+						<td data-price-child>0.00</td>
 						<td data-qty-adults>2</td>
 						<td data-qty-children>0</td>
 						<td class="row-total" data-total></td>
 						<td data-note>Estimated, incl. luggage</td>
 					</tr>
-					<!-- 2026-04-11 -->
-					<tr data-category="Flights (Intl)">
+					<!-- HO CHI MINH CITY - DAY 1 (April 11) -->
+					<tr data-category="Flights (🇵🇭)">
 						<td data-date>2026-04-11</td>
 						<td data-category><span class="category-flight">Flight</span></td>
 						<td data-subcategory>International</td>
@@ -97,19 +98,19 @@
 						<td class="row-total" data-total></td>
 						<td data-note>Estimated, incl. luggage</td>
 					</tr>
-					<tr data-category="Taxi">
+					<tr data-category="Transport">
 						<td data-date>2026-04-11</td>
-						<td data-category><span class="category-taxi">Grab</span></td>
-						<td data-subcategory>Taxi</td>
+						<td data-category><span class="category-transport">Grab</span></td>
+						<td data-subcategory>Airport Transfer</td>
 						<td data-country>🇻🇳 Vietnam</td>
 						<td data-city>Ho Chi Minh</td>
-						<td data-description>Airport to hotel</td>
-						<td data-price-adult>4.50</td>
+						<td data-description>Grab from airport to hotel</td>
+						<td data-price-adult>1.50</td>
 						<td data-price-child>0.00</td>
-						<td data-qty-adults>1</td>
-						<td data-qty-children>0</td>
+						<td data-qty-adults>7</td>
+						<td data-qty-children>1</td>
 						<td class="row-total" data-total></td>
-						<td data-note>100000 to 150000 VND</td>
+						<td data-note>Split fare, ~30-40 min</td>
 					</tr>
 					<tr data-category="Hotel">
 						<td data-date>2026-04-11</td>
@@ -134,57 +135,1439 @@
 						<td data-description>Colonial Quarter Walking Tour</td>
 						<td data-price-adult>0.00</td>
 						<td data-price-child>0.00</td>
-						<td data-qty-adults>1</td>
-						<td data-qty-children>0</td>
+						<td data-qty-adults>7</td>
+						<td data-qty-children>1</td>
 						<td class="row-total" data-total></td>
 						<td data-note>Notre-Dame Cathedral, Central Post Office, Book Street</td>
 					</tr>
+					<tr data-category="Food">
+						<td data-date>2026-04-11</td>
+						<td data-category><span class="category-food">Food</span></td>
+						<td data-subcategory>Coffee</td>
+						<td data-country>🇻🇳 Vietnam</td>
+						<td data-city>Ho Chi Minh</td>
+						<td data-description>Coffee break</td>
+						<td data-price-adult>2.50</td>
+						<td data-price-child>1.50</td>
+						<td data-qty-adults>7</td>
+						<td data-qty-children>1</td>
+						<td class="row-total" data-total></td>
+						<td data-note>The Workshop / Cafe RuNam</td>
+					</tr>
+					<tr data-category="Food">
+						<td data-date>2026-04-11</td>
+						<td data-category><span class="category-food">Food</span></td>
+						<td data-subcategory>Dinner</td>
+						<td data-country>🇻🇳 Vietnam</td>
+						<td data-city>Ho Chi Minh</td>
+						<td data-description>Nha Hang Ngon</td>
+						<td data-price-adult>12.00</td>
+						<td data-price-child>10.00</td>
+						<td data-qty-adults>7</td>
+						<td data-qty-children>1</td>
+						<td class="row-total" data-total></td>
+						<td data-note>Garden restaurant</td>
+					</tr>
 					
-					<tr data-category="Flights (Local)">
+					<!-- HO CHI MINH CITY - DAY 2 (April 12) -->
+					<tr data-category="Activities">
+						<td data-date>2026-04-12</td>
+						<td data-category><span class="category-activity">Activity</span></td>
+						<td data-subcategory>Entrance Fee</td>
+						<td data-country>🇻🇳 Vietnam</td>
+						<td data-city>Ho Chi Minh</td>
+						<td data-description>Jade Emperor Pagoda</td>
+						<td data-price-adult>0.50</td>
+						<td data-price-child>0.00</td>
+						<td data-qty-adults>7</td>
+						<td data-qty-children>1</td>
+						<td class="row-total" data-total></td>
+						<td data-note>Optional donation</td>
+					</tr>
+					<tr data-category="Transport">
+						<td data-date>2026-04-12</td>
+						<td data-category><span class="category-transport">Transport</span></td>
+						<td data-subcategory>Taxi</td>
+						<td data-country>🇻🇳 Vietnam</td>
+						<td data-city>Ho Chi Minh</td>
+						<td data-description>Grab to Jade Emperor Pagoda</td>
+						<td data-price-adult>1.00</td>
+						<td data-price-child>0.00</td>
+						<td data-qty-adults>7</td>
+						<td data-qty-children>1</td>
+						<td class="row-total" data-total></td>
+						<td data-note>~15 min</td>
+					</tr>
+					<tr data-category="Activities">
+						<td data-date>2026-04-12</td>
+						<td data-category><span class="category-activity">Activity</span></td>
+						<td data-subcategory>Entrance Fee</td>
+						<td data-country>🇻🇳 Vietnam</td>
+						<td data-city>Ho Chi Minh</td>
+						<td data-description>War Remnants Museum (optional)</td>
+						<td data-price-adult>2.00</td>
+						<td data-price-child>1.50</td>
+						<td data-qty-adults>7</td>
+						<td data-qty-children>1</td>
+						<td class="row-total" data-total></td>
+						<td data-note>Historical museum</td>
+					</tr>
+					<tr data-category="Food">
+						<td data-date>2026-04-12</td>
+						<td data-category><span class="category-food">Food</span></td>
+						<td data-subcategory>Lunch</td>
+						<td data-country>🇻🇳 Vietnam</td>
+						<td data-city>Ho Chi Minh</td>
+						<td data-description>Pho Hoa Pasteur</td>
+						<td data-price-adult>4.00</td>
+						<td data-price-child>3.00</td>
+						<td data-qty-adults>7</td>
+						<td data-qty-children>1</td>
+						<td class="row-total" data-total></td>
+						<td data-note>Classic pho</td>
+					</tr>
+					<tr data-category="Food">
+						<td data-date>2026-04-12</td>
+						<td data-category><span class="category-food">Food</span></td>
+						<td data-subcategory>Snack</td>
+						<td data-country>🇻🇳 Vietnam</td>
+						<td data-city>Ho Chi Minh</td>
+						<td data-description>Ice cream break</td>
+						<td data-price-adult>2.00</td>
+						<td data-price-child>2.00</td>
+						<td data-qty-adults>7</td>
+						<td data-qty-children>1</td>
+						<td class="row-total" data-total></td>
+						<td data-note>Kido / Bach Dang</td>
+					</tr>
+					<tr data-category="Activities">
+						<td data-date>2026-04-12</td>
+						<td data-category><span class="category-activity">Activity</span></td>
+						<td data-subcategory>Entrance Fee</td>
+						<td data-country>🇻🇳 Vietnam</td>
+						<td data-city>Ho Chi Minh</td>
+						<td data-description>Bitexco Skydeck</td>
+						<td data-price-adult>8.00</td>
+						<td data-price-child>5.00</td>
+						<td data-qty-adults>7</td>
+						<td data-qty-children>1</td>
+						<td class="row-total" data-total></td>
+						<td data-note>49th floor views</td>
+					</tr>
+					<tr data-category="Food">
+						<td data-date>2026-04-12</td>
+						<td data-category><span class="category-food">Food</span></td>
+						<td data-subcategory>Dinner</td>
+						<td data-country>🇻🇳 Vietnam</td>
+						<td data-city>Ho Chi Minh</td>
+						<td data-description>Quan Bui / Secret Garden</td>
+						<td data-price-adult>15.00</td>
+						<td data-price-child>12.00</td>
+						<td data-qty-adults>7</td>
+						<td data-qty-children>1</td>
+						<td class="row-total" data-total></td>
+						<td data-note>Modern Vietnamese</td>
+					</tr>
+					
+					<!-- HO CHI MINH CITY - DAY 3 (April 13) -->
+					<tr data-category="Activities">
+						<td data-date>2026-04-13</td>
+						<td data-category><span class="category-activity">Activity</span></td>
+						<td data-subcategory>Tour</td>
+						<td data-country>🇻🇳 Vietnam</td>
+						<td data-city>Ho Chi Minh</td>
+						<td data-description>Saigon River Cruise (Option A)</td>
+						<td data-price-adult>18.00</td>
+						<td data-price-child>15.00</td>
+						<td data-qty-adults>7</td>
+						<td data-qty-children>1</td>
+						<td class="row-total" data-total></td>
+						<td data-note>2-hour cruise</td>
+					</tr>
+					<tr data-category="Activities">
+						<td data-date>2026-04-13</td>
+						<td data-category><span class="category-activity">Activity</span></td>
+						<td data-subcategory>Entrance Fee</td>
+						<td data-country>🇻🇳 Vietnam</td>
+						<td data-city>Ho Chi Minh</td>
+						<td data-description>Independence Palace (Option B)</td>
+						<td data-price-adult>2.00</td>
+						<td data-price-child>1.00</td>
+						<td data-qty-adults>7</td>
+						<td data-qty-children>1</td>
+						<td class="row-total" data-total></td>
+						<td data-note>Alternative to cruise</td>
+					</tr>
+					<tr data-category="Food">
+						<td data-date>2026-04-13</td>
+						<td data-category><span class="category-food">Food</span></td>
+						<td data-subcategory>Lunch</td>
+						<td data-country>🇻🇳 Vietnam</td>
+						<td data-city>Ho Chi Minh</td>
+						<td data-description>Banh Xeo 46A</td>
+						<td data-price-adult>6.00</td>
+						<td data-price-child>5.00</td>
+						<td data-qty-adults>7</td>
+						<td data-qty-children>1</td>
+						<td class="row-total" data-total></td>
+						<td data-note>Vietnamese pancakes</td>
+					</tr>
+					<tr data-category="Transport">
+						<td data-date>2026-04-13</td>
+						<td data-category><span class="category-transport">Transport</span></td>
+						<td data-subcategory>Airport Transfer</td>
+						<td data-country>🇻🇳 Vietnam</td>
+						<td data-city>Ho Chi Minh</td>
+						<td data-description>Grab to airport</td>
+						<td data-price-adult>1.50</td>
+						<td data-price-child>0.00</td>
+						<td data-qty-adults>7</td>
+						<td data-qty-children>1</td>
+						<td class="row-total" data-total></td>
+						<td data-note>Split fare</td>
+					</tr>
+					<tr data-category="Flights (all)">
 						<td data-date>2026-04-13</td>
 						<td data-category><span class="category-flight">Flight</span></td>
 						<td data-subcategory>Domestic</td>
 						<td data-country>🇻🇳 Vietnam</td>
 						<td data-city>Ho Chi Minh</td>
 						<td data-description>Ho Chi Minh (SGN) - Da Nang (DAD)</td>
-						<td data-price-adult>49.97</td>
-						<td data-price-child>48.02</td>
+						<td data-price-adult>50.00</td>
+						<td data-price-child>45.00</td>
 						<td data-qty-adults>7</td>
 						<td data-qty-children>1</td>
 						<td class="row-total" data-total></td>
-						<td data-note>Estimated, incl. luggage</td>
+						<td data-note>1h 25min, book in advance</td>
+					</tr>
+					<tr data-category="Transport">
+						<td data-date>2026-04-13</td>
+						<td data-category><span class="category-transport">Transport</span></td>
+						<td data-subcategory>Airport Transfer</td>
+						<td data-country>🇻🇳 Vietnam</td>
+						<td data-city>Da Nang</td>
+						<td data-description>Airport to hotel</td>
+						<td data-price-adult>2.00</td>
+						<td data-price-child>0.00</td>
+						<td data-qty-adults>7</td>
+						<td data-qty-children>1</td>
+						<td class="row-total" data-total></td>
+						<td data-note>Split fare, beachfront</td>
+					</tr>
+					<tr data-category="Hotel">
+						<td data-date>2026-04-13</td>
+						<td data-category><span class="category-hotel">Hotel</span></td>
+						<td data-subcategory>Hotel</td>
+						<td data-country>🇻🇳 Vietnam</td>
+						<td data-city>Da Nang</td>
+						<td data-description>3 nights</td>
+						<td data-price-adult>90.00</td>
+						<td data-price-child>0.00</td>
+						<td data-qty-adults>3</td>
+						<td data-qty-children>0</td>
+						<td class="row-total" data-total></td>
+						<td data-note>TMS Hotel Da Nang Beach – ~79 USD (~74 €)
+							Sala Danang Beach Hotel – ~71 USD (~67 €)
+							M Hotel Da Nang – ~95 USD (~89 €)
+							Meliá Danang Beach Resort – ~104 USD (~98 €)
+						</td>
+					</tr>
+					<tr data-category="Food">
+						<td data-date>2026-04-13</td>
+						<td data-category><span class="category-food">Food</span></td>
+						<td data-subcategory>Dinner</td>
+						<td data-country>🇻🇳 Vietnam</td>
+						<td data-city>Da Nang</td>
+						<td data-description>Beachfront restaurant</td>
+						<td data-price-adult>10.00</td>
+						<td data-price-child>8.00</td>
+						<td data-qty-adults>7</td>
+						<td data-qty-children>1</td>
+						<td class="row-total" data-total></td>
+						<td data-note>Seafood</td>
 					</tr>
 					
-					<tr data-category="Flights (Local)">
+					<!-- DA NANG - DAY 4 (April 14) -->
+					<tr data-category="Activities">
+						<td data-date>2026-04-14</td>
+						<td data-category><span class="category-activity">Activity</span></td>
+						<td data-subcategory>Beach</td>
+						<td data-country>🇻🇳 Vietnam</td>
+						<td data-city>Da Nang</td>
+						<td data-description>My Khe Beach</td>
+						<td data-price-adult>0.00</td>
+						<td data-price-child>0.00</td>
+						<td data-qty-adults>7</td>
+						<td data-qty-children>1</td>
+						<td class="row-total" data-total></td>
+						<td data-note>Free, rent chairs ~2 EUR</td>
+					</tr>
+					<tr data-category="Food">
+						<td data-date>2026-04-14</td>
+						<td data-category><span class="category-food">Food</span></td>
+						<td data-subcategory>Lunch</td>
+						<td data-country>🇻🇳 Vietnam</td>
+						<td data-city>Da Nang</td>
+						<td data-description>Nu Do Kitchen</td>
+						<td data-price-adult>10.00</td>
+						<td data-price-child>8.00</td>
+						<td data-qty-adults>7</td>
+						<td data-qty-children>1</td>
+						<td class="row-total" data-total></td>
+						<td data-note>Beachfront</td>
+					</tr>
+					<tr data-category="Activities">
+						<td data-date>2026-04-14</td>
+						<td data-category><span class="category-activity">Activity</span></td>
+						<td data-subcategory>Entrance Fee</td>
+						<td data-country>🇻🇳 Vietnam</td>
+						<td data-city>Da Nang</td>
+						<td data-description>Marble Mountains</td>
+						<td data-price-adult>2.00</td>
+						<td data-price-child>2.00</td>
+						<td data-qty-adults>7</td>
+						<td data-qty-children>1</td>
+						<td class="row-total" data-total></td>
+						<td data-note>Entry fee</td>
+					</tr>
+					<tr data-category="Activities">
+						<td data-date>2026-04-14</td>
+						<td data-category><span class="category-activity">Activity</span></td>
+						<td data-subcategory>Lift</td>
+						<td data-country>🇻🇳 Vietnam</td>
+						<td data-city>Da Nang</td>
+						<td data-description>Marble Mountains Elevator</td>
+						<td data-price-adult>1.00</td>
+						<td data-price-child>1.00</td>
+						<td data-qty-adults>7</td>
+						<td data-qty-children>1</td>
+						<td class="row-total" data-total></td>
+						<td data-note>Optional, recommended</td>
+					</tr>
+					<tr data-category="Transport">
+						<td data-date>2026-04-14</td>
+						<td data-category><span class="category-transport">Transport</span></td>
+						<td data-subcategory>Taxi</td>
+						<td data-country>🇻🇳 Vietnam</td>
+						<td data-city>Da Nang</td>
+						<td data-description>Grab to Marble Mountains</td>
+						<td data-price-adult>1.50</td>
+						<td data-price-child>0.00</td>
+						<td data-qty-adults>7</td>
+						<td data-qty-children>1</td>
+						<td class="row-total" data-total></td>
+						<td data-note>~15 min, round trip</td>
+					</tr>
+					<tr data-category="Food">
+						<td data-date>2026-04-14</td>
+						<td data-category><span class="category-food">Food</span></td>
+						<td data-subcategory>Dinner</td>
+						<td data-country>🇻🇳 Vietnam</td>
+						<td data-city>Da Nang</td>
+						<td data-description>Bep Hen</td>
+						<td data-price-adult>12.00</td>
+						<td data-price-child>10.00</td>
+						<td data-qty-adults>7</td>
+						<td data-qty-children>1</td>
+						<td class="row-total" data-total></td>
+						<td data-note>Historical restaurant</td>
+					</tr>
+					
+					<!-- DA NANG - DAY 5 (April 15) -->
+					<tr data-category="Activities">
+						<td data-date>2026-04-15</td>
+						<td data-category><span class="category-activity">Activity</span></td>
+						<td data-subcategory>Tour</td>
+						<td data-country>🇻🇳 Vietnam</td>
+						<td data-city>Da Nang</td>
+						<td data-description>Ba Na Hills Full Day</td>
+						<td data-price-adult>30.00</td>
+						<td data-price-child>25.00</td>
+						<td data-qty-adults>7</td>
+						<td data-qty-children>1</td>
+						<td class="row-total" data-total></td>
+						<td data-note>Cable car + attractions</td>
+					</tr>
+					<tr data-category="Transport">
+						<td data-date>2026-04-15</td>
+						<td data-category><span class="category-transport">Transport</span></td>
+						<td data-subcategory>Transfer</td>
+						<td data-country>🇻🇳 Vietnam</td>
+						<td data-city>Da Nang</td>
+						<td data-description>Ba Na Hills transport</td>
+						<td data-price-adult>10.00</td>
+						<td data-price-child>10.00</td>
+						<td data-qty-adults>7</td>
+						<td data-qty-children>1</td>
+						<td class="row-total" data-total></td>
+						<td data-note>Private van recommended</td>
+					</tr>
+					<tr data-category="Food">
+						<td data-date>2026-04-15</td>
+						<td data-category><span class="category-food">Food</span></td>
+						<td data-subcategory>Lunch</td>
+						<td data-country>🇻🇳 Vietnam</td>
+						<td data-city>Da Nang</td>
+						<td data-description>Ba Na Hills buffet</td>
+						<td data-price-adult>15.00</td>
+						<td data-price-child>12.00</td>
+						<td data-qty-adults>7</td>
+						<td data-qty-children>1</td>
+						<td class="row-total" data-total></td>
+						<td data-note>At site or tour inclusive</td>
+					</tr>
+					<tr data-category="Food">
+						<td data-date>2026-04-15</td>
+						<td data-category><span class="category-food">Food</span></td>
+						<td data-subcategory>Dinner</td>
+						<td data-country>🇻🇳 Vietnam</td>
+						<td data-city>Da Nang</td>
+						<td data-description>Com Nha Linh</td>
+						<td data-price-adult>12.00</td>
+						<td data-price-child>10.00</td>
+						<td data-qty-adults>7</td>
+						<td data-qty-children>1</td>
+						<td class="row-total" data-total></td>
+						<td data-note>Traditional Vietnamese</td>
+					</tr>
+					
+					<!-- DA NANG - DAY 6 (April 16) -->
+					<tr data-category="Activities">
+						<td data-date>2026-04-16</td>
+						<td data-category><span class="category-activity">Activity</span></td>
+						<td data-subcategory>Entrance Fee</td>
+						<td data-country>🇻🇳 Vietnam</td>
+						<td data-city>Da Nang</td>
+						<td data-description>Museum of Cham Sculpture</td>
+						<td data-price-adult>3.00</td>
+						<td data-price-child>2.00</td>
+						<td data-qty-adults>7</td>
+						<td data-qty-children>1</td>
+						<td class="row-total" data-total></td>
+						<td data-note>World heritage art</td>
+					</tr>
+					<tr data-category="Food">
+						<td data-date>2026-04-16</td>
+						<td data-category><span class="category-food">Food</span></td>
+						<td data-subcategory>Lunch</td>
+						<td data-country>🇻🇳 Vietnam</td>
+						<td data-city>Da Nang</td>
+						<td data-description>Banh Xeo Ba Duong</td>
+						<td data-price-adult>4.00</td>
+						<td data-price-child>3.00</td>
+						<td data-qty-adults>7</td>
+						<td data-qty-children>1</td>
+						<td class="row-total" data-total></td>
+						<td data-note>Local specialty</td>
+					</tr>
+					<tr data-category="Transport">
+						<td data-date>2026-04-16</td>
+						<td data-category><span class="category-transport">Transport</span></td>
+						<td data-subcategory>Taxi</td>
+						<td data-country>🇻🇳 Vietnam</td>
+						<td data-city>Da Nang</td>
+						<td data-description>Da Nang → Hoi An</td>
+						<td data-price-adult>2.50</td>
+						<td data-price-child>0.00</td>
+						<td data-qty-adults>7</td>
+						<td data-qty-children>1</td>
+						<td class="row-total" data-total></td>
+						<td data-note>45 min, split fare</td>
+					</tr>
+					<tr data-category="Hotel">
+						<td data-date>2026-04-16</td>
+						<td data-category><span class="category-hotel">Hotel</span></td>
+						<td data-subcategory>Hotel</td>
+						<td data-country>🇻🇳 Vietnam</td>
+						<td data-city>Hoi An</td>
+						<td data-description>3 nights</td>
+						<td data-price-adult>75.00</td>
+						<td data-price-child>0.00</td>
+						<td data-qty-adults>3</td>
+						<td data-qty-children>0</td>
+						<td class="row-total" data-total></td>
+						<td data-note>Hoi An Historic Hotel – ~58 USD (~55 €)
+							Old Town Hotel – ~40 USD (~37 €)
+							Hoianese Quiet Old Town Hotel – ~47 USD (~44 €)
+							Allegro Hoi An Hotel & Spa – ~95 USD (~89 €)
+						</td>
+					</tr>
+					<tr data-category="Activities">
+						<td data-date>2026-04-16</td>
+						<td data-category><span class="category-activity">Activity</span></td>
+						<td data-subcategory>Entrance Fee</td>
+						<td data-country>🇻🇳 Vietnam</td>
+						<td data-city>Hoi An</td>
+						<td data-description>Old Town Ticket</td>
+						<td data-price-adult>5.00</td>
+						<td data-price-child>0.00</td>
+						<td data-qty-adults>7</td>
+						<td data-qty-children>1</td>
+						<td class="row-total" data-total></td>
+						<td data-note>24h pass, 5 sites, free <15yo</td>
+					</tr>
+					<tr data-category="Food">
+						<td data-date>2026-04-16</td>
+						<td data-category><span class="category-food">Food</span></td>
+						<td data-subcategory>Dinner</td>
+						<td data-country>🇻🇳 Vietnam</td>
+						<td data-city>Hoi An</td>
+						<td data-description>Morning Glory</td>
+						<td data-price-adult>10.00</td>
+						<td data-price-child>8.00</td>
+						<td data-qty-adults>7</td>
+						<td data-qty-children>1</td>
+						<td class="row-total" data-total></td>
+						<td data-note>Hoi An specialties</td>
+					</tr>
+					<tr data-category="Activities">
+						<td data-date>2026-04-16</td>
+						<td data-category><span class="category-activity">Activity</span></td>
+						<td data-subcategory>Tour</td>
+						<td data-country>🇻🇳 Vietnam</td>
+						<td data-city>Hoi An</td>
+						<td data-description>Lantern Boat Ride</td>
+						<td data-price-adult>2.00</td>
+						<td data-price-child>2.00</td>
+						<td data-qty-adults>7</td>
+						<td data-qty-children>1</td>
+						<td class="row-total" data-total></td>
+						<td data-note>Thu Bon River, ~8 EUR/boat</td>
+					</tr>
+					
+					<!-- HOI AN - DAY 7 (April 17) -->
+					<tr data-category="Activities">
+						<td data-date>2026-04-17</td>
+						<td data-category><span class="category-activity">Activity</span></td>
+						<td data-subcategory>Tour</td>
+						<td data-country>🇻🇳 Vietnam</td>
+						<td data-city>Hoi An</td>
+						<td data-description>Coconut Village Experience</td>
+						<td data-price-adult>18.00</td>
+						<td data-price-child>15.00</td>
+						<td data-qty-adults>7</td>
+						<td data-qty-children>1</td>
+						<td class="row-total" data-total></td>
+						<td data-note>Basket boat, activities</td>
+					</tr>
+					<tr data-category="Transport">
+						<td data-date>2026-04-17</td>
+						<td data-category><span class="category-transport">Transport</span></td>
+						<td data-subcategory>Transfer</td>
+						<td data-country>🇻🇳 Vietnam</td>
+						<td data-city>Hoi An</td>
+						<td data-description>To/from Coconut Village</td>
+						<td data-price-adult>1.00</td>
+						<td data-price-child>0.00</td>
+						<td data-qty-adults>7</td>
+						<td data-qty-children>1</td>
+						<td class="row-total" data-total></td>
+						<td data-note>20 min, split fare</td>
+					</tr>
+					<tr data-category="Food">
+						<td data-date>2026-04-17</td>
+						<td data-category><span class="category-food">Food</span></td>
+						<td data-subcategory>Lunch</td>
+						<td data-country>🇻🇳 Vietnam</td>
+						<td data-city>Hoi An</td>
+						<td data-description>Banh Mi Phuong</td>
+						<td data-price-adult>2.00</td>
+						<td data-price-child>2.00</td>
+						<td data-qty-adults>7</td>
+						<td data-qty-children>1</td>
+						<td class="row-total" data-total></td>
+						<td data-note>Obama's banh mi</td>
+					</tr>
+					<tr data-category="Food">
+						<td data-date>2026-04-17</td>
+						<td data-category><span class="category-food">Food</span></td>
+						<td data-subcategory>Snack</td>
+						<td data-country>🇻🇳 Vietnam</td>
+						<td data-city>Hoi An</td>
+						<td data-description>Tea House / Ice Cream</td>
+						<td data-price-adult>3.00</td>
+						<td data-price-child>3.00</td>
+						<td data-qty-adults>7</td>
+						<td data-qty-children>1</td>
+						<td class="row-total" data-total></td>
+						<td data-note>Reaching Out / Bep Tuoi</td>
+					</tr>
+					<tr data-category="Food">
+						<td data-date>2026-04-17</td>
+						<td data-category><span class="category-food">Food</span></td>
+						<td data-subcategory>Dinner</td>
+						<td data-country>🇻🇳 Vietnam</td>
+						<td data-city>Hoi An</td>
+						<td data-description>Cargo Club / Streets</td>
+						<td data-price-adult>12.00</td>
+						<td data-price-child>10.00</td>
+						<td data-qty-adults>7</td>
+						<td data-qty-children>1</td>
+						<td class="row-total" data-total></td>
+						<td data-note>Riverside</td>
+					</tr>
+					
+					<!-- HOI AN - DAY 8 (April 18) -->
+					<tr data-category="Activities">
+						<td data-date>2026-04-18</td>
+						<td data-category><span class="category-activity">Activity</span></td>
+						<td data-subcategory>Beach</td>
+						<td data-country>🇻🇳 Vietnam</td>
+						<td data-city>Hoi An</td>
+						<td data-description>An Bang Beach</td>
+						<td data-price-adult>0.00</td>
+						<td data-price-child>0.00</td>
+						<td data-qty-adults>7</td>
+						<td data-qty-children>1</td>
+						<td class="row-total" data-total></td>
+						<td data-note>Free, taxi ~3 EUR</td>
+					</tr>
+					<tr data-category="Transport">
+						<td data-date>2026-04-18</td>
+						<td data-category><span class="category-transport">Transport</span></td>
+						<td data-subcategory>Taxi</td>
+						<td data-country>🇻🇳 Vietnam</td>
+						<td data-city>Hoi An</td>
+						<td data-description>To/from An Bang Beach</td>
+						<td data-price-adult>1.50</td>
+						<td data-price-child>0.00</td>
+						<td data-qty-adults>7</td>
+						<td data-qty-children>1</td>
+						<td class="row-total" data-total></td>
+						<td data-note>4km, round trip</td>
+					</tr>
+					<tr data-category="Food">
+						<td data-date>2026-04-18</td>
+						<td data-category><span class="category-food">Food</span></td>
+						<td data-subcategory>Lunch</td>
+						<td data-country>🇻🇳 Vietnam</td>
+						<td data-city>Hoi An</td>
+						<td data-description>Beach restaurant</td>
+						<td data-price-adult>8.00</td>
+						<td data-price-child>6.00</td>
+						<td data-qty-adults>7</td>
+						<td data-qty-children>1</td>
+						<td class="row-total" data-total></td>
+						<td data-note>TBD</td>
+					</tr>
+					<tr data-category="Activities">
+						<td data-date>2026-04-18</td>
+						<td data-category><span class="category-activity">Activity</span></td>
+						<td data-subcategory>Entrance Fee</td>
+						<td data-country>🇻🇳 Vietnam</td>
+						<td data-city>Hoi An</td>
+						<td data-description>My Son Sanctuary</td>
+						<td data-price-adult>6.00</td>
+						<td data-price-child>1.50</td>
+						<td data-qty-adults>7</td>
+						<td data-qty-children>1</td>
+						<td class="row-total" data-total></td>
+						<td data-note>UNESCO ruins</td>
+					</tr>
+					<tr data-category="Transport">
+						<td data-date>2026-04-18</td>
+						<td data-category><span class="category-transport">Transport</span></td>
+						<td data-subcategory>Transfer</td>
+						<td data-country>🇻🇳 Vietnam</td>
+						<td data-city>Hoi An</td>
+						<td data-description>My Son transport</td>
+						<td data-price-adult>7.00</td>
+						<td data-price-child>7.00</td>
+						<td data-qty-adults>7</td>
+						<td data-qty-children>1</td>
+						<td class="row-total" data-total></td>
+						<td data-note>1h drive, or $50 private</td>
+					</tr>
+					<tr data-category="Food">
+						<td data-date>2026-04-18</td>
+						<td data-category><span class="category-food">Food</span></td>
+						<td data-subcategory>Dinner</td>
+						<td data-country>🇻🇳 Vietnam</td>
+						<td data-city>Hoi An</td>
+						<td data-description>Madam Khanh / Nu Eatery</td>
+						<td data-price-adult>12.00</td>
+						<td data-price-child>10.00</td>
+						<td data-qty-adults>7</td>
+						<td data-qty-children>1</td>
+						<td class="row-total" data-total></td>
+						<td data-note>Casual / modern</td>
+					</tr>
+					
+					<!-- HOI AN - DAY 9 (April 19) -->
+					<tr data-category="Activities">
+						<td data-date>2026-04-19</td>
+						<td data-category><span class="category-activity">Activity</span></td>
+						<td data-subcategory>Photoshoot</td>
+						<td data-country>🇻🇳 Vietnam</td>
+						<td data-city>Hoi An</td>
+						<td data-description>Traditional dress photoshoot</td>
+						<td data-price-adult>16.25</td>
+						<td data-price-child>16.25</td>
+						<td data-qty-adults>7</td>
+						<td data-qty-children>1</td>
+						<td class="row-total" data-total></td>
+						<td data-note>~130 EUR total for family</td>
+					</tr>
+					<tr data-category="Food">
+						<td data-date>2026-04-19</td>
+						<td data-category><span class="category-food">Food</span></td>
+						<td data-subcategory>Lunch</td>
+						<td data-country>🇻🇳 Vietnam</td>
+						<td data-city>Hoi An</td>
+						<td data-description>Com Ga Ba Buoi</td>
+						<td data-price-adult>4.00</td>
+						<td data-price-child>3.00</td>
+						<td data-qty-adults>7</td>
+						<td data-qty-children>1</td>
+						<td class="row-total" data-total></td>
+						<td data-note>Chicken rice</td>
+					</tr>
+					<tr data-category="Transport">
+						<td data-date>2026-04-19</td>
+						<td data-category><span class="category-transport">Transport</span></td>
+						<td data-subcategory>Airport Transfer</td>
+						<td data-country>🇻🇳 Vietnam</td>
+						<td data-city>Hoi An</td>
+						<td data-description>Taxi to airport</td>
+						<td data-price-adult>2.50</td>
+						<td data-price-child>0.00</td>
+						<td data-qty-adults>7</td>
+						<td data-qty-children>1</td>
+						<td class="row-total" data-total></td>
+						<td data-note>45 min</td>
+					</tr>
+					<tr data-category="Flights (all)">
 						<td data-date>2026-04-19</td>
 						<td data-category><span class="category-flight">Flight</span></td>
 						<td data-subcategory>Domestic</td>
 						<td data-country>🇻🇳 Vietnam</td>
 						<td data-city>Da Nang</td>
 						<td data-description>Da Nang (DAD) - Hanoi (HAN)</td>
-						<td data-price-adult>82.37</td>
-						<td data-price-child>73.94</td>
+						<td data-price-adult>85.00</td>
+						<td data-price-child>75.00</td>
 						<td data-qty-adults>7</td>
 						<td data-qty-children>1</td>
 						<td class="row-total" data-total></td>
-						<td data-note>Estimated, incl. luggage</td>
+						<td data-note>1h 25min</td>
+					</tr>
+					<tr data-category="Transport">
+						<td data-date>2026-04-19</td>
+						<td data-category><span class="category-transport">Transport</span></td>
+						<td data-subcategory>Airport Transfer</td>
+						<td data-country>🇻🇳 Vietnam</td>
+						<td data-city>Hanoi</td>
+						<td data-description>Taxi to hotel</td>
+						<td data-price-adult>2.50</td>
+						<td data-price-child>0.00</td>
+						<td data-qty-adults>7</td>
+						<td data-qty-children>1</td>
+						<td class="row-total" data-total></td>
+						<td data-note></td>
+					</tr>
+					<tr data-category="Hotel">
+						<td data-date>2026-04-19</td>
+						<td data-category><span class="category-hotel">Hotel</span></td>
+						<td data-subcategory>Hotel</td>
+						<td data-country>🇻🇳 Vietnam</td>
+						<td data-city>Hanoi</td>
+						<td data-description>5 nights</td>
+						<td data-price-adult>100.00</td>
+						<td data-price-child>0.00</td>
+						<td data-qty-adults>5</td>
+						<td data-qty-children>0</td>
+						<td class="row-total" data-total></td>
+						<td data-note>Comfortable family rooms or larger spaces can be ~80–130 €/night per room in central locations</td>
+					</tr>
+					<tr data-category="Food">
+						<td data-date>2026-04-19</td>
+						<td data-category><span class="category-food">Food</span></td>
+						<td data-subcategory>Dinner</td>
+						<td data-country>🇻🇳 Vietnam</td>
+						<td data-city>Hanoi</td>
+						<td data-description>Bun Cha Huong Lien</td>
+						<td data-price-adult>9.00</td>
+						<td data-price-child>7.00</td>
+						<td data-qty-adults>7</td>
+						<td data-qty-children>1</td>
+						<td class="row-total" data-total></td>
+						<td data-note>Obama's bun cha</td>
 					</tr>
 					
-					<tr data-category="Flights (Local)">
+					<!-- HANOI - DAY 10 (April 20) -->
+					<tr data-category="Activities">
+						<td data-date>2026-04-20</td>
+						<td data-category><span class="category-activity">Activity</span></td>
+						<td data-subcategory>Entrance Fee</td>
+						<td data-country>🇻🇳 Vietnam</td>
+						<td data-city>Hanoi</td>
+						<td data-description>Ngoc Son Temple</td>
+						<td data-price-adult>1.00</td>
+						<td data-price-child>1.00</td>
+						<td data-qty-adults>7</td>
+						<td data-qty-children>1</td>
+						<td class="row-total" data-total></td>
+						<td data-note>Lake island temple</td>
+					</tr>
+					<tr data-category="Activities">
+						<td data-date>2026-04-20</td>
+						<td data-category><span class="category-activity">Activity</span></td>
+						<td data-subcategory>Entrance Fee</td>
+						<td data-country>🇻🇳 Vietnam</td>
+						<td data-city>Hanoi</td>
+						<td data-description>Ancient House 87 Ma May</td>
+						<td data-price-adult>0.50</td>
+						<td data-price-child>0.50</td>
+						<td data-qty-adults>7</td>
+						<td data-qty-children>1</td>
+						<td class="row-total" data-total></td>
+						<td data-note>19th century house</td>
+					</tr>
+					<tr data-category="Food">
+						<td data-date>2026-04-20</td>
+						<td data-category><span class="category-food">Food</span></td>
+						<td data-subcategory>Coffee</td>
+						<td data-country>🇻🇳 Vietnam</td>
+						<td data-city>Hanoi</td>
+						<td data-description>Cafe Pho Co</td>
+						<td data-price-adult>2.50</td>
+						<td data-price-child>1.50</td>
+						<td data-qty-adults>7</td>
+						<td data-qty-children>1</td>
+						<td class="row-total" data-total></td>
+						<td data-note>Hidden cafe with view</td>
+					</tr>
+					<tr data-category="Food">
+						<td data-date>2026-04-20</td>
+						<td data-category><span class="category-food">Food</span></td>
+						<td data-subcategory>Lunch</td>
+						<td data-country>🇻🇳 Vietnam</td>
+						<td data-city>Hanoi</td>
+						<td data-description>Tung's Kitchen</td>
+						<td data-price-adult>10.00</td>
+						<td data-price-child>8.00</td>
+						<td data-qty-adults>7</td>
+						<td data-qty-children>1</td>
+						<td class="row-total" data-total></td>
+						<td data-note>Local cuisine</td>
+					</tr>
+					<tr data-category="Activities">
+						<td data-date>2026-04-20</td>
+						<td data-category><span class="category-activity">Activity</span></td>
+						<td data-subcategory>Show</td>
+						<td data-country>🇻🇳 Vietnam</td>
+						<td data-city>Hanoi</td>
+						<td data-description>Water Puppet Theatre</td>
+						<td data-price-adult>6.00</td>
+						<td data-price-child>5.00</td>
+						<td data-qty-adults>7</td>
+						<td data-qty-children>1</td>
+						<td class="row-total" data-total></td>
+						<td data-note>4:10 PM show, book ahead</td>
+					</tr>
+					<tr data-category="Food">
+						<td data-date>2026-04-20</td>
+						<td data-category><span class="category-food">Food</span></td>
+						<td data-subcategory>Snack</td>
+						<td data-country>🇻🇳 Vietnam</td>
+						<td data-city>Hanoi</td>
+						<td data-description>Train Street cafe</td>
+						<td data-price-adult>2.00</td>
+						<td data-price-child>2.00</td>
+						<td data-qty-adults>7</td>
+						<td data-qty-children>1</td>
+						<td class="row-total" data-total></td>
+						<td data-note>Drinks while waiting</td>
+					</tr>
+					<tr data-category="Food">
+						<td data-date>2026-04-20</td>
+						<td data-category><span class="category-food">Food</span></td>
+						<td data-subcategory>Dinner</td>
+						<td data-country>🇻🇳 Vietnam</td>
+						<td data-city>Hanoi</td>
+						<td data-description>Quan An Ngon</td>
+						<td data-price-adult>15.00</td>
+						<td data-price-child>12.00</td>
+						<td data-qty-adults>7</td>
+						<td data-qty-children>1</td>
+						<td class="row-total" data-total></td>
+						<td data-note>Food court style</td>
+					</tr>
+					
+					<!-- HANOI - DAY 11 (April 21) -->
+					<tr data-category="Activities">
+						<td data-date>2026-04-21</td>
+						<td data-category><span class="category-activity">Activity</span></td>
+						<td data-subcategory>Tour</td>
+						<td data-country>🇻🇳 Vietnam</td>
+						<td data-city>Hanoi</td>
+						<td data-description>Ha Long Bay Day Trip</td>
+						<td data-price-adult>45.00</td>
+						<td data-price-child>40.00</td>
+						<td data-qty-adults>7</td>
+						<td data-qty-children>1</td>
+						<td class="row-total" data-total></td>
+						<td data-note>Cruise, lunch, activities</td>
+					</tr>
+					<tr data-category="Food">
+						<td data-date>2026-04-21</td>
+						<td data-category><span class="category-food">Food</span></td>
+						<td data-subcategory>Dinner</td>
+						<td data-country>🇻🇳 Vietnam</td>
+						<td data-city>Hanoi</td>
+						<td data-description>Viet Restaurant</td>
+						<td data-price-adult>10.00</td>
+						<td data-price-child>8.00</td>
+						<td data-qty-adults>7</td>
+						<td data-qty-children>1</td>
+						<td class="row-total" data-total></td>
+						<td data-note>Light meal after tour</td>
+					</tr>
+					
+					<!-- HANOI - DAY 12 (April 22) -->
+					<tr data-category="Food">
+						<td data-date>2026-04-22</td>
+						<td data-category><span class="category-food">Food</span></td>
+						<td data-subcategory>Breakfast</td>
+						<td data-country>🇻🇳 Vietnam</td>
+						<td data-city>Hanoi</td>
+						<td data-description>Pho Ga Nguyet</td>
+						<td data-price-adult>4.00</td>
+						<td data-price-child>3.00</td>
+						<td data-qty-adults>7</td>
+						<td data-qty-children>1</td>
+						<td class="row-total" data-total></td>
+						<td data-note>Dry chicken pho</td>
+					</tr>
+					<tr data-category="Activities">
+						<td data-date>2026-04-22</td>
+						<td data-category><span class="category-activity">Activity</span></td>
+						<td data-subcategory>Entrance Fee</td>
+						<td data-country>🇻🇳 Vietnam</td>
+						<td data-city>Hanoi</td>
+						<td data-description>Temple of Literature</td>
+						<td data-price-adult>1.00</td>
+						<td data-price-child>0.50</td>
+						<td data-qty-adults>7</td>
+						<td data-qty-children>1</td>
+						<td class="row-total" data-total></td>
+						<td data-note>UNESCO heritage</td>
+					</tr>
+					<tr data-category="Transport">
+						<td data-date>2026-04-22</td>
+						<td data-category><span class="category-transport">Transport</span></td>
+						<td data-subcategory>Taxi</td>
+						<td data-country>🇻🇳 Vietnam</td>
+						<td data-city>Hanoi</td>
+						<td data-description>Grab to Temple</td>
+						<td data-price-adult>1.00</td>
+						<td data-price-child>0.00</td>
+						<td data-qty-adults>7</td>
+						<td data-qty-children>1</td>
+						<td class="row-total" data-total></td>
+						<td data-note>~15 min</td>
+					</tr>
+					<tr data-category="Activities">
+						<td data-date>2026-04-22</td>
+						<td data-category><span class="category-activity">Activity</span></td>
+						<td data-subcategory>Entrance Fee</td>
+						<td data-country>🇻🇳 Vietnam</td>
+						<td data-city>Hanoi</td>
+						<td data-description>Ho Chi Minh Mausoleum Complex</td>
+						<td data-price-adult>0.00</td>
+						<td data-price-child>0.00</td>
+						<td data-qty-adults>7</td>
+						<td data-qty-children>1</td>
+						<td class="row-total" data-total></td>
+						<td data-note>Free, Stilt House ~2 EUR</td>
+					</tr>
+					<tr data-category="Activities">
+						<td data-date>2026-04-22</td>
+						<td data-category><span class="category-activity">Activity</span></td>
+						<td data-subcategory>Entrance Fee</td>
+						<td data-country>🇻🇳 Vietnam</td>
+						<td data-city>Hanoi</td>
+						<td data-description>Ho Chi Minh Stilt House</td>
+						<td data-price-adult>2.00</td>
+						<td data-price-child>1.00</td>
+						<td data-qty-adults>7</td>
+						<td data-qty-children>1</td>
+						<td class="row-total" data-total></td>
+						<td data-note>Part of complex</td>
+					</tr>
+					<tr data-category="Food">
+						<td data-date>2026-04-22</td>
+						<td data-category><span class="category-food">Food</span></td>
+						<td data-subcategory>Lunch</td>
+						<td data-country>🇻🇳 Vietnam</td>
+						<td data-city>Hanoi</td>
+						<td data-description>Pho Gia Truyen</td>
+						<td data-price-adult>4.00</td>
+						<td data-price-child>3.00</td>
+						<td data-qty-adults>7</td>
+						<td data-qty-children>1</td>
+						<td class="row-total" data-total></td>
+						<td data-note>Famous pho</td>
+					</tr>
+					<tr data-category="Activities">
+						<td data-date>2026-04-22</td>
+						<td data-category><span class="category-activity">Activity</span></td>
+						<td data-subcategory>Entrance Fee</td>
+						<td data-country>🇻🇳 Vietnam</td>
+						<td data-city>Hanoi</td>
+						<td data-description>Tran Quoc Pagoda</td>
+						<td data-price-adult>0.00</td>
+						<td data-price-child>0.00</td>
+						<td data-qty-adults>7</td>
+						<td data-qty-children>1</td>
+						<td class="row-total" data-total></td>
+						<td data-note>Free, donations welcome</td>
+					</tr>
+					<tr data-category="Activities">
+						<td data-date>2026-04-22</td>
+						<td data-category><span class="category-activity">Activity</span></td>
+						<td data-subcategory>Entrance Fee</td>
+						<td data-country>🇻🇳 Vietnam</td>
+						<td data-city>Hanoi</td>
+						<td data-description>Quan Thanh Temple</td>
+						<td data-price-adult>0.50</td>
+						<td data-price-child>0.00</td>
+						<td data-qty-adults>7</td>
+						<td data-qty-children>1</td>
+						<td class="row-total" data-total></td>
+						<td data-note>Small fee</td>
+					</tr>
+					<tr data-category="Food">
+						<td data-date>2026-04-22</td>
+						<td data-category><span class="category-food">Food</span></td>
+						<td data-subcategory>Coffee</td>
+						<td data-country>🇻🇳 Vietnam</td>
+						<td data-city>Hanoi</td>
+						<td data-description>Egg Coffee - Cafe Giang</td>
+						<td data-price-adult>2.50</td>
+						<td data-price-child>1.50</td>
+						<td data-qty-adults>7</td>
+						<td data-qty-children>1</td>
+						<td class="row-total" data-total></td>
+						<td data-note>Must-try specialty</td>
+					</tr>
+					<tr data-category="Food">
+						<td data-date>2026-04-22</td>
+						<td data-category><span class="category-food">Food</span></td>
+						<td data-subcategory>Dinner</td>
+						<td data-country>🇻🇳 Vietnam</td>
+						<td data-city>Hanoi</td>
+						<td data-description>Cha Ca La Vong</td>
+						<td data-price-adult>13.00</td>
+						<td data-price-child>10.00</td>
+						<td data-qty-adults>7</td>
+						<td data-qty-children>1</td>
+						<td class="row-total" data-total></td>
+						<td data-note>Famous fish dish</td>
+					</tr>
+					
+					<!-- HANOI - DAY 13 (April 23) -->
+					<tr data-category="Activities">
+						<td data-date>2026-04-23</td>
+						<td data-category><span class="category-activity">Activity</span></td>
+						<td data-subcategory>Tour</td>
+						<td data-country>🇻🇳 Vietnam</td>
+						<td data-city>Hanoi</td>
+						<td data-description>Ninh Binh Day Trip</td>
+						<td data-price-adult>35.00</td>
+						<td data-price-child>30.00</td>
+						<td data-qty-adults>7</td>
+						<td data-qty-children>1</td>
+						<td class="row-total" data-total></td>
+						<td data-note>Tam Coc boat, temples</td>
+					</tr>
+					<tr data-category="Food">
+						<td data-date>2026-04-23</td>
+						<td data-category><span class="category-food">Food</span></td>
+						<td data-subcategory>Dinner</td>
+						<td data-country>🇻🇳 Vietnam</td>
+						<td data-city>Hanoi</td>
+						<td data-description>MAMMOM Restaurant</td>
+						<td data-price-adult>12.00</td>
+						<td data-price-child>10.00</td>
+						<td data-qty-adults>7</td>
+						<td data-qty-children>1</td>
+						<td class="row-total" data-total></td>
+						<td data-note>Authentic Vietnamese</td>
+					</tr>
+					
+					<!-- HANOI - DAY 14 (April 24) -->
+					<tr data-category="Transport">
 						<td data-date>2026-04-24</td>
-						<td data-category><span class="category-flight">Flight</span></td>
+						<td data-category><span class="category-transport">Transport</span></td>
+						<td data-subcategory>Airport Transfer</td>
+						<td data-country>🇻🇳 Vietnam</td>
+						<td data-city>Hanoi</td>
+						<td data-description>Taxi to airport</td>
+						<td data-price-adult>2.00</td>
+						<td data-price-child>0.00</td>
+						<td data-qty-adults>7</td>
+						<td data-qty-children>1</td>
+						<td class="row-total" data-total></td>
+						<td data-note>45 min</td>
+					</tr>
+					<tr data-category="Flights (all)">
+						<td data-date>2026-04-24</td>
+						<td data-category><span class="category-transport">Flight</span></td>
 						<td data-subcategory>International</td>
 						<td data-country>🇻🇳 Vietnam</td>
 						<td data-city>Hanoi</td>
 						<td data-description>Hanoi (HAN) - Luang Prabang (LPQ)</td>
-						<td data-price-adult>132.77</td>
-						<td data-price-child>104.17</td>
+						<td data-price-adult>135.00</td>
+						<td data-price-child>105.00</td>
 						<td data-qty-adults>7</td>
 						<td data-qty-children>1</td>
 						<td class="row-total" data-total></td>
-						<td data-note>Estimated, incl. luggage</td>
+						<td data-note>1h flight, book ahead</td>
+					</tr>
+					<tr data-category="Activities">
+						<td data-date>2026-04-24</td>
+						<td data-category><span class="category-activity">Activity</span></td>
+						<td data-subcategory>Visa</td>
+						<td data-country>🇱🇦 Laos</td>
+						<td data-city>Luang Prabang</td>
+						<td data-description>Visa on Arrival</td>
+						<td data-price-adult>37.00</td>
+						<td data-price-child>37.00</td>
+						<td data-qty-adults>6</td>
+						<td data-qty-children>1</td>
+						<td class="row-total" data-total></td>
+						<td data-note>USD cash + photo</td>
+					</tr>
+					<tr data-category="Transport">
+						<td data-date>2026-04-24</td>
+						<td data-category><span class="category-transport">Transport</span></td>
+						<td data-subcategory>Airport Transfer</td>
+						<td data-country>🇱🇦 Laos</td>
+						<td data-city>Luang Prabang</td>
+						<td data-description>Taxi to hotel</td>
+						<td data-price-adult>2.00</td>
+						<td data-price-child>0.00</td>
+						<td data-qty-adults>7</td>
+						<td data-qty-children>1</td>
+						<td class="row-total" data-total></td>
+						<td data-note>45 min</td>
+					</tr>
+					<tr data-category="Hotel">
+						<td data-date>2026-04-24</td>
+						<td data-category><span class="category-hotel">Hotel</span></td>
+						<td data-subcategory>Hotel</td>
+						<td data-country>🇱🇦 Laos</td>
+						<td data-city>Luang Prabang</td>
+						<td data-description>4 nights</td>
+						<td data-price-adult>80.00</td>
+						<td data-price-child>0.00</td>
+						<td data-qty-adults>4</td>
+						<td data-qty-children>0</td>
+						<td class="row-total" data-total></td>
+						<td data-note>Typical 3★–4★ rooms in central Luang Prabang can be ~40–80 € per night; larger family rooms or suites up to 90–120 €. Reviews and location matter to avoid lower-quality properties.</td>
+					</tr>
+					<tr data-category="Food">
+						<td data-date>2026-04-24</td>
+						<td data-category><span class="category-food">Food</span></td>
+						<td data-subcategory>Dinner</td>
+						<td data-country>🇱🇦 Laos</td>
+						<td data-city>Luang Prabang</td>
+						<td data-description>Tamarind Restaurant</td>
+						<td data-price-adult>12.00</td>
+						<td data-price-child>10.00</td>
+						<td data-qty-adults>7</td>
+						<td data-qty-children>1</td>
+						<td class="row-total" data-total></td>
+						<td data-note>Lao cuisine</td>
 					</tr>
 					
+					<!-- LUANG PRABANG - DAY 15 (April 25) -->
+					<tr data-category="Activities">
+						<td data-date>2026-04-25</td>
+						<td data-category><span class="category-activity">Activity</span></td>
+						<td data-subcategory>Entrance Fee</td>
+						<td data-country>🇱🇦 Laos</td>
+						<td data-city>Luang Prabang</td>
+						<td data-description>Wat Xieng Thong</td>
+						<td data-price-adult>3.00</td>
+						<td data-price-child>3.00</td>
+						<td data-qty-adults>7</td>
+						<td data-qty-children>1</td>
+						<td class="row-total" data-total></td>
+						<td data-note>Most beautiful temple</td>
+					</tr>
+					<tr data-category="Activities">
+						<td data-date>2026-04-25</td>
+						<td data-category><span class="category-activity">Activity</span></td>
+						<td data-subcategory>Entrance Fee</td>
+						<td data-country>🇱🇦 Laos</td>
+						<td data-city>Luang Prabang</td>
+						<td data-description>Royal Palace Museum</td>
+						<td data-price-adult>5.00</td>
+						<td data-price-child>5.00</td>
+						<td data-qty-adults>7</td>
+						<td data-qty-children>1</td>
+						<td class="row-total" data-total></td>
+						<td data-note>Former king's palace</td>
+					</tr>
+					<tr data-category="Activities">
+						<td data-date>2026-04-25</td>
+						<td data-category><span class="category-activity">Activity</span></td>
+						<td data-subcategory>Entrance Fee</td>
+						<td data-country>🇱🇦 Laos</td>
+						<td data-city>Luang Prabang</td>
+						<td data-description>Wat Mai</td>
+						<td data-price-adult>1.00</td>
+						<td data-price-child>1.00</td>
+						<td data-qty-adults>7</td>
+						<td data-qty-children>1</td>
+						<td class="row-total" data-total></td>
+						<td data-note>Golden temple</td>
+					</tr>
+					<tr data-category="Food">
+						<td data-date>2026-04-25</td>
+						<td data-category><span class="category-food">Food</span></td>
+						<td data-subcategory>Coffee</td>
+						<td data-country>🇱🇦 Laos</td>
+						<td data-city>Luang Prabang</td>
+						<td data-description>Saffron / Joma Cafe</td>
+						<td data-price-adult>3.00</td>
+						<td data-price-child>2.00</td>
+						<td data-qty-adults>7</td>
+						<td data-qty-children>1</td>
+						<td class="row-total" data-total></td>
+						<td data-note>Coffee break</td>
+					</tr>
+					<tr data-category="Food">
+						<td data-date>2026-04-25</td>
+						<td data-category><span class="category-food">Food</span></td>
+						<td data-subcategory>Lunch</td>
+						<td data-country>🇱🇦 Laos</td>
+						<td data-city>Luang Prabang</td>
+						<td data-description>Dyen Sabai Restaurant</td>
+						<td data-price-adult>10.00</td>
+						<td data-price-child>8.00</td>
+						<td data-qty-adults>7</td>
+						<td data-qty-children>1</td>
+						<td class="row-total" data-total></td>
+						<td data-note>Riverside</td>
+					</tr>
+					<tr data-category="Activities">
+						<td data-date>2026-04-25</td>
+						<td data-category><span class="category-activity">Activity</span></td>
+						<td data-subcategory>Workshop</td>
+						<td data-country>🇱🇦 Laos</td>
+						<td data-city>Luang Prabang</td>
+						<td data-description>Silver Ring Making</td>
+						<td data-price-adult>50.00</td>
+						<td data-price-child>40.00</td>
+						<td data-qty-adults>7</td>
+						<td data-qty-children>1</td>
+						<td class="row-total" data-total></td>
+						<td data-note>2-3h, materials included</td>
+					</tr>
+					<tr data-category="Food">
+						<td data-date>2026-04-25</td>
+						<td data-category><span class="category-food">Food</span></td>
+						<td data-subcategory>Dinner</td>
+						<td data-country>🇱🇦 Laos</td>
+						<td data-city>Luang Prabang</td>
+						<td data-description>Bamboo Tree / Khaiphaen</td>
+						<td data-price-adult>15.00</td>
+						<td data-price-child>12.00</td>
+						<td data-qty-adults>7</td>
+						<td data-qty-children>1</td>
+						<td class="row-total" data-total></td>
+						<td data-note>Lao fusion</td>
+					</tr>
+					
+					<!-- LUANG PRABANG - DAY 16 (April 26) -->
+					<tr data-category="Activities">
+						<td data-date>2026-04-26</td>
+						<td data-category><span class="category-activity">Activity</span></td>
+						<td data-subcategory>Tour</td>
+						<td data-country>🇱🇦 Laos</td>
+						<td data-city>Luang Prabang</td>
+						<td data-description>Kuang Si Waterfalls</td>
+						<td data-price-adult>15.00</td>
+						<td data-price-child>15.00</td>
+						<td data-qty-adults>7</td>
+						<td data-qty-children>1</td>
+						<td class="row-total" data-total></td>
+						<td data-note>Group tour or tuk-tuk</td>
+					</tr>
+					<tr data-category="Activities">
+						<td data-date>2026-04-26</td>
+						<td data-category><span class="category-activity">Activity</span></td>
+						<td data-subcategory>Entrance Fee</td>
+						<td data-country>🇱🇦 Laos</td>
+						<td data-city>Luang Prabang</td>
+						<td data-description>Bear Rescue Centre</td>
+						<td data-price-adult>0.00</td>
+						<td data-price-child>0.00</td>
+						<td data-qty-adults>7</td>
+						<td data-qty-children>1</td>
+						<td class="row-total" data-total></td>
+						<td data-note>Free, donations welcome</td>
+					</tr>
+					<tr data-category="Activities">
+						<td data-date>2026-04-26</td>
+						<td data-category><span class="category-activity">Activity</span></td>
+						<td data-subcategory>Entrance Fee</td>
+						<td data-country>🇱🇦 Laos</td>
+						<td data-city>Luang Prabang</td>
+						<td data-description>Kuang Si Waterfalls Entry</td>
+						<td data-price-adult>3.00</td>
+						<td data-price-child>3.00</td>
+						<td data-qty-adults>7</td>
+						<td data-qty-children>1</td>
+						<td class="row-total" data-total></td>
+						<td data-note>Entry fee</td>
+					</tr>
+					<tr data-category="Food">
+						<td data-date>2026-04-26</td>
+						<td data-category><span class="category-food">Food</span></td>
+						<td data-subcategory>Lunch</td>
+						<td data-country>🇱🇦 Laos</td>
+						<td data-city>Luang Prabang</td>
+						<td data-description>Packed lunch / At site</td>
+						<td data-price-adult>6.00</td>
+						<td data-price-child>5.00</td>
+						<td data-qty-adults>7</td>
+						<td data-qty-children>1</td>
+						<td class="row-total" data-total></td>
+						<td data-note>Basic options</td>
+					</tr>
+					<tr data-category="Food">
+						<td data-date>2026-04-26</td>
+						<td data-category><span class="category-food">Food</span></td>
+						<td data-subcategory>Dinner</td>
+						<td data-country>🇱🇦 Laos</td>
+						<td data-city>Luang Prabang</td>
+						<td data-description>Le Banneton / Coconut Garden</td>
+						<td data-price-adult>10.00</td>
+						<td data-price-child>8.00</td>
+						<td data-qty-adults>7</td>
+						<td data-qty-children>1</td>
+						<td class="row-total" data-total></td>
+						<td data-note>Casual</td>
+					</tr>
+					
+					<!-- LUANG PRABANG - DAY 17 (April 27) -->
+					<tr data-category="Activities">
+						<td data-date>2026-04-27</td>
+						<td data-category><span class="category-activity">Activity</span></td>
+						<td data-subcategory>Entrance Fee</td>
+						<td data-country>🇱🇦 Laos</td>
+						<td data-city>Luang Prabang</td>
+						<td data-description>Wat Visoun</td>
+						<td data-price-adult>1.00</td>
+						<td data-price-child>1.00</td>
+						<td data-qty-adults>7</td>
+						<td data-qty-children>1</td>
+						<td class="row-total" data-total></td>
+						<td data-note>Oldest temple</td>
+					</tr>
+					<tr data-category="Activities">
+						<td data-date>2026-04-27</td>
+						<td data-category><span class="category-activity">Activity</span></td>
+						<td data-subcategory>Entrance Fee</td>
+						<td data-country>🇱🇦 Laos</td>
+						<td data-city>Luang Prabang</td>
+						<td data-description>Wat Aham</td>
+						<td data-price-adult>1.00</td>
+						<td data-price-child>1.00</td>
+						<td data-qty-adults>7</td>
+						<td data-qty-children>1</td>
+						<td class="row-total" data-total></td>
+						<td data-note>Guardian spirits</td>
+					</tr>
+					<tr data-category="Activities">
+						<td data-date>2026-04-27</td>
+						<td data-category><span class="category-activity">Activity</span></td>
+						<td data-subcategory>Entrance Fee</td>
+						<td data-country>🇱🇦 Laos</td>
+						<td data-city>Luang Prabang</td>
+						<td data-description>Wat Sene</td>
+						<td data-price-adult>1.00</td>
+						<td data-price-child>1.00</td>
+						<td data-qty-adults>7</td>
+						<td data-qty-children>1</td>
+						<td class="row-total" data-total></td>
+						<td data-note>Golden temple</td>
+					</tr>
+					<tr data-category="Food">
+						<td data-date>2026-04-27</td>
+						<td data-category><span class="category-food">Food</span></td>
+						<td data-subcategory>Lunch</td>
+						<td data-country>🇱🇦 Laos</td>
+						<td data-city>Luang Prabang</td>
+						<td data-description>Tangor / 525 Kitchen</td>
+						<td data-price-adult>12.00</td>
+						<td data-price-child>10.00</td>
+						<td data-qty-adults>7</td>
+						<td data-qty-children>1</td>
+						<td class="row-total" data-total></td>
+						<td data-note>French-Lao fusion</td>
+					</tr>
+					<tr data-category="Activities">
+						<td data-date>2026-04-27</td>
+						<td data-category><span class="category-activity">Activity</span></td>
+						<td data-subcategory>Entrance Fee</td>
+						<td data-country>🇱🇦 Laos</td>
+						<td data-city>Luang Prabang</td>
+						<td data-description>Mount Phousi Sunset Climb</td>
+						<td data-price-adult>2.00</td>
+						<td data-price-child>2.00</td>
+						<td data-qty-adults>7</td>
+						<td data-qty-children>1</td>
+						<td class="row-total" data-total></td>
+						<td data-note>328 steps, panoramic views</td>
+					</tr>
+					<tr data-category="Food">
+						<td data-date>2026-04-27</td>
+						<td data-category><span class="category-food">Food</span></td>
+						<td data-subcategory>Dinner</td>
+						<td data-country>🇱🇦 Laos</td>
+						<td data-city>Luang Prabang</td>
+						<td data-description>Manda de Laos</td>
+						<td data-price-adult>25.00</td>
+						<td data-price-child>20.00</td>
+						<td data-qty-adults>7</td>
+						<td data-qty-children>1</td>
+						<td class="row-total" data-total></td>
+						<td data-note>Fine dining, book ahead</td>
+					</tr>
+					
+					<!-- LUANG PRABANG - DAY 18 (April 28) -->
+					<tr data-category="Activities">
+						<td data-date>2026-04-28</td>
+						<td data-category><span class="category-activity">Activity</span></td>
+						<td data-subcategory>Cultural</td>
+						<td data-country>🇱🇦 Laos</td>
+						<td data-city>Luang Prabang</td>
+						<td data-description>Alms Ceremony (optional)</td>
+						<td data-price-adult>5.00</td>
+						<td data-price-child>0.00</td>
+						<td data-qty-adults>7</td>
+						<td data-qty-children>1</td>
+						<td class="row-total" data-total></td>
+						<td data-note>Alms kit if participating</td>
+					</tr>
+					<tr data-category="Food">
+						<td data-date>2026-04-28</td>
+						<td data-category><span class="category-food">Food</span></td>
+						<td data-subcategory>Lunch</td>
+						<td data-country>🇱🇦 Laos</td>
+						<td data-city>Luang Prabang</td>
+						<td data-description>Le Calao / 525 Kitchen</td>
+						<td data-price-adult>12.00</td>
+						<td data-price-child>10.00</td>
+						<td data-qty-adults>7</td>
+						<td data-qty-children>1</td>
+						<td class="row-total" data-total></td>
+						<td data-note>Before departure</td>
+					</tr>
 					<tr data-category="Trains">
 						<td data-date>2026-04-28</td>
 						<td data-category><span class="category-train">Train</span></td>
@@ -199,64 +1582,280 @@
 						<td class="row-total" data-total></td>
 						<td data-note></td>
 					</tr>
-
-					<!-- Accommodation 
-					<tr data-category="Accommodation">
-						<td>2026-02-02</td>
-						<td>Accommodation</td>
-						<td>Hotel</td>
-						<td>Vietnam</td>
-						<td>Hanoi</td>
-						<td>Hotel 4 nights</td>
-						<td data-price-adult>120</td>
-						<td data-price-child>0</td>
-						<td data-qty-adults>2</td>
-						<td data-qty-children>1</td>
-						<td class="row-total"></td>
-						<td>Child free</td>
+					<tr data-category="Hotel">
+						<td data-date>2026-04-24</td>
+						<td data-category><span class="category-hotel">Hotel</span></td>
+						<td data-subcategory>Hotel</td>
+						<td data-country>🇱🇦 Laos</td>
+						<td data-city>Vientiane</td>
+						<td data-description>4 nights</td>
+						<td data-price-adult>80.00</td>
+						<td data-price-child>0.00</td>
+						<td data-qty-adults>4</td>
+						<td data-qty-children>0</td>
+						<td class="row-total" data-total></td>
+						<td data-note>Vientiane is capital city but still generally more affordable than western capitals. Decent 3★–4★ ~35–70 € per night for standard rooms; larger spaces ~70–110 €</td>
 					</tr>
-					<tr data-category="Meals">
-						<td>2026-02-03</td>
-						<td>Meals</td>
-						<td>Daily food</td>
-						<td>Vietnam</td>
-						<td>Hanoi</td>
-						<td>Food estimate per day</td>
-						<td data-price-adult>25</td>
-						<td data-price-child>15</td>
-						<td data-qty-adults>2</td>
+					<tr data-category="Food">
+						<td data-date>2026-04-28</td>
+						<td data-category><span class="category-food">Food</span></td>
+						<td data-subcategory>Dinner</td>
+						<td data-country>🇱🇦 Laos</td>
+						<td data-city>Vientiane</td>
+						<td data-description>Kualao / Makphet</td>
+						<td data-price-adult>12.00</td>
+						<td data-price-child>10.00</td>
+						<td data-qty-adults>7</td>
 						<td data-qty-children>1</td>
-						<td class="row-total"></td>
-						<td>Average estimate</td>
+						<td class="row-total" data-total></td>
+						<td data-note>Welcome dinner</td>
 					</tr>
-					<tr data-category="Activities & entrance fees">
-						<td>2026-02-04</td>
-						<td>Activities</td>
-						<td>Culture</td>
-						<td>Vietnam</td>
-						<td>Hanoi</td>
-						<td>Museum + temples</td>
-						<td data-price-adult>18</td>
-						<td data-price-child>10</td>
-						<td data-qty-adults>2</td>
+					
+					<!-- VIENTIANE - DAY 19 (April 29) -->
+					<tr data-category="Activities">
+						<td data-date>2026-04-29</td>
+						<td data-category><span class="category-activity">Activity</span></td>
+						<td data-subcategory>Entrance Fee</td>
+						<td data-country>🇱🇦 Laos</td>
+						<td data-city>Vientiane</td>
+						<td data-description>Pha That Luang</td>
+						<td data-price-adult>1.00</td>
+						<td data-price-child>1.00</td>
+						<td data-qty-adults>7</td>
 						<td data-qty-children>1</td>
-						<td class="row-total"></td>
-						<td>Child discount applied</td>
+						<td class="row-total" data-total></td>
+						<td data-note>National symbol</td>
 					</tr>
-					<tr data-category="Local transport">
-						<td>2026-02-05</td>
-						<td>Local transport</td>
-						<td>Taxi / Grab</td>
-						<td>Vietnam</td>
-						<td>Hanoi</td>
-						<td>Daily transport</td>
-						<td data-price-adult>10</td>
-						<td data-price-child>0</td>
-						<td data-qty-adults>2</td>
+					<tr data-category="Transport">
+						<td data-date>2026-04-29</td>
+						<td data-category><span class="category-transport">Transport</span></td>
+						<td data-subcategory>Taxi</td>
+						<td data-country>🇱🇦 Laos</td>
+						<td data-city>Vientiane</td>
+						<td data-description>Tuk-tuk to Pha That Luang</td>
+						<td data-price-adult>1.50</td>
+						<td data-price-child>0.00</td>
+						<td data-qty-adults>7</td>
 						<td data-qty-children>1</td>
-						<td class="row-total"></td>
-						<td>Estimate</td>
-					</tr> -->
+						<td class="row-total" data-total></td>
+						<td data-note>~10 min</td>
+					</tr>
+					<tr data-category="Activities">
+						<td data-date>2026-04-29</td>
+						<td data-category><span class="category-activity">Activity</span></td>
+						<td data-subcategory>Entrance Fee</td>
+						<td data-country>🇱🇦 Laos</td>
+						<td data-city>Vientiane</td>
+						<td data-description>Patuxai Monument</td>
+						<td data-price-adult>1.00</td>
+						<td data-price-child>1.00</td>
+						<td data-qty-adults>7</td>
+						<td data-qty-children>1</td>
+						<td class="row-total" data-total></td>
+						<td data-note>Climb for views</td>
+					</tr>
+					<tr data-category="Food">
+						<td data-date>2026-04-29</td>
+						<td data-category><span class="category-food">Food</span></td>
+						<td data-subcategory>Lunch</td>
+						<td data-country>🇱🇦 Laos</td>
+						<td data-city>Vientiane</td>
+						<td data-description>Khop Chai Deu</td>
+						<td data-price-adult>10.00</td>
+						<td data-price-child>8.00</td>
+						<td data-qty-adults>7</td>
+						<td data-qty-children>1</td>
+						<td class="row-total" data-total></td>
+						<td data-note>Lao-French</td>
+					</tr>
+					<tr data-category="Activities">
+						<td data-date>2026-04-29</td>
+						<td data-category><span class="category-activity">Activity</span></td>
+						<td data-subcategory>Entrance Fee</td>
+						<td data-country>🇱🇦 Laos</td>
+						<td data-city>Vientiane</td>
+						<td data-description>Wat Si Saket</td>
+						<td data-price-adult>1.00</td>
+						<td data-price-child>1.00</td>
+						<td data-qty-adults>7</td>
+						<td data-qty-children>1</td>
+						<td class="row-total" data-total></td>
+						<td data-note>Oldest temple</td>
+					</tr>
+					<tr data-category="Activities">
+						<td data-date>2026-04-29</td>
+						<td data-category><span class="category-activity">Activity</span></td>
+						<td data-subcategory>Entrance Fee</td>
+						<td data-country>🇱🇦 Laos</td>
+						<td data-city>Vientiane</td>
+						<td data-description>Wat Ho Phra Keo</td>
+						<td data-price-adult>1.00</td>
+						<td data-price-child>1.00</td>
+						<td data-qty-adults>7</td>
+						<td data-qty-children>1</td>
+						<td class="row-total" data-total></td>
+						<td data-note>Museum</td>
+					</tr>
+					<tr data-category="Activities">
+						<td data-date>2026-04-29</td>
+						<td data-category><span class="category-activity">Activity</span></td>
+						<td data-subcategory>Museum</td>
+						<td data-country>🇱🇦 Laos</td>
+						<td data-city>Vientiane</td>
+						<td data-description>COPE Visitor Centre</td>
+						<td data-price-adult>0.00</td>
+						<td data-price-child>0.00</td>
+						<td data-qty-adults>7</td>
+						<td data-qty-children>1</td>
+						<td class="row-total" data-total></td>
+						<td data-note>Free, donations welcome</td>
+					</tr>
+					<tr data-category="Food">
+						<td data-date>2026-04-29</td>
+						<td data-category><span class="category-food">Food</span></td>
+						<td data-subcategory>Dinner</td>
+						<td data-country>🇱🇦 Laos</td>
+						<td data-city>Vientiane</td>
+						<td data-description>Sticky Fingers / Lao Kitchen</td>
+						<td data-price-adult>12.00</td>
+						<td data-price-child>10.00</td>
+						<td data-qty-adults>7</td>
+						<td data-qty-children>1</td>
+						<td class="row-total" data-total></td>
+						<td data-note>Riverside</td>
+					</tr>
+					
+					<!-- VIENTIANE - DAY 20 (April 30) -->
+					<tr data-category="Activities">
+						<td data-date>2026-04-30</td>
+						<td data-category><span class="category-activity">Activity</span></td>
+						<td data-subcategory>Entrance Fee</td>
+						<td data-country>🇱🇦 Laos</td>
+						<td data-city>Vientiane</td>
+						<td data-description>Buddha Park</td>
+						<td data-price-adult>1.00</td>
+						<td data-price-child>1.00</td>
+						<td data-qty-adults>7</td>
+						<td data-qty-children>1</td>
+						<td class="row-total" data-total></td>
+						<td data-note>Quirky sculptures</td>
+					</tr>
+					<tr data-category="Transport">
+						<td data-date>2026-04-30</td>
+						<td data-category><span class="category-transport">Transport</span></td>
+						<td data-subcategory>Transfer</td>
+						<td data-country>🇱🇦 Laos</td>
+						<td data-city>Vientiane</td>
+						<td data-description>Tuk-tuk to Buddha Park</td>
+						<td data-price-adult>4.00</td>
+						<td data-price-child>0.00</td>
+						<td data-qty-adults>7</td>
+						<td data-qty-children>1</td>
+						<td class="row-total" data-total></td>
+						<td data-note>25km, round trip for group</td>
+					</tr>
+					<tr data-category="Food">
+						<td data-date>2026-04-30</td>
+						<td data-category><span class="category-food">Food</span></td>
+						<td data-subcategory>Lunch</td>
+						<td data-country>🇱🇦 Laos</td>
+						<td data-city>Vientiane</td>
+						<td data-description>Buddha Park restaurant or city</td>
+						<td data-price-adult>8.00</td>
+						<td data-price-child>6.00</td>
+						<td data-qty-adults>7</td>
+						<td data-qty-children>1</td>
+						<td class="row-total" data-total></td>
+						<td data-note>Basic options</td>
+					</tr>
+					<tr data-category="Food">
+						<td data-date>2026-04-30</td>
+						<td data-category><span class="category-food">Food</span></td>
+						<td data-subcategory>Dinner</td>
+						<td data-country>🇱🇦 Laos</td>
+						<td data-city>Vientiane</td>
+						<td data-description>Tamnak Lao / Ray's Grille</td>
+						<td data-price-adult>17.00</td>
+						<td data-price-child>14.00</td>
+						<td data-qty-adults>7</td>
+						<td data-qty-children>1</td>
+						<td class="row-total" data-total></td>
+						<td data-note>Upscale</td>
+					</tr>
+					
+					<!-- VIENTIANE - DAY 21 (May 1) -->
+					<tr data-category="Activities">
+						<td data-date>2026-05-01</td>
+						<td data-category><span class="category-activity">Activity</span></td>
+						<td data-subcategory>Shopping</td>
+						<td data-country>🇱🇦 Laos</td>
+						<td data-city>Vientiane</td>
+						<td data-description>Talat Sao Market</td>
+						<td data-price-adult>0.00</td>
+						<td data-price-child>0.00</td>
+						<td data-qty-adults>7</td>
+						<td data-qty-children>1</td>
+						<td class="row-total" data-total></td>
+						<td data-note>Free browsing</td>
+					</tr>
+					<tr data-category="Activities">
+						<td data-date>2026-05-01</td>
+						<td data-category><span class="category-activity">Activity</span></td>
+						<td data-subcategory>Museum</td>
+						<td data-country>🇱🇦 Laos</td>
+						<td data-city>Vientiane</td>
+						<td data-description>Lao Textile Museum (optional)</td>
+						<td data-price-adult>3.00</td>
+						<td data-price-child>2.00</td>
+						<td data-qty-adults>7</td>
+						<td data-qty-children>1</td>
+						<td class="row-total" data-total></td>
+						<td data-note>If interested</td>
+					</tr>
+					<tr data-category="Food">
+						<td data-date>2026-05-01</td>
+						<td data-category><span class="category-food">Food</span></td>
+						<td data-subcategory>Lunch</td>
+						<td data-country>🇱🇦 Laos</td>
+						<td data-city>Vientiane</td>
+						<td data-description>Kua Lao / Le Provencal</td>
+						<td data-price-adult>17.00</td>
+						<td data-price-child>14.00</td>
+						<td data-qty-adults>7</td>
+						<td data-qty-children>1</td>
+						<td class="row-total" data-total></td>
+						<td data-note>Farewell lunch</td>
+					</tr>
+					<tr data-category="Food">
+						<td data-date>2026-05-01</td>
+						<td data-category><span class="category-food">Food</span></td>
+						<td data-subcategory>Dinner</td>
+						<td data-country>🇱🇦 Laos</td>
+						<td data-city>Vientiane</td>
+						<td data-description>Spirit House / Makphet</td>
+						<td data-price-adult>25.00</td>
+						<td data-price-child>20.00</td>
+						<td data-qty-adults>7</td>
+						<td data-qty-children>1</td>
+						<td class="row-total" data-total></td>
+						<td data-note>Farewell dinner, splurge</td>
+					</tr>
+					
+					<!-- VIENTIANE - DAY 22 (May 2) - DEPARTURE -->
+					<tr data-category="Transport">
+						<td data-date>2026-05-02</td>
+						<td data-category><span class="category-transport">Transport</span></td>
+						<td data-subcategory>Airport Transfer</td>
+						<td data-country>🇱🇦 Laos</td>
+						<td data-city>Vientiane</td>
+						<td data-description>Taxi to airport</td>
+						<td data-price-adult>2.00</td>
+						<td data-price-child>0.00</td>
+						<td data-qty-adults>2</td>
+						<td data-qty-children>0</td>
+						<td class="row-total" data-total></td>
+						<td data-note>Stéphane & Françoise only</td>
+					</tr>
 
 				</tbody>
 			</table>
@@ -294,10 +1893,28 @@
     categoryTotals[category] = (categoryTotals[category] || 0) + total;
   });
 
+	// Color palette
+	const CATEGORY_COLORS = {
+		"Flights (all)": '#1565c0',     // darker blue
+		"Flights (🇫🇷)": '#1565c0',     // darker blue
+		"Flights (🇵🇭)": '#1565c0',     // darker blue
+		"Trains": '#2e7d32',      // green
+		"Transport": '#f57f17',  // amber
+		"Hotel": '#6a1b9a',      // purple
+		"Food": '#e65100',       // orange
+		"Activities": '#00695c'    // teal
+	};
+
   // Prepare data for ECharts
-  const chartData = Object.entries(categoryTotals).map(
-    ([name, value]) => ({ name, value })
-  );
+  const chartData = Object.entries(categoryTotals)
+  .map(([name, value]) => ({
+    name,
+    value,
+    itemStyle: {
+      color: CATEGORY_COLORS[name] || '#999'
+    }
+  }))
+  .sort((a, b) => a.name.localeCompare(b.name));
 
   // Init donut chart
   const chart = echarts.init(document.getElementById('budget-by-category'));
@@ -330,6 +1947,40 @@
     ]
   });
 
+})();
+
+(function () {
+  const table = document.getElementById('budget-table');
+  const tbody = table.querySelector('tbody');
+  const rows = tbody.querySelectorAll('tr');
+
+  let grandTotal = 0;
+
+  rows.forEach(row => {
+    const priceAdult = Number(row.querySelector('[data-price-adult]').textContent);
+    const priceChild = Number(row.querySelector('[data-price-child]').textContent);
+    const qtyAdults = Number(row.querySelector('[data-qty-adults]').textContent);
+    const qtyChildren = Number(row.querySelector('[data-qty-children]').textContent);
+
+    const rowTotal =
+      (priceAdult * qtyAdults) +
+      (priceChild * qtyChildren);
+
+    row.querySelector('[data-total]').textContent = rowTotal.toFixed(2);
+    grandTotal += rowTotal;
+  });
+
+  // Create total row
+  const totalRow = document.createElement('tr');
+  totalRow.classList.add('table-total-row');
+
+  totalRow.innerHTML = `
+    <td colspan="7"><strong>Total</strong></td>
+    <td class="table-grand-total"><strong>${grandTotal.toFixed(2)}</strong></td>
+    <td></td>
+  `;
+
+  tbody.appendChild(totalRow);
 })();
 </script>
 

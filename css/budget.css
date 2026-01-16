@@ -10,8 +10,8 @@
 }
 
 #budget-by-category {
-	width: 50%; 
-	max-width: 50%; 
+	width: 100%; 
+	max-width: 100%; 
 	height: 400px;
 }
 
@@ -131,44 +131,63 @@
 }
 
 .category-flight {
-	background: #e3f2fd;
-	color: #1565c0;
+  background: #e3f2fd; /* light blue */
+  color: #1565c0;      /* strong blue */
 }
 .category-flight:before {
-	content: "🛬 ";
+  content: "🛬 ";
 }
-
 .category-train {
-	background: #f3e5f5;
-	color: #6a1b9a;
+  background: #e8f5e9;
+  color: #2e7d32;
 }
 .category-train:before {
-	content: "🚆 ";
+  content: "🚆 ";
 }
-
-.category-taxi {
-	background: #f3e5cc;
-	color: #6a1bcc;
+.category-transport {
+  background: #fff8e1;
+  color: #f57f17;
 }
-.category-taxi:before {
-	content: "🚕 ";
+.category-transport:before {
+  content: "🚕 ";
 }
-
 .category-hotel {
-	background: #e8f5e9;
-	color: #2e7d32;
+  background: #f3e5f5;
+  color: #6a1b9a;
 }
 .category-hotel:before {
-	content: "🏨 ";
+  content: "🏨 ";
 }
-
+.category-food {
+  background: #fff3e0;
+  color: #e65100;
+}
+.category-food:before {
+  content: "🍜 ";
+}
 .category-activity {
-	background: #fff9e6;
-	color: #e76f51;
+  background: #e0f2f1;
+  color: #00695c;
 }
 .category-activity:before {
-	content: "🚶 ";
+  content: "🎟️ ";
 }
+
+.table-total-row {
+  border-top: 2px solid var(--color-border);
+  background: rgba(0, 0, 0, 0.04);
+}
+
+.table-total-row td {
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+}
+
+.table-grand-total {
+  text-align: right;
+  font-size: 1.05rem;
+}
+
 
 /* Responsive fallback (not mobile-first, just survivable) */
 @media (max-width: 900px) {
