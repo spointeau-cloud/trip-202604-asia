@@ -117,12 +117,12 @@ function calculateRowTotals() {
     const total = (priceAdult * adults) + (priceChild * children) + (priceNight * nights);
 
     const totalCell = row.querySelector('[data-total]');
-    totalCell.textContent = `${symbol}` + total.toFixed(2);
+    totalCell.textContent = total.toFixed(2);
     totalCell.dataset.eur = total;
 		
-		row.querySelector('[data-price-adult]').textContent = `${symbol}` + priceAdult.toFixed(2);
-		row.querySelector('[data-price-child]').textContent = `${symbol}` + priceChild.toFixed(2);
-		row.querySelector('[data-price-night]').textContent = `${symbol}` + priceNight.toFixed(2);
+		//row.querySelector('[data-price-adult]').textContent = `${symbol}` + priceAdult.toFixed(2);
+		//row.querySelector('[data-price-child]').textContent = `${symbol}` + priceChild.toFixed(2);
+		//row.querySelector('[data-price-night]').textContent = `${symbol}` + priceNight.toFixed(2);
     
     grandTotal += total;
 
