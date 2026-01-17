@@ -87,6 +87,9 @@ function normalizeEuroValues() {
 }
 
 function calculateRowTotals() {
+	// Get symbol
+	const symbol = getCurrencySymbol();
+	
   const tbody = document.querySelector('#budget-table tbody');
   const rows = tbody.querySelectorAll('tr[data-category]');
   const categoryTotals = {};
@@ -114,8 +117,12 @@ function calculateRowTotals() {
     const total = (priceAdult * adults) + (priceChild * children) + (priceNight * nights);
 
     const totalCell = row.querySelector('[data-total]');
-    totalCell.textContent = total.toFixed(2);
-    totalCell.dataset.eur = total; // Add this line
+    totalCell.textContent = `${symbol}` + total.toFixed(2);
+    totalCell.dataset.eur = total;
+		
+		row.querySelector('[data-price-adult]').textContent = `${symbol}` + priceAdult.toFixed(2);
+		row.querySelector('[data-price-child]').textContent = `${symbol}` + priceChild.toFixed(2);
+		row.querySelector('[data-price-night]').textContent = `${symbol}` + priceNight.toFixed(2);
     
     grandTotal += total;
 
@@ -133,7 +140,7 @@ function calculateRowTotals() {
   totalRow.classList.add('table-total-row');
   totalRow.innerHTML = `
     <td colspan="8"><strong>Total</strong></td>
-    <td class="table-grand-total" data-total-row data-eur="${grandTotal}">${grandTotal.toFixed(2)}</td>
+    <td class="table-grand-total" data-total-row data-eur="${grandTotal}">${symbol}${grandTotal.toFixed(2)}</td>
     <td></td>
   `;
   tbody.appendChild(totalRow);
@@ -142,27 +149,29 @@ function calculateRowTotals() {
 }
 
 function refreshTableCurrency() {
+	// Get symbol
+	const symbol = getCurrencySymbol();
+	
   // Update all EUR-based cells (price columns)
   document.querySelectorAll('[data-price-night], [data-price-adult], [data-price-child]').forEach(cell => {
     const eur = Number(cell.dataset.eur);
-    cell.textContent = format(eur);
+    cell.textContent = `${symbol}` + format(eur);
   });
 
   // Update row totals
   document.querySelectorAll('[data-total]').forEach(cell => {
     const eur = Number(cell.dataset.eur);
-    cell.textContent = format(eur);
+    cell.textContent = `${symbol}` + format(eur);
   });
 
   // Update grand total
   const grandTotalCell = document.querySelector('[data-total-row]');
   if (grandTotalCell) {
     const eur = Number(grandTotalCell.dataset.eur);
-    grandTotalCell.textContent = format(eur);
+    grandTotalCell.textContent = `${symbol}` + format(eur);
   }
 
   // Update column headers
-  const symbol = getCurrencySymbol();
   document.querySelector('[data-col-price-night]').textContent = `Price / Night (${symbol})`;
   document.querySelector('[data-col-price-adult]').textContent = `Price / Adult (${symbol})`;
   document.querySelector('[data-col-price-child]').textContent = `Price / Rafael (${symbol})`;
@@ -331,15 +340,17 @@ function updatePersonChart() {
       }
     },
     legend: {
-      top: isMobile ? 5 : 'bottom',
+      top: isMobile ? 'bottom' : 'bottom',
       type: isMobile ? 'scroll' : 'plain',
-      show: !isMobile // Hide legend on mobile, info available in tooltip
+			orient: isMobile ? 'horizontal' : 'horizontal',
+			left: isMobile ? 'center' : 'center',
+      //show: !isMobile // Hide legend on mobile, info available in tooltip
     },
     grid: {
-      left: isMobile ? '20%' : '3%',
-      right: isMobile ? '15%' : '3%',
+      left: isMobile ? '3%' : '3%',
+      right: isMobile ? '3%' : '3%',
       top: isMobile ? '3%' : '3%',
-      bottom: isMobile ? '3%' : '12%',
+      bottom: isMobile ? '12%' : '12%',
       containLabel: true
     },
     xAxis: {
