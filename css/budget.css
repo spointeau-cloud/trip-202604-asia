@@ -9,10 +9,13 @@
 	display: flex;
 }
 
-#budget-by-category {
+#budget-by-category, #budget-by-person {
 	width: 100%; 
-	max-width: 100%; 
+	min-width: 100%; 
 	height: 400px;
+}
+#budget-by-person {
+	display: none;
 }
 
 #budget-table {
@@ -93,16 +96,20 @@
 #budget-table td:nth-child(8),
 #budget-table td:nth-child(9),
 #budget-table td:nth-child(10),
-#budget-table td:nth-child(11) {
+#budget-table td:nth-child(11),
+#budget-table td:nth-child(12),
+#budget-table td:nth-child(13) {
   text-align: right;
   white-space: nowrap;
 }
 
 /* Hide some columns */
 #budget-table td:nth-child(3), #budget-table th:nth-child(3),
-#budget-table td:nth-child(9), #budget-table th:nth-child(9),
 #budget-table td:nth-child(10), #budget-table th:nth-child(10),
-#budget-table td:nth-child(12), #budget-table th:nth-child(12) {
+#budget-table td:nth-child(11), #budget-table th:nth-child(11),
+#budget-table td:nth-child(12), #budget-table th:nth-child(12),
+#budget-table td:nth-child(14), #budget-table th:nth-child(14),
+#budget-table td:nth-child(15), #budget-table th:nth-child(15) {
 	display: none;
 }
 
@@ -186,6 +193,7 @@
 .table-grand-total {
   text-align: right;
   font-size: 1.05rem;
+	font-weight: bold;
 }
 
 
