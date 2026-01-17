@@ -422,3 +422,66 @@ function init() {
 
 // Start when DOM is ready
 document.addEventListener('DOMContentLoaded', init);
+
+// =====================
+// MOBILE CARD ACCORDION
+// =====================
+
+function initMobileAccordion() {
+  if (window.innerWidth > 768) return;
+
+  const rows = document.querySelectorAll('#budget-table tbody tr[data-category]');
+  
+  rows.forEach(row => {
+    // Skip if already initialized
+    if (row.classList.contains('accordion-initialized')) return;
+    
+    row.classList.add('accordion-initialized');
+    row.classList.add('collapsed');
+    
+    row.addEventListener('click', function(e) {
+      // Don't toggle if clicking on a link
+      if (e.target.tagName === 'A') return;
+      
+      this.classList.toggle('collapsed');
+      this.classList.toggle('expanded');
+    });
+  });
+}
+
+// Call on load and resize
+function handleResize() {
+  Object.values(charts).forEach(chart => {
+    if (chart) chart.resize();
+  });
+  
+  if (charts.person) {
+    updatePersonChart();
+  }
+  
+  // Re-init accordion on resize
+  initMobileAccordion();
+}
+
+// Update init function
+function init() {
+  normalizeEuroValues();
+
+  const { categoryTotals } = calculateRowTotals();
+  prepareCategoryChartData(categoryTotals);
+  preparePersonChartData();
+
+  createCategoryChart();
+  createPersonChart();
+
+  document.getElementById('currency-selector').addEventListener('change', handleCurrencyChange);
+  document.getElementById('chart-selector').addEventListener('change', handleChartToggle);
+  window.addEventListener('resize', handleResize);
+
+  document.getElementById('budget-by-person').style.display = 'none';
+  
+  // Initialize mobile accordion
+  initMobileAccordion();
+}
+
+document.addEventListener('DOMContentLoaded', init);

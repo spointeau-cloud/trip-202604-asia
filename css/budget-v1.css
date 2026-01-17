@@ -1,0 +1,210 @@
+/* =========================
+   Budget table
+   ========================= */
+#budget-table-container {
+	overflow: auto;
+}
+
+#budget-graphs {
+	display: flex;
+}
+
+#budget-by-category, #budget-by-person {
+	width: 100%; 
+	min-width: 100%; 
+	height: 400px;
+}
+#budget-by-person {
+	display: none;
+}
+
+#budget-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1.5rem;
+  font-size: 0.9rem;
+  line-height: 1.4;
+}
+
+/* Header */
+#budget-table thead th {
+  position: sticky;
+  top: 0;
+  background-color: var(--color-primary);
+  color: #fff;
+  font-weight: 600;
+  text-align: left;
+  padding: 0.75rem 0.75rem;
+  border-bottom: 2px solid var(--color-border);
+  
+}
+
+/* Body cells */
+#budget-table tbody td {
+  padding: 0.65rem 0.75rem;
+  border-bottom: 1px solid var(--color-border);
+  vertical-align: top;
+}
+
+/* Zebra striping */
+#budget-table tbody tr:nth-child(even) {
+  background-color: rgba(0, 0, 0, 0.02);
+}
+
+/* Hover feedback (desktop only) */
+@media (hover: hover) {
+  #budget-table tbody tr:hover {
+    background-color: rgba(0, 0, 0, 0.04);
+  }
+}
+
+#budget-table td:nth-child(1), #budget-table th:nth-child(1) {
+	width: 10%;
+	min-width: 100px;
+}
+#budget-table td:nth-child(2), #budget-table th:nth-child(2) {
+	width: 10%;
+	min-width: 100px;
+}
+#budget-table td:nth-child(4), #budget-table th:nth-child(4) {
+	width: 10%;
+	min-width: 100px;
+}
+#budget-table td:nth-child(5), #budget-table th:nth-child(5) {
+	width: 10%;
+	min-width: 100px;
+}
+#budget-table td:nth-child(6), #budget-table th:nth-child(6) {
+	width: 30%;
+	min-width: 200px;
+}
+#budget-table td:nth-child(7), #budget-table th:nth-child(7) {
+	width: 10%;
+	min-width: 100px;
+}
+#budget-table td:nth-child(8), #budget-table th:nth-child(8) {
+	width: 10%;
+	min-width: 100px;
+}
+#budget-table td:nth-child(11), #budget-table th:nth-child(11) {
+	width: 10%;
+	min-width: 100px;
+}
+
+/* Numeric alignment */
+#budget-table td:nth-child(7),
+#budget-table td:nth-child(8),
+#budget-table td:nth-child(9),
+#budget-table td:nth-child(10),
+#budget-table td:nth-child(11),
+#budget-table td:nth-child(12),
+#budget-table td:nth-child(13) {
+  text-align: right;
+  white-space: nowrap;
+}
+
+/* Hide some columns */
+#budget-table td:nth-child(3), #budget-table th:nth-child(3),
+#budget-table td:nth-child(10), #budget-table th:nth-child(10),
+#budget-table td:nth-child(11), #budget-table th:nth-child(11),
+#budget-table td:nth-child(12), #budget-table th:nth-child(12),
+#budget-table td:nth-child(14), #budget-table th:nth-child(14),
+#budget-table td:nth-child(15), #budget-table th:nth-child(15) {
+	display: none;
+}
+
+/* Total column emphasis */
+#budget-table td.row-total {
+  font-weight: 600;
+}
+
+/* Notes column */
+#budget-table td:last-child {
+  font-size: 0.85rem;
+  color: var(--color-text-muted, #555);
+}
+
+/* Reduce visual noise for long tables */
+#budget-table tbody tr td:first-child {
+  white-space: nowrap;
+}
+
+#budget-table td:nth-child(2) span {
+	display: inline-block;
+	padding: 2px 5px;
+	border-radius: 15px;
+	font-weight: 500;
+	font-size: 0.75rem;
+}
+
+.category-flight {
+  background: #e3f2fd; /* light blue */
+  color: #1565c0;      /* strong blue */
+}
+.category-flight:before {
+  content: "🛬 ";
+}
+.category-train {
+  background: #e8f5e9;
+  color: #2e7d32;
+}
+.category-train:before {
+  content: "🚆 ";
+}
+.category-transport {
+  background: #fff8e1;
+  color: #f57f17;
+}
+.category-transport:before {
+  content: "🚕 ";
+}
+.category-hotel {
+  background: #f3e5f5;
+  color: #6a1b9a;
+}
+.category-hotel:before {
+  content: "🏨 ";
+}
+.category-food {
+  background: #fff3e0;
+  color: #e65100;
+}
+.category-food:before {
+  content: "🍜 ";
+}
+.category-activity {
+  background: #e0f2f1;
+  color: #00695c;
+}
+.category-activity:before {
+  content: "🎟️ ";
+}
+
+.table-total-row {
+  border-top: 2px solid var(--color-border);
+  background: rgba(0, 0, 0, 0.04);
+}
+
+.table-total-row td {
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+}
+
+.table-grand-total {
+  text-align: right;
+  font-size: 1.05rem;
+	font-weight: bold;
+}
+
+
+/* Responsive fallback (not mobile-first, just survivable) */
+@media (max-width: 900px) {
+  #budget-table {
+    font-size: 0.85rem;
+  }
+
+  #budget-table thead th,
+  #budget-table tbody td {
+    padding: 0.5rem;
+  }
+}
