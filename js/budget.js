@@ -215,6 +215,9 @@ function preparePersonChartData() {
     type: 'bar',
     stack: 'total',
     emphasis: { focus: 'series' },
+    itemStyle: {
+      color: CATEGORY_COLORS[category] || '#999' // Add color here
+    },
     data: Object.keys(PEOPLE).map(personId =>
       +(personTotals[personId][category] || 0).toFixed(2)
     )
@@ -290,6 +293,7 @@ function updateCategoryChart() {
 
 function updatePersonChart() {
   const symbol = getCurrencySymbol();
+  const isMobile = window.innerWidth < 768;
 
   // Convert series data to current currency
   const convertedSeries = personChartData.series.map((s, index) => ({
@@ -298,7 +302,7 @@ function updatePersonChart() {
     label: index === personChartData.series.length - 1
       ? {
           show: true,
-          position: 'top',
+          position: isMobile ? 'right' : 'top',
           formatter: params => {
             const total = convert(personChartData.totals[params.dataIndex]);
             return `${symbol}${total.toFixed(0)}`;
@@ -327,20 +331,30 @@ function updatePersonChart() {
       }
     },
     legend: {
-      bottom: 0
+      top: isMobile ? 5 : 'bottom',
+      type: isMobile ? 'scroll' : 'plain',
+      show: !isMobile // Hide legend on mobile, info available in tooltip
     },
     grid: {
-      left: '3%',
-      right: '3%',
-      bottom: '12%',
+      left: isMobile ? '20%' : '3%',
+      right: isMobile ? '15%' : '3%',
+      top: isMobile ? '3%' : '3%',
+      bottom: isMobile ? '3%' : '12%',
       containLabel: true
     },
     xAxis: {
-      type: 'category',
-      data: Object.keys(PEOPLE).map(id => PEOPLE[id].label)
+      type: isMobile ? 'value' : 'category',
+      data: isMobile ? undefined : Object.keys(PEOPLE).map(id => PEOPLE[id].label),
+      axisLabel: isMobile ? undefined : {
+        rotate: window.innerWidth < 480 ? 45 : 0 // Rotate on very small screens if vertical
+      }
     },
     yAxis: {
-      type: 'value'
+      type: isMobile ? 'category' : 'value',
+      data: isMobile ? Object.keys(PEOPLE).map(id => PEOPLE[id].label) : undefined,
+      axisLabel: {
+        fontSize: isMobile ? 11 : 12
+      }
     },
     series: convertedSeries
   });
@@ -373,6 +387,11 @@ function handleResize() {
   Object.values(charts).forEach(chart => {
     if (chart) chart.resize();
   });
+  
+  // Re-render person chart to adjust layout for new screen size
+  if (charts.person) {
+    updatePersonChart();
+  }
 }
 
 // =====================
