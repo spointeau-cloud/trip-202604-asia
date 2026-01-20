@@ -381,6 +381,11 @@ function handleCurrencyChange(e) {
   refreshTableCurrency();
   updateCategoryChart();
   updatePersonChart();
+  
+  // Refresh filtered totals
+  if (window.TableFilter) {
+    TableFilter.refreshTotals();
+  }
 }
 
 function handleChartToggle(e) {
@@ -493,6 +498,11 @@ function init() {
   
   // Initialize mobile accordion
   initMobileAccordion();
+	
+	// Initialize table filter
+	if (window.TableFilter) {
+		TableFilter.init();
+	}
 }
 
 document.addEventListener('DOMContentLoaded', init);

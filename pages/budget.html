@@ -58,6 +58,69 @@
 		<section id="budget-table-container" aria-labelledby="budget-table-title">
 			<h2 id="budget-table-title">Detailed expenses</h2>
 
+			<div id="filter-panel" class="collapsed">
+				<button id="toggle-filters" type="button">
+					<span class="toggle-icon">▼</span>
+					<span class="toggle-text">Show Filters</span>
+				</button>
+				<div class="filter-content">
+					<div class="filter-row">
+						<div class="filter-group filter-group-date">
+							<label for="filter-date-from">Date Range</label>
+							<div class="date-range-inputs">
+								<input type="date" id="filter-date-from" placeholder="From">
+								<span class="date-separator">to</span>
+								<input type="date" id="filter-date-to" placeholder="To">
+							</div>
+						</div>
+						<div class="filter-group">
+							<label for="filter-category">Category</label>
+							<select id="filter-category">
+								<option value="">All</option>
+							</select>
+						</div>
+						<div class="filter-group">
+							<label for="filter-country">Country</label>
+							<select id="filter-country">
+								<option value="">All</option>
+							</select>
+						</div>
+						<div class="filter-group">
+							<label for="filter-city">City</label>
+							<select id="filter-city">
+								<option value="">All</option>
+							</select>
+						</div>
+					</div>
+					<div class="filter-row">
+						<div class="filter-group">
+							<label for="filter-description">Description</label>
+							<input type="text" id="filter-description" placeholder="Search...">
+						</div>
+						<div class="filter-group">
+							<label for="filter-subcategory">Subcategory</label>
+							<select id="filter-subcategory">
+								<option value="">All</option>
+							</select>
+						</div>
+						<div class="filter-group">
+							<label for="filter-participant">Participant</label>
+							<select id="filter-participant">
+								<option value="">All</option>
+							</select>
+						</div>
+						<div class="filter-group">
+							<button id="reset-filters" type="button">Reset All</button>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div id="table-info">
+				<span id="showing-count"></span>
+				<div id="pagination-controls"></div>
+			</div>
+
 			<table id="budget-table">
 				<thead>
 					<tr>
@@ -86,7 +149,7 @@
 						<td data-subcategory>International</td>
 						<td data-country>🇫🇷 France</td>
 						<td data-city>Marseille</td>
-						<td data-description>Marseille (MRS) - Ho Chi Minh (SGN), Vientiane (VTE) - Marseille (MRS)</td>
+						<td data-description>Vietnam Airlines: Marseille (MRS) - Ho Chi Minh (SGN), Vientiane (VTE) - Marseille (MRS)</td>
 						<td data-price-night>0.00</td>
 						<td data-price-adult>1624.24</td>
 						<td data-price-child>0.00</td>
@@ -104,7 +167,7 @@
 						<td data-subcategory>International</td>
 						<td data-country>🇵🇭 Philippines</td>
 						<td data-city>Manila</td>
-						<td data-description>Manila (MNL) - Ho Chi Minh (SGN)</td>
+						<td data-description>Vietnam Airlines: Manila (MNL) - Ho Chi Minh (SGN)</td>
 						<td data-price-night>0.00</td>
 						<td data-price-adult>116.78</td>
 						<td data-price-child>92.78</td>
@@ -121,10 +184,10 @@
 						<td data-subcategory>Airport Transfer</td>
 						<td data-country>🇻🇳 Vietnam</td>
 						<td data-city>Ho Chi Minh</td>
-						<td data-description>Grab from airport to hotel</td>
+						<td data-description>Airport to hotel - 2 grab 6-seaters</td>
 						<td data-price-night>0.00</td>
-						<td data-price-adult>1.50</td>
-						<td data-price-child>0.00</td>
+						<td data-price-adult>1.25</td>
+						<td data-price-child>1.25</td>
 						<td data-qty-nights></td>
 						<td data-qty-adults></td>
 						<td data-qty-children></td>
@@ -138,8 +201,8 @@
 						<td data-subcategory>Hotel</td>
 						<td data-country>🇻🇳 Vietnam</td>
 						<td data-city>Ho Chi Minh</td>
-						<td data-description>ROOM 1 - <a href="https://www.sherwoodresidence.com/">Hotel Sherwood Residence</a> - 2 nights</td>
-						<td data-price-night>137.44</td>
+						<td data-description>ROOM 1 - <a href="https://www.booking.com/hotel/vn/sherwood-residence.html">Sherwood Residence *****</a> - Three-bedroom premier with balcony</td>
+						<td data-price-night>123.50</td>
 						<td data-price-adult>0.00</td>
 						<td data-price-child>0.00</td>
 						<td data-qty-nights>2</td>
@@ -155,8 +218,8 @@
 						<td data-subcategory>Hotel</td>
 						<td data-country>🇻🇳 Vietnam</td>
 						<td data-city>Ho Chi Minh</td>
-						<td data-description>ROOM 2 - <a href="https://www.sherwoodresidence.com/">Hotel Sherwood Residence</a> - 2 nights</td>
-						<td data-price-night>137.44</td>
+						<td data-description>ROOM 2 - <a href="https://www.booking.com/hotel/vn/sherwood-residence.html">Sherwood Residence *****</a> - Three-bedroom premier with balcony</td>
+						<td data-price-night>123.50</td>
 						<td data-price-adult>0.00</td>
 						<td data-price-child>0.00</td>
 						<td data-qty-nights>2</td>
@@ -164,6 +227,40 @@
 						<td data-qty-children></td>
 						<td class="row-total" data-total></td>
 						<td data-participants class="participants">rom,chr,vin,gab</td>
+						<td data-note></td>
+					</tr>
+					<tr data-category="Food">
+						<td data-date>2026-04-11</td>
+						<td data-category><span class="category-food">Food</span></td>
+						<td data-subcategory>Breakfast</td>
+						<td data-country>🇻🇳 Vietnam</td>
+						<td data-city>Ho Chi Minh</td>
+						<td data-description>Breakfast - ??</td>
+						<td data-price-night>0.00</td>
+						<td data-price-adult>5.00</td>
+						<td data-price-child>5.00</td>
+						<td data-qty-nights></td>
+						<td data-qty-adults></td>
+						<td data-qty-children></td>
+						<td class="row-total" data-total></td>
+						<td data-participants class="participants">ste,fra,car,raf,rom,chr,vin,gab</td>
+						<td data-note></td>
+					</tr>
+					<tr data-category="Food">
+						<td data-date>2026-04-11</td>
+						<td data-category><span class="category-food">Food</span></td>
+						<td data-subcategory>Lunch</td>
+						<td data-country>🇻🇳 Vietnam</td>
+						<td data-city>Ho Chi Minh</td>
+						<td data-description>Lunch - ??</td>
+						<td data-price-night>0.00</td>
+						<td data-price-adult>10.00</td>
+						<td data-price-child>8.00</td>
+						<td data-qty-nights></td>
+						<td data-qty-adults></td>
+						<td data-qty-children></td>
+						<td class="row-total" data-total></td>
+						<td data-participants class="participants">ste,fra,car,raf,rom,chr,vin,gab</td>
 						<td data-note></td>
 					</tr>
 					<tr data-category="Activities">
@@ -191,7 +288,7 @@
 						<td data-city>Ho Chi Minh</td>
 						<td data-description>Coffee break</td>
 						<td data-price-night>0.00</td>
-						<td data-price-adult>2.50</td>
+						<td data-price-adult>1.50</td>
 						<td data-price-child>1.50</td>
 						<td data-qty-nights></td>
 						<td data-qty-adults></td>
@@ -206,10 +303,10 @@
 						<td data-subcategory>Dinner</td>
 						<td data-country>🇻🇳 Vietnam</td>
 						<td data-city>Ho Chi Minh</td>
-						<td data-description>Nha Hang Ngon</td>
+						<td data-description><a href="https://www.nhahangngon.com.vn/ngon-saigon/">Nha Hang Ngon</a></td>
 						<td data-price-night>0.00</td>
-						<td data-price-adult>12.00</td>
-						<td data-price-child>10.00</td>
+						<td data-price-adult>10.00</td>
+						<td data-price-child>8.00</td>
 						<td data-qty-nights></td>
 						<td data-qty-adults></td>
 						<td data-qty-children></td>
@@ -448,8 +545,8 @@
 						<td data-subcategory>Hotel</td>
 						<td data-country>🇻🇳 Vietnam</td>
 						<td data-city>Da Nang</td>
-						<td data-description>ROOM 1 - <a href="https://www.booking.com/hotel/vn/halina-and-apartment.fr.html">Halina Hotel and Apartment</a> - Appartment 2 bedrooms - 3 nights</td>
-						<td data-price-night>65.00</td>
+						<td data-description>ROOM 1 - <a href="https://www.booking.com/hotel/vn/halina-and-apartment.html">Halina Hotel and Apartment</a> - Two-Bedroom Apartment - 3 nights</td>
+						<td data-price-night>64.33</td>
 						<td data-price-adult>0.00</td>
 						<td data-price-child>0.00</td>
 						<td data-qty-nights>3</td>
@@ -457,11 +554,7 @@
 						<td data-qty-children></td>
 						<td class="row-total" data-total></td>
 						<td data-participants class="participants">ste,fra,car,raf</td>
-						<td data-note>TMS Hotel Da Nang Beach – ~79 USD (~74 €)
-							Sala Danang Beach Hotel – ~71 USD (~67 €)
-							M Hotel Da Nang – ~95 USD (~89 €)
-							Meliá Danang Beach Resort – ~104 USD (~98 €)
-						</td>
+						<td data-note>Breakfast included</td>
 					</tr>
 					<tr data-category="Hotel">
 						<td data-date>2026-04-13</td>
@@ -469,16 +562,33 @@
 						<td data-subcategory>Hotel</td>
 						<td data-country>🇻🇳 Vietnam</td>
 						<td data-city>Da Nang</td>
-						<td data-description>ROOM 1 - <a href="https://www.booking.com/hotel/vn/halina-and-apartment.fr.html">Halina Hotel and Apartment</a> - Appartment 2 bedrooms - 3 nights</td>
-						<td data-price-night>65.00</td>
+						<td data-description>ROOM 2 - <a href="https://www.booking.com/hotel/vn/halina-and-apartment.html">Halina Hotel and Apartment</a> - Studio Apartment with City View - 3 nights</td>
+						<td data-price-night>30.33</td>
 						<td data-price-adult>0.00</td>
 						<td data-price-child>0.00</td>
 						<td data-qty-nights>3</td>
 						<td data-qty-adults></td>
 						<td data-qty-children></td>
 						<td class="row-total" data-total></td>
-						<td data-participants class="participants">rom,chr,vin,gab</td>
-						<td data-note></td>
+						<td data-participants class="participants">rom,chr</td>
+						<td data-note>Breakfast included</td>
+					</tr>
+					<tr data-category="Hotel">
+						<td data-date>2026-04-13</td>
+						<td data-category><span class="category-hotel">Hotel</span></td>
+						<td data-subcategory>Hotel</td>
+						<td data-country>🇻🇳 Vietnam</td>
+						<td data-city>Da Nang</td>
+						<td data-description>ROOM 3 - <a href="https://www.booking.com/hotel/vn/halina-and-apartment.html">Halina Hotel and Apartment</a> - Deluxe Twin Room with City View - 3 nights</td>
+						<td data-price-night>25.66</td>
+						<td data-price-adult>0.00</td>
+						<td data-price-child>0.00</td>
+						<td data-qty-nights>3</td>
+						<td data-qty-adults></td>
+						<td data-qty-children></td>
+						<td class="row-total" data-total></td>
+						<td data-participants class="participants">vin,gab</td>
+						<td data-note>Breakfast included</td>
 					</tr>
 					<tr data-category="Food">
 						<td data-date>2026-04-13</td>
@@ -730,8 +840,8 @@
 						<td data-subcategory>Hotel</td>
 						<td data-country>🇻🇳 Vietnam</td>
 						<td data-city>Hoi An</td>
-						<td data-description>ROOM 1 - <a href="https://www.booking.com/hotel/vn/khong-cam-garden-villas.fr.html">Khong Cam Garden Villas</a> - several options - 3 nights</td>
-						<td data-price-night>65.00</td>
+						<td data-description>ROOM 1 - <a href="https://www.booking.com/hotel/vn/khong-cam-garden-villas.html">Khong Cam Garden Villas ***</a> - Deluxe Connecting Rooms - 3 nights</td>
+						<td data-price-night>57.00</td>
 						<td data-price-adult>0.00</td>
 						<td data-price-child>0.00</td>
 						<td data-qty-nights>3</td>
@@ -739,11 +849,7 @@
 						<td data-qty-children></td>
 						<td class="row-total" data-total></td>
 						<td data-participants class="participants">ste,fra,car,raf</td>
-						<td data-note>Hoi An Historic Hotel – ~58 USD (~55 €)
-							Old Town Hotel – ~40 USD (~37 €)
-							Hoianese Quiet Old Town Hotel – ~47 USD (~44 €)
-							Allegro Hoi An Hotel & Spa – ~95 USD (~89 €)
-						</td>
+						<td data-note>Breakfast included</td>
 					</tr>
 					<tr data-category="Hotel">
 						<td data-date>2026-04-16</td>
@@ -751,8 +857,8 @@
 						<td data-subcategory>Hotel</td>
 						<td data-country>🇻🇳 Vietnam</td>
 						<td data-city>Hoi An</td>
-						<td data-description>ROOM 2 - <a href="https://www.booking.com/hotel/vn/khong-cam-garden-villas.fr.html">Khong Cam Garden Villas</a> - several options - 3 nights</td>
-						<td data-price-night>75.00</td>
+						<td data-description>ROOM 2 - <a href="https://www.booking.com/hotel/vn/khong-cam-garden-villas.html">Khong Cam Garden Villas ***</a> - Suite Connecting Rooms Family with Balcony - 3 nights</td>
+						<td data-price-night>62.33</td>
 						<td data-price-adult>0.00</td>
 						<td data-price-child>0.00</td>
 						<td data-qty-nights>3</td>
@@ -760,7 +866,7 @@
 						<td data-qty-children></td>
 						<td class="row-total" data-total></td>
 						<td data-participants class="participants">rom,chr,vin,gab</td>
-						<td data-note></td>
+						<td data-note>Breakfast included</td>
 					</tr>
 					<tr data-category="Activities">
 						<td data-date>2026-04-16</td>
@@ -1097,8 +1203,8 @@
 						<td data-subcategory>Hotel</td>
 						<td data-country>🇻🇳 Vietnam</td>
 						<td data-city>Hanoi</td>
-						<td data-description>ROOM 1 - 5 nights</td>
-						<td data-price-night>100.00</td>
+						<td data-description>ROOM 1 - <a href="https://www.booking.com/hotel/vn/golden-cyclo.html">San Premium Hotel ****</a> - Family Connecting Room - 5 nights</td>
+						<td data-price-night>85.40</td>
 						<td data-price-adult>0.00</td>
 						<td data-price-child>0.00</td>
 						<td data-qty-nights>5</td>
@@ -1106,7 +1212,7 @@
 						<td data-qty-children></td>
 						<td class="row-total" data-total></td>
 						<td data-participants class="participants">ste,fra,car,raf</td>
-						<td data-note>Comfortable family rooms or larger spaces can be ~80–130 €/night per room in central locations</td>
+						<td data-note></td>
 					</tr>
 					<tr data-category="Hotel">
 						<td data-date>2026-04-19</td>
@@ -1114,8 +1220,8 @@
 						<td data-subcategory>Hotel</td>
 						<td data-country>🇻🇳 Vietnam</td>
 						<td data-city>Hanoi</td>
-						<td data-description>ROOM 2 - 5 nights</td>
-						<td data-price-night>100.00</td>
+						<td data-description>ROOM 2 - <a href="https://www.booking.com/hotel/vn/golden-cyclo.html">San Premium Hotel ****</a> - Family Connecting Room - 5 nights</td>
+						<td data-price-night>85.40</td>
 						<td data-price-adult>0.00</td>
 						<td data-price-child>0.00</td>
 						<td data-qty-nights>5</td>
@@ -1583,8 +1689,8 @@
 						<td data-subcategory>Hotel</td>
 						<td data-country>🇱🇦 Laos</td>
 						<td data-city>Luang Prabang</td>
-						<td data-description>ROOM 1 - 4 nights</td>
-						<td data-price-night>80.00</td>
+						<td data-description>ROOM 1 - <a href="https://www.booking.com/hotel/la/villa-namnuea.html">Villa Oasis ****</a> - Two-Bedroom Bungalow - 4 nights</td>
+						<td data-price-night>72.00</td>
 						<td data-price-adult>0.00</td>
 						<td data-price-child>0.00</td>
 						<td data-qty-nights>4</td>
@@ -1592,7 +1698,7 @@
 						<td data-qty-children></td>
 						<td class="row-total" data-total></td>
 						<td data-participants class="participants">ste,fra,car,raf</td>
-						<td data-note>Typical 3★–4★ rooms in central Luang Prabang can be ~40–80 € per night; larger family rooms or suites up to 90–120 €. Reviews and location matter to avoid lower-quality properties.</td>
+						<td data-note></td>
 					</tr>
 					<tr data-category="Hotel">
 						<td data-date>2026-04-24</td>
@@ -1600,8 +1706,8 @@
 						<td data-subcategory>Hotel</td>
 						<td data-country>🇱🇦 Laos</td>
 						<td data-city>Luang Prabang</td>
-						<td data-description>ROOM 2 - 4 nights</td>
-						<td data-price-night>80.00</td>
+						<td data-description>ROOM 2 - <a href="https://www.booking.com/hotel/la/villa-namnuea.html">Villa Oasis ****</a> - Two-Bedroom Bungalow - 4 nights</td>
+						<td data-price-night>72.00</td>
 						<td data-price-adult>0.00</td>
 						<td data-price-child>0.00</td>
 						<td data-qty-nights>4</td>
@@ -2353,6 +2459,7 @@
     <p>© 2026 – Asia Trip Planning</p>
   </footer>
 
+	<script src="../js/table-filter.js"></script>
 	<script src="../js/budget.js"></script>
 </body>
 </html>
