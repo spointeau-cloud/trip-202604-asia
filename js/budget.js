@@ -10,7 +10,9 @@ const PEOPLE = {
   "rom": { label: 'Rommel', type: 'Adult', sex: 'Male', country: 'Philippines' },
   "chr": { label: 'Chris', type: 'Adult', sex: 'Female', country: 'Philippines' },
   "vin": { label: 'Vincent', type: 'Adult', sex: 'Male', country: 'Philippines' },
-  "gab": { label: 'Gabriel', type: 'Adult', sex: 'Male', country: 'Philippines' }
+  "gab": { label: 'Gabriel', type: 'Adult', sex: 'Male', country: 'Philippines' },
+	"pj":  { label: 'Paul John', type: 'Adult', sex: 'Male', country: 'Philippines' },
+	"pri": { label: 'Priyanka', type: 'Adult', sex: 'Female', country: 'Philippines' }
 };
 
 const CATEGORY_COLORS = {
