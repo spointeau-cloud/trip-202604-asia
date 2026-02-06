@@ -5,11 +5,10 @@ The website is intended for non-technical users and focuses on clarity,
 accessibility, and ease of use across devices and countries.
 
 ## Trip Overview
-- **Dates:** April 10 – May 2, 2026
+- **Dates:** April 10 – May 3, 2026
 - **Countries:**
-  - Vietnam (Hanoi, Da Nang, Hoi An)
-  - Thailand (Bangkok, Ayutthaya)
-  - Laos (Vientiane, Luang Prabang)
+  - Vietnam (Ho Chi Minh, Da Nang, Hoi An, Hanoi)
+  - Laos (Luang Prabang, Vientiane)
 - **Participants:** Family members traveling from France and the Philippines
 
 ## Website Purpose
@@ -37,11 +36,21 @@ The website is hosted using **GitHub Pages** and is publicly accessible.
 ## Project Structure
 index.html
 css/
+  budget.css
+  itinerary.css
   style.css
 js/
+  budget.js
   main.js
+  table-filter.js
 images/
 data/
+pages/
+  budget.html
+  destinations.html
+  food.html
+  itinerary.html
+  practical-info.html
 README.md
 
 ## Development Principles
