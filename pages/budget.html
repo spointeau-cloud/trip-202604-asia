@@ -110,6 +110,12 @@
 							</select>
 						</div>
 						<div class="filter-group">
+							<label for="filter-note">Status</label>
+							<select id="filter-note">
+								<option value="">All</option>
+							</select>
+						</div>
+						<div class="filter-group">
 							<button id="reset-filters" type="button">Reset All</button>
 						</div>
 					</div>
@@ -132,7 +138,7 @@
 						<th data-col-description>Description</th>
 						<th data-col-price-night>Price / Night (€)</th>
 						<th data-col-price-adult>Price / Adult (€)</th>
-						<th data-col-price-child>Price / Rafael (€)</th>
+						<th data-col-price-child>Price / Child (€)</th>
 						<th data-col-nb-night>Nights</th>
 						<th data-col-nb-adult>Adults</th>
 						<th data-col-nb-child>Children</th>
@@ -141,41 +147,16 @@
 					</tr>
 				</thead>
 
-				<!-- Rows are grouped by date, then to make it easier they are ordered as follow when any:
-							- Flights
-							- Trains
-							- Transport
-							- Hotel
-							- Food: breakfast, lunch, snack, dinner
-							- Activities
-							- Others: Visa, SIM card, shopping
-				-->
+				<!-- Rows are ordered by date & time -->
 				<tbody>
 					<!-- MARSEILLE - DAY 0 (April 10) -->
-					<tr data-category="Flights (🇫🇷)">
-						<td data-date>2026-04-10</td>
-						<td data-category><span class="category-flight">Flight</span></td>
-						<td data-subcategory>Flight (International)</td>
-						<td data-country>🇫🇷 France</td>
-						<td data-city>Marseille</td>
-						<td data-description>✔️ Marseille (MRS) - Ho Chi Minh (SGN), Vientiane (VTE) - Marseille (MRS)</td>
-						<td data-price-night>0.00</td>
-						<td data-price-adult>1624.24</td>
-						<td data-price-child>0.00</td>
-						<td data-qty-nights></td>
-						<td data-qty-adults></td>
-						<td data-qty-children></td>
-						<td class="row-total" data-total></td>
-						<td data-participants class="participants">ste,fra</td>
-						<td data-note>Paid - Premium Economy</td>
-					</tr>
 					<tr data-category="Transport">
 						<td data-date>2026-04-10</td>
 						<td data-category><span class="category-transport">Transport</span></td>
 						<td data-subcategory>Car</td>
 						<td data-country>🇫🇷 France</td>
 						<td data-city>Cavaillon</td>
-						<td data-description>Cavaillon - Marseille (MRS) by car (toll + gas)</td>
+						<td data-description>03:00 - Cavaillon - Marseille (MRS) by car</td>
 						<td data-price-night>0.00</td>
 						<td data-price-adult>5.00</td>
 						<td data-price-child>0.00</td>
@@ -184,15 +165,15 @@
 						<td data-qty-children></td>
 						<td class="row-total" data-total></td>
 						<td data-participants class="participants">ste,fra</td>
-						<td data-note>Toll + Gas</td>
+						<td data-note></td>
 					</tr>
-                    <tr data-category="Transport">
+					<tr data-category="Transport">
 						<td data-date>2026-04-10</td>
 						<td data-category><span class="category-transport">Transport</span></td>
 						<td data-subcategory>Parking</td>
 						<td data-country>🇫🇷 France</td>
 						<td data-city>Marseille</td>
-						<td data-description>Parking P8 (book in advance)</td>
+						<td data-description>04:00 - ✔️ Parking P8</td>
 						<td data-price-night>0.00</td>
 						<td data-price-adult>78.75</td>
 						<td data-price-child>0.00</td>
@@ -201,7 +182,24 @@
 						<td data-qty-children></td>
 						<td class="row-total" data-total></td>
 						<td data-participants class="participants">ste,fra</td>
-						<td data-note>Toll + Gas</td>
+						<td data-note>Paid</td>
+					</tr>
+					<tr data-category="Flights (🇫🇷)">
+						<td data-date>2026-04-10</td>
+						<td data-category><span class="category-flight">Flight</span></td>
+						<td data-subcategory>Flight (International)</td>
+						<td data-country>🇫🇷 France</td>
+						<td data-city>Marseille</td>
+						<td data-description>06:00 - ✔️ Marseille (MRS) - Ho Chi Minh (SGN)</td>
+						<td data-price-night>0.00</td>
+						<td data-price-adult>1624.24</td>
+						<td data-price-child>0.00</td>
+						<td data-qty-nights></td>
+						<td data-qty-adults></td>
+						<td data-qty-children></td>
+						<td class="row-total" data-total></td>
+						<td data-participants class="participants">ste,fra</td>
+						<td data-note>Paid</td>
 					</tr>
 					
 					<!-- HO CHI MINH CITY - DAY 1 (April 11) -->
@@ -211,16 +209,33 @@
 						<td data-subcategory>Flight (International)</td>
 						<td data-country>🇵🇭 Philippines</td>
 						<td data-city>Manila</td>
-						<td data-description>Vietnam Airlines: Manila (MNL) - Ho Chi Minh (SGN)</td>
+						<td data-description>04:05 - Manila (MNL) - Ho Chi Minh (SGN)</td>
 						<td data-price-night>0.00</td>
-						<td data-price-adult>116.78</td>
-						<td data-price-child>92.78</td>
+						<td data-price-adult>146.66</td>
+						<td data-price-child>114.66</td>
 						<td data-qty-nights></td>
 						<td data-qty-adults></td>
 						<td data-qty-children></td>
 						<td class="row-total" data-total></td>
 						<td data-participants class="participants">car,raf</td>
-						<td data-note>Price checked on 17/01. Vietnam Airlines website.</td>
+						<td data-note></td>
+					</tr>
+					<tr data-category="Others">
+						<td data-date>2026-04-11</td>
+						<td data-category><span class="category-activity">Others</span></td>
+						<td data-subcategory>SIM card</td>
+						<td data-country>🇻🇳 Vietnam</td>
+						<td data-city>Ho Chi Minh</td>
+						<td data-description>07:00 - SIM card for Vietnam (14d.)</td>
+						<td data-price-night>0.00</td>
+						<td data-price-adult>8.50</td>
+						<td data-price-child>0.00</td>
+						<td data-qty-nights></td>
+						<td data-qty-adults></td>
+						<td data-qty-children></td>
+						<td class="row-total" data-total></td>
+						<td data-participants class="participants">ste,fra,car</td>
+						<td data-note></td>
 					</tr>
 					<tr data-category="Transport">
 						<td data-date>2026-04-11</td>
@@ -228,28 +243,11 @@
 						<td data-subcategory>Taxi</td>
 						<td data-country>🇻🇳 Vietnam</td>
 						<td data-city>Ho Chi Minh</td>
-						<td data-description>Airport to hotel - 2 grab 6-seaters</td>
+						<td data-description>08:00 - Airport to hotel - grab 6-seaters (<150000VND)</td>
 						<td data-price-night>0.00</td>
 						<td data-price-adult>1.25</td>
 						<td data-price-child>1.25</td>
 						<td data-qty-nights></td>
-						<td data-qty-adults></td>
-						<td data-qty-children></td>
-						<td class="row-total" data-total></td>
-						<td data-participants class="participants">ste,fra,car,raf,rom,chr,vin,gab</td>
-						<td data-note>150000VND for a 6-seats. We'll need two cars because of luggages.</td>
-					</tr>
-					<tr data-category="Hotel">
-						<td data-date>2026-04-11</td>
-						<td data-category><span class="category-hotel">Hotel</span></td>
-						<td data-subcategory>Hotel</td>
-						<td data-country>🇻🇳 Vietnam</td>
-						<td data-city>Ho Chi Minh</td>
-						<td data-description>✔️ ROOM 1 - <a href="https://www.booking.com/hotel/vn/sherwood-residence.html">Sherwood Residence *****</a> - Three-bedroom premier with balcony</td>
-						<td data-price-night>132.50</td>
-						<td data-price-adult>0.00</td>
-						<td data-price-child>0.00</td>
-						<td data-qty-nights>2</td>
 						<td data-qty-adults></td>
 						<td data-qty-children></td>
 						<td class="row-total" data-total></td>
@@ -262,38 +260,21 @@
 						<td data-subcategory>Hotel</td>
 						<td data-country>🇻🇳 Vietnam</td>
 						<td data-city>Ho Chi Minh</td>
-						<td data-description>ROOM 2 - <a href="https://www.booking.com/hotel/vn/sherwood-residence.html">Nicecy Hotel - Trương Quyền ***</a> - Superior Queen Room</td>
-						<td data-price-night>29.00</td>
+						<td data-description>09:00 - ✔️ ROOM 1 - <a href="https://www.booking.com/hotel/vn/sherwood-residence.html">Sherwood Residence *****</a> - Three-bedroom premier with balcony</td>
+						<td data-price-night>132.50</td>
 						<td data-price-adult>0.00</td>
 						<td data-price-child>0.00</td>
 						<td data-qty-nights>2</td>
 						<td data-qty-adults></td>
 						<td data-qty-children></td>
 						<td class="row-total" data-total></td>
-						<td data-participants class="participants">rom,chr</td>
-						<td data-note></td>
-					</tr>
-					<tr data-category="Hotel">
-						<td data-date>2026-04-11</td>
-						<td data-category><span class="category-hotel">Hotel</span></td>
-						<td data-subcategory>Hotel</td>
-						<td data-country>🇻🇳 Vietnam</td>
-						<td data-city>Ho Chi Minh</td>
-						<td data-description>ROOM 3 - <a href="https://www.booking.com/hotel/vn/sherwood-residence.html">Nicecy Hotel - Trương Quyền ***</a> - Superior Queen Room</td>
-						<td data-price-night>29.00</td>
-						<td data-price-adult>0.00</td>
-						<td data-price-child>0.00</td>
-						<td data-qty-nights>2</td>
-						<td data-qty-adults></td>
-						<td data-qty-children></td>
-						<td class="row-total" data-total></td>
-						<td data-participants class="participants">vin,gab</td>
-						<td data-note></td>
+						<td data-participants class="participants">ste,fra,car,raf</td>
+						<td data-note>Booked</td>
 					</tr>
 					<tr data-category="Food">
 						<td data-date>2026-04-11</td>
 						<td data-category><span class="category-food">Food</span></td>
-						<td data-subcategory>Food (Breakfast)</td>
+						<td data-subcategory>10:00 - Food (Breakfast)</td>
 						<td data-country>🇻🇳 Vietnam</td>
 						<td data-city>Ho Chi Minh</td>
 						<td data-description>Breakfast - ??</td>
@@ -304,13 +285,13 @@
 						<td data-qty-adults></td>
 						<td data-qty-children></td>
 						<td class="row-total" data-total></td>
-						<td data-participants class="participants">ste,fra,car,raf,rom,chr,vin,gab</td>
+						<td data-participants class="participants">ste,fra,car,raf</td>
 						<td data-note></td>
 					</tr>
 					<tr data-category="Food">
 						<td data-date>2026-04-11</td>
 						<td data-category><span class="category-food">Food</span></td>
-						<td data-subcategory>Food (Lunch)</td>
+						<td data-subcategory>12:30 - Food (Lunch)</td>
 						<td data-country>🇻🇳 Vietnam</td>
 						<td data-city>Ho Chi Minh</td>
 						<td data-description>Lunch - ??</td>
@@ -321,7 +302,24 @@
 						<td data-qty-adults></td>
 						<td data-qty-children></td>
 						<td class="row-total" data-total></td>
-						<td data-participants class="participants">ste,fra,car,raf,rom,chr,vin,gab</td>
+						<td data-participants class="participants">ste,fra,car,raf</td>
+						<td data-note></td>
+					</tr>
+					<tr data-category="Activities">
+						<td data-date>2026-04-11</td>
+						<td data-category><span class="category-activity">Activity</span></td>
+						<td data-subcategory>Visit (Walk)</td>
+						<td data-country>🇻🇳 Vietnam</td>
+						<td data-city>Ho Chi Minh</td>
+						<td data-description>14:00 - Colonial Quarter Walking Tour: Notre-Dame Cathedral, Central Post Office, Book Street, Opera, Nguyen Hue Street, Ben Thanh Market</td>
+						<td data-price-night>0.00</td>
+						<td data-price-adult>0.00</td>
+						<td data-price-child>0.00</td>
+						<td data-qty-nights></td>
+						<td data-qty-adults></td>
+						<td data-qty-children></td>
+						<td class="row-total" data-total></td>
+						<td data-participants class="participants">ste,fra,car,raf</td>
 						<td data-note></td>
 					</tr>
 					<tr data-category="Food">
@@ -330,7 +328,7 @@
 						<td data-subcategory>Food (Snack)</td>
 						<td data-country>🇻🇳 Vietnam</td>
 						<td data-city>Ho Chi Minh</td>
-						<td data-description>Coffee break - <a href="https://www.vietnamcoracle.com/the-cafe-apartment-on-saigons-walking-street/">The Cafe Apartment</a></td>
+						<td data-description>16:00 - Coffee break - <a href="https://www.vietnamcoracle.com/the-cafe-apartment-on-saigons-walking-street/">The Cafe Apartment</a></td>
 						<td data-price-night>0.00</td>
 						<td data-price-adult>1.50</td>
 						<td data-price-child>1.50</td>
@@ -338,13 +336,13 @@
 						<td data-qty-adults></td>
 						<td data-qty-children></td>
 						<td class="row-total" data-total></td>
-						<td data-participants class="participants">ste,fra,car,raf,rom,chr,vin,gab</td>
+						<td data-participants class="participants">ste,fra,car,raf</td>
 						<td data-note></td>
 					</tr>
 					<tr data-category="Food">
 						<td data-date>2026-04-11</td>
 						<td data-category><span class="category-food">Food</span></td>
-						<td data-subcategory>Food (Dinner)</td>
+						<td data-subcategory>19:00 - Food (Dinner)</td>
 						<td data-country>🇻🇳 Vietnam</td>
 						<td data-city>Ho Chi Minh</td>
 						<td data-description>Dinner - <a href="https://www.nhahangngon.com.vn/ngon-saigon/">Nha Hang Ngon</a></td>
@@ -355,42 +353,8 @@
 						<td data-qty-adults></td>
 						<td data-qty-children></td>
 						<td class="row-total" data-total></td>
-						<td data-participants class="participants">ste,fra,car,raf,rom,chr,vin,gab</td>
-						<td data-note>Garden restaurant</td>
-					</tr>
-					<tr data-category="Activities">
-						<td data-date>2026-04-11</td>
-						<td data-category><span class="category-activity">Activity</span></td>
-						<td data-subcategory>Visit (Walk)</td>
-						<td data-country>🇻🇳 Vietnam</td>
-						<td data-city>Ho Chi Minh</td>
-						<td data-description>Colonial Quarter Walking Tour: Notre-Dame Cathedral, Central Post Office, Book Street, Opera, Nguyen Hue Street, Ben Thanh Market</td>
-						<td data-price-night>0.00</td>
-						<td data-price-adult>0.00</td>
-						<td data-price-child>0.00</td>
-						<td data-qty-nights></td>
-						<td data-qty-adults></td>
-						<td data-qty-children></td>
-						<td class="row-total" data-total></td>
-						<td data-participants class="participants">ste,fra,car,raf,rom,chr,vin,gab</td>
+						<td data-participants class="participants">ste,fra,car,raf</td>
 						<td data-note></td>
-					</tr>
-					<tr data-category="Others">
-						<td data-date>2026-04-11</td>
-						<td data-category><span class="category-activity">Others</span></td>
-						<td data-subcategory>SIM card</td>
-						<td data-country>🇻🇳 Vietnam</td>
-						<td data-city>Ho Chi Minh</td>
-						<td data-description>SIM card for Vietnam (14d.)</td>
-						<td data-price-night>0.00</td>
-						<td data-price-adult>8.50</td>
-						<td data-price-child>0.00</td>
-						<td data-qty-nights></td>
-						<td data-qty-adults></td>
-						<td data-qty-children></td>
-						<td class="row-total" data-total></td>
-						<td data-participants class="participants">ste,fra,car,rom,vin</td>
-						<td data-note>Buy at airport?</td>
 					</tr>
 					
 					<!-- HO CHI MINH CITY - DAY 2 (April 12) -->
@@ -408,7 +372,7 @@
 						<td data-qty-adults></td>
 						<td data-qty-children></td>
 						<td class="row-total" data-total></td>
-						<td data-participants class="participants">ste,fra,car,raf,rom,chr,vin,gab</td>
+						<td data-participants class="participants">ste,fra,car,raf</td>
 						<td data-note></td>
 					</tr>
 					<tr data-category="Food">
@@ -425,8 +389,8 @@
 						<td data-qty-adults></td>
 						<td data-qty-children></td>
 						<td class="row-total" data-total></td>
-						<td data-participants class="participants">ste,fra,car,raf,rom,chr,vin,gab</td>
-						<td data-note>Classic pho</td>
+						<td data-participants class="participants">ste,fra,car,raf</td>
+						<td data-note></td>
 					</tr>
 					<tr data-category="Food">
 						<td data-date>2026-04-12</td>
@@ -442,8 +406,8 @@
 						<td data-qty-adults></td>
 						<td data-qty-children></td>
 						<td class="row-total" data-total></td>
-						<td data-participants class="participants">ste,fra,car,raf,rom,chr,vin,gab</td>
-						<td data-note>Kido / Bach Dang</td>
+						<td data-participants class="participants">ste,fra,car,raf</td>
+						<td data-note></td>
 					</tr>
 					<tr data-category="Food">
 						<td data-date>2026-04-12</td>
@@ -459,8 +423,8 @@
 						<td data-qty-adults></td>
 						<td data-qty-children></td>
 						<td class="row-total" data-total></td>
-						<td data-participants class="participants">ste,fra,car,raf,rom,chr,vin,gab</td>
-						<td data-note>Modern Vietnamese</td>
+						<td data-participants class="participants">ste,fra,car,raf</td>
+						<td data-note></td>
 					</tr>
 					<tr data-category="Activities">
 						<td data-date>2026-04-12</td>
@@ -476,8 +440,8 @@
 						<td data-qty-adults></td>
 						<td data-qty-children></td>
 						<td class="row-total" data-total></td>
-						<td data-participants class="participants">ste,fra,car,raf,rom,chr,vin,gab</td>
-						<td data-note>There is no strict dress code, but, to be respectful, opt for clothing that covers the shoulders and drops below the knee</td>
+						<td data-participants class="participants">ste,fra,car,raf</td>
+						<td data-note></td>
 					</tr>
 					<tr data-category="Activities">
 						<td data-date>2026-04-12</td>
@@ -493,8 +457,8 @@
 						<td data-qty-adults></td>
 						<td data-qty-children></td>
 						<td class="row-total" data-total></td>
-						<td data-participants class="participants">ste,fra,car,raf,rom,chr,vin,gab</td>
-						<td data-note>Historical museum</td>
+						<td data-participants class="participants">ste,fra,car,raf</td>
+						<td data-note></td>
 					</tr>
 					<tr data-category="Activities">
 						<td data-date>2026-04-12</td>
@@ -510,8 +474,8 @@
 						<td data-qty-adults></td>
 						<td data-qty-children></td>
 						<td class="row-total" data-total></td>
-						<td data-participants class="participants">ste,fra,car,raf,rom,chr,vin,gab</td>
-						<td data-note>49th floor views</td>
+						<td data-participants class="participants">ste,fra,car,raf</td>
+						<td data-note></td>
 					</tr>
 					
 					<!-- HO CHI MINH CITY - DAY 3 (April 13) -->
@@ -521,7 +485,7 @@
 						<td data-subcategory>Flight (International)</td>
 						<td data-country>🇵🇭 Philippines</td>
 						<td data-city>Manila</td>
-						<td data-description>Philippine Airlines: Manila (MNL) - Da Nang (DAD)</td>
+						<td data-description>Manila (MNL) - Da Nang (DAD). Philippine Airlines: 13:50 - 15:20 (2h30)</td>
 						<td data-price-night>0.00</td>
 						<td data-price-adult>162.00</td>
 						<td data-price-child>0.00</td>
@@ -530,7 +494,7 @@
 						<td data-qty-children></td>
 						<td class="row-total" data-total></td>
 						<td data-participants class="participants">rom,chr,vin,gab</td>
-						<td data-note>Philippine Airlines: 13:50 - 15:20 (2h30)</td>
+						<td data-note></td>
 					</tr>
 					<tr data-category="Flights (all)">
 						<td data-date>2026-04-13</td>
@@ -547,7 +511,7 @@
 						<td data-qty-children></td>
 						<td class="row-total" data-total></td>
 						<td data-participants class="participants">ste,fra,car,raf</td>
-						<td data-note>Vietnam Airlines. Caroline's family should flight directly from Manila</td>
+						<td data-note>Paid</td>
 					</tr>
 					<tr data-category="Transport">
 						<td data-date>2026-04-13</td>
@@ -563,8 +527,8 @@
 						<td data-qty-adults></td>
 						<td data-qty-children></td>
 						<td class="row-total" data-total></td>
-						<td data-participants class="participants">ste,fra,car,raf,rom,chr,vin,gab</td>
-						<td data-note>150000VND for a 6-seats. We'll need two cars because of luggages.</td>
+						<td data-participants class="participants">ste,fra,car,raf</td>
+						<td data-note></td>
 					</tr>
 					<tr data-category="Transport">
 						<td data-date>2026-04-13</td>
@@ -580,8 +544,25 @@
 						<td data-qty-adults></td>
 						<td data-qty-children></td>
 						<td class="row-total" data-total></td>
-						<td data-participants class="participants">ste,fra,car,raf,rom,chr,vin,gab</td>
-						<td data-note>150000VND for a 6-seats. We'll need two cars because of luggages.</td>
+						<td data-participants class="participants">rom,chr,vin,gab</td>
+						<td data-note></td>
+					</tr>
+					<tr data-category="Transport">
+						<td data-date>2026-04-13</td>
+						<td data-category><span class="category-transport">Transport</span></td>
+						<td data-subcategory>Taxi</td>
+						<td data-country>🇻🇳 Vietnam</td>
+						<td data-city>Da Nang</td>
+						<td data-description>Airport to hotel</td>
+						<td data-price-night>0.00</td>
+						<td data-price-adult>1.25</td>
+						<td data-price-child>1.25</td>
+						<td data-qty-nights></td>
+						<td data-qty-adults></td>
+						<td data-qty-children></td>
+						<td class="row-total" data-total></td>
+						<td data-participants class="participants">ste,fra,car,raf</td>
+						<td data-note></td>
 					</tr>
 					<tr data-category="Hotel">
 						<td data-date>2026-04-13</td>
@@ -598,7 +579,7 @@
 						<td data-qty-children></td>
 						<td class="row-total" data-total></td>
 						<td data-participants class="participants">ste,fra,car,raf</td>
-						<td data-note>Breakfast included</td>
+						<td data-note>Booked</td>
 					</tr>
 					<tr data-category="Hotel">
 						<td data-date>2026-04-13</td>
@@ -615,7 +596,7 @@
 						<td data-qty-children></td>
 						<td class="row-total" data-total></td>
 						<td data-participants class="participants">rom,chr,vin,gab</td>
-						<td data-note>Breakfast included</td>
+						<td data-note></td>
 					</tr>
 					<tr data-category="Food">
 						<td data-date>2026-04-13</td>
@@ -631,7 +612,7 @@
 						<td data-qty-adults></td>
 						<td data-qty-children></td>
 						<td class="row-total" data-total></td>
-						<td data-participants class="participants">ste,fra,car,raf,rom,chr,vin,gab</td>
+						<td data-participants class="participants">ste,fra,car,raf</td>
 						<td data-note></td>
 					</tr>
 					<tr data-category="Food">
@@ -648,8 +629,8 @@
 						<td data-qty-adults></td>
 						<td data-qty-children></td>
 						<td class="row-total" data-total></td>
-						<td data-participants class="participants">ste,fra,car,raf,rom,chr,vin,gab</td>
-						<td data-note>Vietnamese pancakes</td>
+						<td data-participants class="participants">ste,fra,car,raf</td>
+						<td data-note></td>
 					</tr>
 					<tr data-category="Food">
 						<td data-date>2026-04-13</td>
@@ -666,24 +647,7 @@
 						<td data-qty-children></td>
 						<td class="row-total" data-total></td>
 						<td data-participants class="participants">ste,fra,car,raf,rom,chr,vin,gab</td>
-						<td data-note>Seafood</td>
-					</tr>
-					<tr data-category="Activities">
-						<td data-date>2026-04-13</td>
-						<td data-category><span class="category-activity">Activity</span></td>
-						<td data-subcategory>Visit (Tour)</td>
-						<td data-country>🇻🇳 Vietnam</td>
-						<td data-city>Ho Chi Minh</td>
-						<td data-description><a href="https://saigonboatcompany.com/">Saigon River Cruise</a> (Option A)</td>
-						<td data-price-night>0.00</td>
-						<td data-price-adult>11.00</td>
-						<td data-price-child>7.00</td>
-						<td data-qty-nights></td>
-						<td data-qty-adults></td>
-						<td data-qty-children></td>
-						<td class="row-total" data-total></td>
-						<td data-participants class="participants">ste,fra,car,raf,rom,chr,vin,gab</td>
-						<td data-note>2-hour cruise - Not sure to find some in the morning</td>
+						<td data-note></td>
 					</tr>
 					<tr data-category="Activities">
 						<td data-date>2026-04-13</td>
@@ -699,8 +663,8 @@
 						<td data-qty-adults></td>
 						<td data-qty-children></td>
 						<td class="row-total" data-total></td>
-						<td data-participants class="participants">ste,fra,car,raf,rom,chr,vin,gab</td>
-						<td data-note>Alternative to cruise</td>
+						<td data-participants class="participants">ste,fra,car,raf</td>
+						<td data-note></td>
 					</tr>
 					
 					<!-- DA NANG - DAY 4 (April 14) -->
@@ -719,7 +683,7 @@
 						<td data-qty-children></td>
 						<td class="row-total" data-total></td>
 						<td data-participants class="participants">ste,fra,car,raf,rom,chr,vin,gab</td>
-						<td data-note>110000 VND for a 4-seaters. Need 2 cars</td>
+						<td data-note></td>
 					</tr>
 					<tr data-category="Transport">
 						<td data-date>2026-04-14</td>
@@ -736,7 +700,7 @@
 						<td data-qty-children></td>
 						<td class="row-total" data-total></td>
 						<td data-participants class="participants">ste,fra,car,raf,rom,chr,vin,gab</td>
-						<td data-note>110000 VND for a 4-seaters. Need 2 cars</td>
+						<td data-note></td>
 					</tr>
 					<tr data-category="Food">
 						<td data-date>2026-04-14</td>
@@ -770,7 +734,7 @@
 						<td data-qty-children></td>
 						<td class="row-total" data-total></td>
 						<td data-participants class="participants">ste,fra,car,raf,rom,chr,vin,gab</td>
-						<td data-note>Beachfront</td>
+						<td data-note></td>
 					</tr>
 					<tr data-category="Food">
 						<td data-date>2026-04-14</td>
@@ -787,7 +751,7 @@
 						<td data-qty-children></td>
 						<td class="row-total" data-total></td>
 						<td data-participants class="participants">ste,fra,car,raf,rom,chr,vin,gab</td>
-						<td data-note>Historical restaurant</td>
+						<td data-note></td>
 					</tr>
 					<tr data-category="Activities">
 						<td data-date>2026-04-14</td>
@@ -804,7 +768,7 @@
 						<td data-qty-children></td>
 						<td class="row-total" data-total></td>
 						<td data-participants class="participants">ste,fra,car,raf,rom,chr,vin,gab</td>
-						<td data-note>Free, rent chairs ~2 EUR</td>
+						<td data-note></td>
 					</tr>
 					<tr data-category="Activities">
 						<td data-date>2026-04-14</td>
@@ -821,7 +785,7 @@
 						<td data-qty-children></td>
 						<td class="row-total" data-total></td>
 						<td data-participants class="participants">ste,fra,car,raf,rom,chr,vin,gab</td>
-						<td data-note>Entry fee 40000 VND + 15000 VND for elevator</td>
+						<td data-note></td>
 					</tr>
 					
 					<!-- DA NANG - DAY 5 (April 15) -->
@@ -857,7 +821,7 @@
 						<td data-qty-children></td>
 						<td class="row-total" data-total></td>
 						<td data-participants class="participants">ste,fra,car,raf,rom,chr,vin,gab</td>
-						<td data-note>Cable car + attractions</td>
+						<td data-note></td>
 					</tr>
 					<tr data-category="Transport">
 						<td data-date>2026-04-15</td>
@@ -874,7 +838,7 @@
 						<td data-qty-children></td>
 						<td class="row-total" data-total></td>
 						<td data-participants class="participants">ste,fra,car,raf,rom,chr,vin,gab</td>
-						<td data-note>Private van recommended</td>
+						<td data-note></td>
 					</tr>
 					<tr data-category="Food">
 						<td data-date>2026-04-15</td>
@@ -891,7 +855,7 @@
 						<td data-qty-children></td>
 						<td class="row-total" data-total></td>
 						<td data-participants class="participants">ste,fra,car,raf,rom,chr,vin,gab</td>
-						<td data-note>At site or tour inclusive</td>
+						<td data-note></td>
 					</tr>
 					<tr data-category="Food">
 						<td data-date>2026-04-15</td>
@@ -908,7 +872,7 @@
 						<td data-qty-children></td>
 						<td class="row-total" data-total></td>
 						<td data-participants class="participants">ste,fra,car,raf,rom,chr,vin,gab</td>
-						<td data-note>Traditional Vietnamese</td>
+						<td data-note></td>
 					</tr>
 					
 					<!-- DA NANG - DAY 6 (April 16) -->
@@ -944,7 +908,7 @@
 						<td data-qty-children></td>
 						<td class="row-total" data-total></td>
 						<td data-participants class="participants">ste,fra,car,raf,rom,chr,vin,gab</td>
-						<td data-note>World heritage art</td>
+						<td data-note></td>
 					</tr>
 					<tr data-category="Food">
 						<td data-date>2026-04-16</td>
@@ -961,7 +925,7 @@
 						<td data-qty-children></td>
 						<td class="row-total" data-total></td>
 						<td data-participants class="participants">ste,fra,car,raf,rom,chr,vin,gab</td>
-						<td data-note>Local specialty</td>
+						<td data-note></td>
 					</tr>
 					<tr data-category="Transport">
 						<td data-date>2026-04-16</td>
@@ -978,7 +942,7 @@
 						<td data-qty-children></td>
 						<td class="row-total" data-total></td>
 						<td data-participants class="participants">ste,fra,car,raf,rom,chr,vin,gab</td>
-						<td data-note>45 min, split fare</td>
+						<td data-note></td>
 					</tr>
 					<tr data-category="Hotel">
 						<td data-date>2026-04-16</td>
@@ -995,7 +959,7 @@
 						<td data-qty-children></td>
 						<td class="row-total" data-total></td>
 						<td data-participants class="participants">ste,fra,car,raf</td>
-						<td data-note>Breakfast included</td>
+						<td data-note>Booked</td>
 					</tr>
 					<tr data-category="Hotel">
 						<td data-date>2026-04-16</td>
@@ -1012,7 +976,7 @@
 						<td data-qty-children></td>
 						<td class="row-total" data-total></td>
 						<td data-participants class="participants">rom,chr,vin,gab</td>
-						<td data-note>Breakfast included</td>
+						<td data-note></td>
 					</tr>
 					<tr data-category="Activities">
 						<td data-date>2026-04-16</td>
@@ -1029,7 +993,7 @@
 						<td data-qty-children></td>
 						<td class="row-total" data-total></td>
 						<td data-participants class="participants">ste,fra,car,raf,rom,chr,vin,gab</td>
-						<td data-note>24h pass, 5 sites, free <15yo</td>
+						<td data-note></td>
 					</tr>
 					<tr data-category="Food">
 						<td data-date>2026-04-16</td>
@@ -1046,7 +1010,7 @@
 						<td data-qty-children></td>
 						<td class="row-total" data-total></td>
 						<td data-participants class="participants">ste,fra,car,raf,rom,chr,vin,gab</td>
-						<td data-note>Hoi An specialties</td>
+						<td data-note></td>
 					</tr>
 					<tr data-category="Activities">
 						<td data-date>2026-04-16</td>
@@ -1054,7 +1018,7 @@
 						<td data-subcategory>Tour</td>
 						<td data-country>🇻🇳 Vietnam</td>
 						<td data-city>Hoi An</td>
-						<td data-description>Lantern Boat Ride</td>
+						<td data-description>Lantern Boat Ride? Thu Bon River, ~8 EUR/boat</td>
 						<td data-price-night>0.00</td>
 						<td data-price-adult>2.00</td>
 						<td data-price-child>2.00</td>
@@ -1063,7 +1027,7 @@
 						<td data-qty-children></td>
 						<td class="row-total" data-total></td>
 						<td data-participants class="participants">ste,fra,car,raf,rom,chr,vin,gab</td>
-						<td data-note>Thu Bon River, ~8 EUR/boat</td>
+						<td data-note></td>
 					</tr>
 					
 					<!-- HOI AN - DAY 7 (April 17) -->
@@ -1099,7 +1063,7 @@
 						<td data-qty-children></td>
 						<td class="row-total" data-total></td>
 						<td data-participants class="participants">ste,fra,car,raf,rom,chr,vin,gab</td>
-						<td data-note>Basket boat, activities</td>
+						<td data-note></td>
 					</tr>
 					<tr data-category="Transport">
 						<td data-date>2026-04-17</td>
@@ -1116,7 +1080,7 @@
 						<td data-qty-children></td>
 						<td class="row-total" data-total></td>
 						<td data-participants class="participants">ste,fra,car,raf,rom,chr,vin,gab</td>
-						<td data-note>20 min, split fare</td>
+						<td data-note></td>
 					</tr>
 					<tr data-category="Food">
 						<td data-date>2026-04-17</td>
@@ -1133,7 +1097,7 @@
 						<td data-qty-children></td>
 						<td class="row-total" data-total></td>
 						<td data-participants class="participants">ste,fra,car,raf,rom,chr,vin,gab</td>
-						<td data-note>Obama's banh mi</td>
+						<td data-note></td>
 					</tr>
 					<tr data-category="Food">
 						<td data-date>2026-04-17</td>
@@ -1150,7 +1114,7 @@
 						<td data-qty-children></td>
 						<td class="row-total" data-total></td>
 						<td data-participants class="participants">ste,fra,car,raf,rom,chr,vin,gab</td>
-						<td data-note>Reaching Out / Bep Tuoi</td>
+						<td data-note></td>
 					</tr>
 					<tr data-category="Food">
 						<td data-date>2026-04-17</td>
@@ -1167,7 +1131,7 @@
 						<td data-qty-children></td>
 						<td class="row-total" data-total></td>
 						<td data-participants class="participants">ste,fra,car,raf,rom,chr,vin,gab</td>
-						<td data-note>Riverside</td>
+						<td data-note></td>
 					</tr>
 					
 					<!-- HOI AN - DAY 8 (April 18) -->
@@ -1203,7 +1167,7 @@
 						<td data-qty-children></td>
 						<td class="row-total" data-total></td>
 						<td data-participants class="participants">ste,fra,car,raf,rom,chr,vin,gab</td>
-						<td data-note>Free, taxi ~3 EUR</td>
+						<td data-note></td>
 					</tr>
 					<tr data-category="Transport">
 						<td data-date>2026-04-18</td>
@@ -1220,7 +1184,7 @@
 						<td data-qty-children></td>
 						<td class="row-total" data-total></td>
 						<td data-participants class="participants">ste,fra,car,raf,rom,chr,vin,gab</td>
-						<td data-note>4km, round trip</td>
+						<td data-note></td>
 					</tr>
 					<tr data-category="Food">
 						<td data-date>2026-04-18</td>
@@ -1237,7 +1201,7 @@
 						<td data-qty-children></td>
 						<td class="row-total" data-total></td>
 						<td data-participants class="participants">ste,fra,car,raf,rom,chr,vin,gab</td>
-						<td data-note>TBD</td>
+						<td data-note></td>
 					</tr>
 					<tr data-category="Activities">
 						<td data-date>2026-04-18</td>
@@ -1245,7 +1209,7 @@
 						<td data-subcategory>Entrance Fee</td>
 						<td data-country>🇻🇳 Vietnam</td>
 						<td data-city>Hoi An</td>
-						<td data-description>My Son Sanctuary</td>
+						<td data-description>My Son Sanctuary. UNESCO ruins</td>
 						<td data-price-night>0.00</td>
 						<td data-price-adult>6.00</td>
 						<td data-price-child>1.50</td>
@@ -1254,7 +1218,7 @@
 						<td data-qty-children></td>
 						<td class="row-total" data-total></td>
 						<td data-participants class="participants">ste,fra,car,raf,rom,chr,vin,gab</td>
-						<td data-note>UNESCO ruins</td>
+						<td data-note></td>
 					</tr>
 					<tr data-category="Transport">
 						<td data-date>2026-04-18</td>
@@ -1262,7 +1226,7 @@
 						<td data-subcategory>Transfer</td>
 						<td data-country>🇻🇳 Vietnam</td>
 						<td data-city>Hoi An</td>
-						<td data-description>My Son transport</td>
+						<td data-description>My Son transport. 1h drive, or $50 private</td>
 						<td data-price-night>0.00</td>
 						<td data-price-adult>7.00</td>
 						<td data-price-child>7.00</td>
@@ -1271,7 +1235,7 @@
 						<td data-qty-children></td>
 						<td class="row-total" data-total></td>
 						<td data-participants class="participants">ste,fra,car,raf,rom,chr,vin,gab</td>
-						<td data-note>1h drive, or $50 private</td>
+						<td data-note></td>
 					</tr>
 					<tr data-category="Food">
 						<td data-date>2026-04-18</td>
@@ -1288,7 +1252,7 @@
 						<td data-qty-children></td>
 						<td class="row-total" data-total></td>
 						<td data-participants class="participants">ste,fra,car,raf,rom,chr,vin,gab</td>
-						<td data-note>Casual / modern</td>
+						<td data-note></td>
 					</tr>
 					
 					<!-- HOI AN - DAY 9 (April 19) -->
@@ -1315,7 +1279,7 @@
 						<td data-subcategory>Photoshoot</td>
 						<td data-country>🇻🇳 Vietnam</td>
 						<td data-city>Hoi An</td>
-						<td data-description>Traditional dress photoshoot</td>
+						<td data-description>Traditional dress photoshoot. ~130 EUR total for family</td>
 						<td data-price-night>0.00</td>
 						<td data-price-adult>16.25</td>
 						<td data-price-child>16.25</td>
@@ -1324,7 +1288,7 @@
 						<td data-qty-children></td>
 						<td class="row-total" data-total></td>
 						<td data-participants class="participants">ste,fra,car,raf,rom,chr,vin,gab</td>
-						<td data-note>~130 EUR total for family</td>
+						<td data-note></td>
 					</tr>
 					<tr data-category="Food">
 						<td data-date>2026-04-19</td>
@@ -1341,7 +1305,7 @@
 						<td data-qty-children></td>
 						<td class="row-total" data-total></td>
 						<td data-participants class="participants">ste,fra,car,raf,rom,chr,vin,gab</td>
-						<td data-note>Chicken rice</td>
+						<td data-note></td>
 					</tr>
 					<tr data-category="Transport">
 						<td data-date>2026-04-19</td>
@@ -1358,7 +1322,7 @@
 						<td data-qty-children></td>
 						<td class="row-total" data-total></td>
 						<td data-participants class="participants">ste,fra,car,raf,rom,chr,vin,gab</td>
-						<td data-note>45 min</td>
+						<td data-note></td>
 					</tr>
 					<tr data-category="Flights (all)">
 						<td data-date>2026-04-19</td>
@@ -1375,7 +1339,7 @@
 						<td data-qty-children></td>
 						<td class="row-total" data-total></td>
 						<td data-participants class="participants">ste,fra,car,raf</td>
-						<td data-note>1h 25min</td>
+						<td data-note>Paid</td>
 					</tr>
 					<tr data-category="Flights (all)">
 						<td data-date>2026-04-19</td>
@@ -1392,7 +1356,7 @@
 						<td data-qty-children></td>
 						<td class="row-total" data-total></td>
 						<td data-participants class="participants">rom,chr,vin,gab</td>
-						<td data-note>1h 25min</td>
+						<td data-note></td>
 					</tr>
 					<tr data-category="Transport">
 						<td data-date>2026-04-19</td>
@@ -1426,7 +1390,7 @@
 						<td data-qty-children></td>
 						<td class="row-total" data-total></td>
 						<td data-participants class="participants">ste,fra,car,raf</td>
-						<td data-note></td>
+						<td data-note>Booked</td>
 					</tr>
 					<tr data-category="Hotel">
 						<td data-date>2026-04-19</td>
@@ -1460,7 +1424,7 @@
 						<td data-qty-children></td>
 						<td class="row-total" data-total></td>
 						<td data-participants class="participants">ste,fra,car,raf,rom,chr,vin,gab</td>
-						<td data-note>Obama's bun cha</td>
+						<td data-note></td>
 					</tr>
 					
 					<!-- HANOI - DAY 10 (April 20) -->
@@ -1496,7 +1460,7 @@
 						<td data-qty-children></td>
 						<td class="row-total" data-total></td>
 						<td data-participants class="participants">ste,fra,car,raf,rom,chr,vin,gab</td>
-						<td data-note>Lake island temple</td>
+						<td data-note></td>
 					</tr>
 					<tr data-category="Activities">
 						<td data-date>2026-04-20</td>
@@ -1513,7 +1477,7 @@
 						<td data-qty-children></td>
 						<td class="row-total" data-total></td>
 						<td data-participants class="participants">ste,fra,car,raf,rom,chr,vin,gab</td>
-						<td data-note>19th century house</td>
+						<td data-note></td>
 					</tr>
 					<tr data-category="Food">
 						<td data-date>2026-04-20</td>
@@ -1530,7 +1494,7 @@
 						<td data-qty-children></td>
 						<td class="row-total" data-total></td>
 						<td data-participants class="participants">ste,fra,car,raf,rom,chr,vin,gab</td>
-						<td data-note>Hidden cafe with view</td>
+						<td data-note></td>
 					</tr>
 					<tr data-category="Food">
 						<td data-date>2026-04-20</td>
@@ -1547,7 +1511,7 @@
 						<td data-qty-children></td>
 						<td class="row-total" data-total></td>
 						<td data-participants class="participants">ste,fra,car,raf,rom,chr,vin,gab</td>
-						<td data-note>Local cuisine</td>
+						<td data-note></td>
 					</tr>
 					<tr data-category="Activities">
 						<td data-date>2026-04-20</td>
@@ -1564,7 +1528,7 @@
 						<td data-qty-children></td>
 						<td class="row-total" data-total></td>
 						<td data-participants class="participants">ste,fra,car,raf,rom,chr,vin,gab</td>
-						<td data-note>4:10 PM show, book ahead</td>
+						<td data-note></td>
 					</tr>
 					<tr data-category="Food">
 						<td data-date>2026-04-20</td>
@@ -1581,7 +1545,7 @@
 						<td data-qty-children></td>
 						<td class="row-total" data-total></td>
 						<td data-participants class="participants">ste,fra,car,raf,rom,chr,vin,gab</td>
-						<td data-note>Drinks while waiting</td>
+						<td data-note></td>
 					</tr>
 					<tr data-category="Food">
 						<td data-date>2026-04-20</td>
@@ -1598,7 +1562,7 @@
 						<td data-qty-children></td>
 						<td class="row-total" data-total></td>
 						<td data-participants class="participants">ste,fra,car,raf,rom,chr,vin,gab</td>
-						<td data-note>Food court style</td>
+						<td data-note></td>
 					</tr>
 					
 					<!-- HANOI - DAY 11 (April 21) -->
@@ -1634,7 +1598,7 @@
 						<td data-qty-children></td>
 						<td class="row-total" data-total></td>
 						<td data-participants class="participants">ste,fra,car,raf,rom,chr,vin,gab</td>
-						<td data-note>Cruise, lunch, activities</td>
+						<td data-note></td>
 					</tr>
 					<tr data-category="Food">
 						<td data-date>2026-04-21</td>
@@ -1651,7 +1615,7 @@
 						<td data-qty-children></td>
 						<td class="row-total" data-total></td>
 						<td data-participants class="participants">ste,fra,car,raf,rom,chr,vin,gab</td>
-						<td data-note>Light meal after tour</td>
+						<td data-note></td>
 					</tr>
 					
 					<!-- HANOI - DAY 12 (April 22) -->
@@ -1670,7 +1634,7 @@
 						<td data-qty-children></td>
 						<td class="row-total" data-total></td>
 						<td data-participants class="participants">ste,fra,car,raf,rom,chr,vin,gab</td>
-						<td data-note>Dry chicken pho</td>
+						<td data-note></td>
 					</tr>
 					<tr data-category="Activities">
 						<td data-date>2026-04-22</td>
@@ -1687,7 +1651,7 @@
 						<td data-qty-children></td>
 						<td class="row-total" data-total></td>
 						<td data-participants class="participants">ste,fra,car,raf,rom,chr,vin,gab</td>
-						<td data-note>UNESCO heritage</td>
+						<td data-note></td>
 					</tr>
 					<tr data-category="Transport">
 						<td data-date>2026-04-22</td>
@@ -1704,7 +1668,7 @@
 						<td data-qty-children></td>
 						<td class="row-total" data-total></td>
 						<td data-participants class="participants">ste,fra,car,raf,rom,chr,vin,gab</td>
-						<td data-note>~15 min</td>
+						<td data-note></td>
 					</tr>
 					<tr data-category="Activities">
 						<td data-date>2026-04-22</td>
@@ -1721,7 +1685,7 @@
 						<td data-qty-children></td>
 						<td class="row-total" data-total></td>
 						<td data-participants class="participants">ste,fra,car,raf,rom,chr,vin,gab</td>
-						<td data-note>Free, Stilt House ~2 EUR</td>
+						<td data-note></td>
 					</tr>
 					<tr data-category="Activities">
 						<td data-date>2026-04-22</td>
@@ -1738,7 +1702,7 @@
 						<td data-qty-children></td>
 						<td class="row-total" data-total></td>
 						<td data-participants class="participants">ste,fra,car,raf,rom,chr,vin,gab</td>
-						<td data-note>Part of complex</td>
+						<td data-note></td>
 					</tr>
 					<tr data-category="Food">
 						<td data-date>2026-04-22</td>
@@ -1755,7 +1719,7 @@
 						<td data-qty-children></td>
 						<td class="row-total" data-total></td>
 						<td data-participants class="participants">ste,fra,car,raf,rom,chr,vin,gab</td>
-						<td data-note>Famous pho</td>
+						<td data-note></td>
 					</tr>
 					<tr data-category="Activities">
 						<td data-date>2026-04-22</td>
@@ -1772,7 +1736,7 @@
 						<td data-qty-children></td>
 						<td class="row-total" data-total></td>
 						<td data-participants class="participants">ste,fra,car,raf,rom,chr,vin,gab</td>
-						<td data-note>Free, donations welcome</td>
+						<td data-note></td>
 					</tr>
 					<tr data-category="Activities">
 						<td data-date>2026-04-22</td>
@@ -1789,7 +1753,7 @@
 						<td data-qty-children></td>
 						<td class="row-total" data-total></td>
 						<td data-participants class="participants">ste,fra,car,raf,rom,chr,vin,gab</td>
-						<td data-note>Small fee</td>
+						<td data-note></td>
 					</tr>
 					<tr data-category="Food">
 						<td data-date>2026-04-22</td>
@@ -1806,7 +1770,7 @@
 						<td data-qty-children></td>
 						<td class="row-total" data-total></td>
 						<td data-participants class="participants">ste,fra,car,raf,rom,chr,vin,gab</td>
-						<td data-note>Must-try specialty</td>
+						<td data-note></td>
 					</tr>
 					<tr data-category="Food">
 						<td data-date>2026-04-22</td>
@@ -1823,7 +1787,7 @@
 						<td data-qty-children></td>
 						<td class="row-total" data-total></td>
 						<td data-participants class="participants">ste,fra,car,raf,rom,chr,vin,gab</td>
-						<td data-note>Famous fish dish</td>
+						<td data-note></td>
 					</tr>
 					
 					<!-- HANOI - DAY 13 (April 23) -->
@@ -1859,7 +1823,7 @@
 						<td data-qty-children></td>
 						<td class="row-total" data-total></td>
 						<td data-participants class="participants">ste,fra,car,raf,rom,chr,vin,gab</td>
-						<td data-note>Tam Coc boat, temples</td>
+						<td data-note></td>
 					</tr>
 					<tr data-category="Food">
 						<td data-date>2026-04-23</td>
@@ -1876,7 +1840,7 @@
 						<td data-qty-children></td>
 						<td class="row-total" data-total></td>
 						<td data-participants class="participants">ste,fra,car,raf,rom,chr,vin,gab</td>
-						<td data-note>Authentic Vietnamese</td>
+						<td data-note></td>
 					</tr>
 					
 					<!-- HANOI - DAY 14 (April 24) -->
@@ -1912,7 +1876,7 @@
 						<td data-qty-children></td>
 						<td class="row-total" data-total></td>
 						<td data-participants class="participants">ste,fra,car,raf,rom,chr,vin,gab</td>
-						<td data-note>45 min</td>
+						<td data-note></td>
 					</tr>
 					<tr data-category="Flights (all)">
 						<td data-date>2026-04-24</td>
@@ -1929,7 +1893,7 @@
 						<td data-qty-children></td>
 						<td class="row-total" data-total></td>
 						<td data-participants class="participants">ste,fra,car,raf</td>
-						<td data-note>1h flight, book ahead</td>
+						<td data-note>Paid</td>
 					</tr>
 					<tr data-category="Flights (all)">
 						<td data-date>2026-04-24</td>
@@ -1946,7 +1910,7 @@
 						<td data-qty-children></td>
 						<td class="row-total" data-total></td>
 						<td data-participants class="participants">rom,chr,vin,gab</td>
-						<td data-note>1h flight, book ahead</td>
+						<td data-note></td>
 					</tr>
 					<tr data-category="Others">
 						<td data-date>2026-04-24</td>
@@ -1963,7 +1927,7 @@
 						<td data-qty-children></td>
 						<td class="row-total" data-total></td>
 						<td data-participants class="participants">ste,fra</td>
-						<td data-note>USD cash + photo</td>
+						<td data-note></td>
 					</tr>
 					<tr data-category="Transport">
 						<td data-date>2026-04-24</td>
@@ -1980,7 +1944,7 @@
 						<td data-qty-children></td>
 						<td class="row-total" data-total></td>
 						<td data-participants class="participants">ste,fra,car,raf,rom,chr,vin,gab</td>
-						<td data-note>45 min</td>
+						<td data-note></td>
 					</tr>
 					<tr data-category="Hotel">
 						<td data-date>2026-04-24</td>
@@ -1997,7 +1961,7 @@
 						<td data-qty-children></td>
 						<td class="row-total" data-total></td>
 						<td data-participants class="participants">ste,fra,car,raf</td>
-						<td data-note></td>
+						<td data-note>Booked</td>
 					</tr>
 					<tr data-category="Hotel">
 						<td data-date>2026-04-24</td>
@@ -2031,7 +1995,7 @@
 						<td data-qty-children></td>
 						<td class="row-total" data-total></td>
 						<td data-participants class="participants">ste,fra,car,raf,rom,chr,vin,gab</td>
-						<td data-note>Lao cuisine</td>
+						<td data-note></td>
 					</tr>
 					<tr data-category="Others">
 						<td data-date>2026-04-24</td>
@@ -2048,7 +2012,7 @@
 						<td data-qty-children></td>
 						<td class="row-total" data-total></td>
 						<td data-participants class="participants">ste,fra,rom,vin</td>
-						<td data-note>Buy at airport?</td>
+						<td data-note></td>
 					</tr>
 					
 					<!-- LUANG PRABANG - DAY 15 (April 25) -->
@@ -2084,7 +2048,7 @@
 						<td data-qty-children></td>
 						<td class="row-total" data-total></td>
 						<td data-participants class="participants">ste,fra,car,raf,rom,chr,vin,gab</td>
-						<td data-note>Most beautiful temple</td>
+						<td data-note></td>
 					</tr>
 					<tr data-category="Activities">
 						<td data-date>2026-04-25</td>
@@ -2101,7 +2065,7 @@
 						<td data-qty-children></td>
 						<td class="row-total" data-total></td>
 						<td data-participants class="participants">ste,fra,car,raf,rom,chr,vin,gab</td>
-						<td data-note>Former king's palace</td>
+						<td data-note></td>
 					</tr>
 					<tr data-category="Activities">
 						<td data-date>2026-04-25</td>
@@ -2118,7 +2082,7 @@
 						<td data-qty-children></td>
 						<td class="row-total" data-total></td>
 						<td data-participants class="participants">ste,fra,car,raf,rom,chr,vin,gab</td>
-						<td data-note>Golden temple</td>
+						<td data-note></td>
 					</tr>
 					<tr data-category="Food">
 						<td data-date>2026-04-25</td>
@@ -2135,7 +2099,7 @@
 						<td data-qty-children></td>
 						<td class="row-total" data-total></td>
 						<td data-participants class="participants">ste,fra,car,raf,rom,chr,vin,gab</td>
-						<td data-note>Coffee break</td>
+						<td data-note></td>
 					</tr>
 					<tr data-category="Food">
 						<td data-date>2026-04-25</td>
@@ -2152,7 +2116,7 @@
 						<td data-qty-children></td>
 						<td class="row-total" data-total></td>
 						<td data-participants class="participants">ste,fra,car,raf,rom,chr,vin,gab</td>
-						<td data-note>Riverside</td>
+						<td data-note></td>
 					</tr>
 					<tr data-category="Activities">
 						<td data-date>2026-04-25</td>
@@ -2160,7 +2124,7 @@
 						<td data-subcategory>Workshop</td>
 						<td data-country>🇱🇦 Laos</td>
 						<td data-city>Luang Prabang</td>
-						<td data-description>Silver Ring Making</td>
+						<td data-description>Silver Ring Making. 2-3h, materials included</td>
 						<td data-price-night>0.00</td>
 						<td data-price-adult>50.00</td>
 						<td data-price-child>40.00</td>
@@ -2169,7 +2133,7 @@
 						<td data-qty-children></td>
 						<td class="row-total" data-total></td>
 						<td data-participants class="participants">ste,fra,car,raf,rom,chr,vin,gab</td>
-						<td data-note>2-3h, materials included</td>
+						<td data-note></td>
 					</tr>
 					<tr data-category="Food">
 						<td data-date>2026-04-25</td>
@@ -2186,7 +2150,7 @@
 						<td data-qty-children></td>
 						<td class="row-total" data-total></td>
 						<td data-participants class="participants">ste,fra,car,raf,rom,chr,vin,gab</td>
-						<td data-note>Lao fusion</td>
+						<td data-note></td>
 					</tr>
 					
 					<!-- LUANG PRABANG - DAY 16 (April 26) -->
@@ -2213,7 +2177,7 @@
 						<td data-subcategory>Tour</td>
 						<td data-country>🇱🇦 Laos</td>
 						<td data-city>Luang Prabang</td>
-						<td data-description>Kuang Si Waterfalls</td>
+						<td data-description>Kuang Si Waterfalls. Group tour or tuk-tuk</td>
 						<td data-price-night>0.00</td>
 						<td data-price-adult>15.00</td>
 						<td data-price-child>15.00</td>
@@ -2222,7 +2186,7 @@
 						<td data-qty-children></td>
 						<td class="row-total" data-total></td>
 						<td data-participants class="participants">ste,fra,car,raf,rom,chr,vin,gab</td>
-						<td data-note>Group tour or tuk-tuk</td>
+						<td data-note></td>
 					</tr>
 					<tr data-category="Activities">
 						<td data-date>2026-04-26</td>
@@ -2239,7 +2203,7 @@
 						<td data-qty-children></td>
 						<td class="row-total" data-total></td>
 						<td data-participants class="participants">ste,fra,car,raf,rom,chr,vin,gab</td>
-						<td data-note>Free, donations welcome</td>
+						<td data-note></td>
 					</tr>
 					<tr data-category="Activities">
 						<td data-date>2026-04-26</td>
@@ -2256,7 +2220,7 @@
 						<td data-qty-children></td>
 						<td class="row-total" data-total></td>
 						<td data-participants class="participants">ste,fra,car,raf,rom,chr,vin,gab</td>
-						<td data-note>Entry fee</td>
+						<td data-note></td>
 					</tr>
 					<tr data-category="Food">
 						<td data-date>2026-04-26</td>
@@ -2273,7 +2237,7 @@
 						<td data-qty-children></td>
 						<td class="row-total" data-total></td>
 						<td data-participants class="participants">ste,fra,car,raf,rom,chr,vin,gab</td>
-						<td data-note>Basic options</td>
+						<td data-note></td>
 					</tr>
 					<tr data-category="Food">
 						<td data-date>2026-04-26</td>
@@ -2290,7 +2254,7 @@
 						<td data-qty-children></td>
 						<td class="row-total" data-total></td>
 						<td data-participants class="participants">ste,fra,car,raf,rom,chr,vin,gab</td>
-						<td data-note>Casual</td>
+						<td data-note></td>
 					</tr>
 					
 					<!-- LUANG PRABANG - DAY 17 (April 27) -->
@@ -2326,7 +2290,7 @@
 						<td data-qty-children></td>
 						<td class="row-total" data-total></td>
 						<td data-participants class="participants">ste,fra,car,raf,rom,chr,vin,gab</td>
-						<td data-note>Oldest temple</td>
+						<td data-note></td>
 					</tr>
 					<tr data-category="Activities">
 						<td data-date>2026-04-27</td>
@@ -2343,7 +2307,7 @@
 						<td data-qty-children></td>
 						<td class="row-total" data-total></td>
 						<td data-participants class="participants">ste,fra,car,raf,rom,chr,vin,gab</td>
-						<td data-note>Guardian spirits</td>
+						<td data-note></td>
 					</tr>
 					<tr data-category="Activities">
 						<td data-date>2026-04-27</td>
@@ -2360,7 +2324,7 @@
 						<td data-qty-children></td>
 						<td class="row-total" data-total></td>
 						<td data-participants class="participants">ste,fra,car,raf,rom,chr,vin,gab</td>
-						<td data-note>Golden temple</td>
+						<td data-note></td>
 					</tr>
 					<tr data-category="Food">
 						<td data-date>2026-04-27</td>
@@ -2377,7 +2341,7 @@
 						<td data-qty-children></td>
 						<td class="row-total" data-total></td>
 						<td data-participants class="participants">ste,fra,car,raf,rom,chr,vin,gab</td>
-						<td data-note>French-Lao fusion</td>
+						<td data-note></td>
 					</tr>
 					<tr data-category="Activities">
 						<td data-date>2026-04-27</td>
@@ -2385,7 +2349,7 @@
 						<td data-subcategory>Entrance Fee</td>
 						<td data-country>🇱🇦 Laos</td>
 						<td data-city>Luang Prabang</td>
-						<td data-description>Mount Phousi Sunset Climb</td>
+						<td data-description>Mount Phousi Sunset Climb. 328 steps, panoramic views</td>
 						<td data-price-night>0.00</td>
 						<td data-price-adult>2.00</td>
 						<td data-price-child>2.00</td>
@@ -2394,7 +2358,7 @@
 						<td data-qty-children></td>
 						<td class="row-total" data-total></td>
 						<td data-participants class="participants">ste,fra,car,raf,rom,chr,vin,gab</td>
-						<td data-note>328 steps, panoramic views</td>
+						<td data-note></td>
 					</tr>
 					<tr data-category="Food">
 						<td data-date>2026-04-27</td>
@@ -2411,7 +2375,7 @@
 						<td data-qty-children></td>
 						<td class="row-total" data-total></td>
 						<td data-participants class="participants">ste,fra,car,raf,rom,chr,vin,gab</td>
-						<td data-note>Fine dining, book ahead</td>
+						<td data-note></td>
 					</tr>
 					
 					<!-- LUANG PRABANG - DAY 18 (April 28) -->
@@ -2438,7 +2402,7 @@
 						<td data-subcategory>Cultural</td>
 						<td data-country>🇱🇦 Laos</td>
 						<td data-city>Luang Prabang</td>
-						<td data-description>Alms Ceremony (optional)</td>
+						<td data-description>Alms Ceremony (optional). Alms kit if participating</td>
 						<td data-price-night>0.00</td>
 						<td data-price-adult>5.00</td>
 						<td data-price-child>0.00</td>
@@ -2447,7 +2411,7 @@
 						<td data-qty-children></td>
 						<td class="row-total" data-total></td>
 						<td data-participants class="participants">ste,fra,car,raf,rom,chr,vin,gab</td>
-						<td data-note>Alms kit if participating</td>
+						<td data-note></td>
 					</tr>
 					<tr data-category="Food">
 						<td data-date>2026-04-28</td>
@@ -2464,7 +2428,7 @@
 						<td data-qty-children></td>
 						<td class="row-total" data-total></td>
 						<td data-participants class="participants">ste,fra,car,raf,rom,chr,vin,gab</td>
-						<td data-note>Before departure</td>
+						<td data-note></td>
 					</tr>
 					<tr data-category="Trains">
 						<td data-date>2026-04-28</td>
@@ -2489,16 +2453,16 @@
 						<td data-subcategory>Hotel</td>
 						<td data-country>🇱🇦 Laos</td>
 						<td data-city>Vientiane</td>
-						<td data-description>ROOM 1 - 4 nights</td>
-						<td data-price-night>80.00</td>
+						<td data-description>✔️ ROOM 1 - <a href="https://www.booking.com/hotel/la/urbanite.html">Urbanite Hotel ****</a> - King Suite with Balcony</td>
+						<td data-price-night>44.50</td>
 						<td data-price-adult>0.00</td>
 						<td data-price-child>0.00</td>
 						<td data-qty-nights>4</td>
 						<td data-qty-adults></td>
 						<td data-qty-children></td>
 						<td class="row-total" data-total></td>
-						<td data-participants class="participants">ste,fra,car,raf</td>
-						<td data-note>Vientiane is capital city but still generally more affordable than western capitals. Decent 3★–4★ ~35–70 € per night for standard rooms; larger spaces ~70–110 €</td>
+						<td data-participants class="participants">ste,car</td>
+						<td data-note>Booked</td>
 					</tr>
 					<tr data-category="Hotel">
 						<td data-date>2026-04-24</td>
@@ -2506,16 +2470,16 @@
 						<td data-subcategory>Hotel</td>
 						<td data-country>🇱🇦 Laos</td>
 						<td data-city>Vientiane</td>
-						<td data-description>ROOM 2 - 4 nights</td>
-						<td data-price-night>80.00</td>
+						<td data-description>✔️ ROOM 2 - <a href="https://www.booking.com/hotel/la/urbanite.html">Urbanite Hotel ****</a> - Deluxe King Room</td>
+						<td data-price-night>38.25</td>
 						<td data-price-adult>0.00</td>
 						<td data-price-child>0.00</td>
 						<td data-qty-nights>4</td>
 						<td data-qty-adults></td>
 						<td data-qty-children></td>
 						<td class="row-total" data-total></td>
-						<td data-participants class="participants">rom,chr,vin,gab</td>
-						<td data-note></td>
+						<td data-participants class="participants">fra</td>
+						<td data-note>Booked</td>
 					</tr>
 					<tr data-category="Food">
 						<td data-date>2026-04-28</td>
@@ -2532,7 +2496,7 @@
 						<td data-qty-children></td>
 						<td class="row-total" data-total></td>
 						<td data-participants class="participants">ste,fra,car,raf,rom,chr,vin,gab</td>
-						<td data-note>Welcome dinner</td>
+						<td data-note></td>
 					</tr>
 					
 					<!-- VIENTIANE - DAY 19 (April 29) -->
@@ -2568,7 +2532,7 @@
 						<td data-qty-children></td>
 						<td class="row-total" data-total></td>
 						<td data-participants class="participants">ste,fra,car,raf,rom,chr,vin,gab</td>
-						<td data-note>National symbol</td>
+						<td data-note></td>
 					</tr>
 					<tr data-category="Transport">
 						<td data-date>2026-04-29</td>
@@ -2585,7 +2549,7 @@
 						<td data-qty-children></td>
 						<td class="row-total" data-total></td>
 						<td data-participants class="participants">ste,fra,car,raf,rom,chr,vin,gab</td>
-						<td data-note>~10 min</td>
+						<td data-note></td>
 					</tr>
 					<tr data-category="Activities">
 						<td data-date>2026-04-29</td>
@@ -2602,7 +2566,7 @@
 						<td data-qty-children></td>
 						<td class="row-total" data-total></td>
 						<td data-participants class="participants">ste,fra,car,raf,rom,chr,vin,gab</td>
-						<td data-note>Climb for views</td>
+						<td data-note></td>
 					</tr>
 					<tr data-category="Food">
 						<td data-date>2026-04-29</td>
@@ -2619,7 +2583,7 @@
 						<td data-qty-children></td>
 						<td class="row-total" data-total></td>
 						<td data-participants class="participants">ste,fra,car,raf,rom,chr,vin,gab</td>
-						<td data-note>Lao-French</td>
+						<td data-note></td>
 					</tr>
 					<tr data-category="Activities">
 						<td data-date>2026-04-29</td>
@@ -2636,7 +2600,7 @@
 						<td data-qty-children></td>
 						<td class="row-total" data-total></td>
 						<td data-participants class="participants">ste,fra,car,raf,rom,chr,vin,gab</td>
-						<td data-note>Oldest temple</td>
+						<td data-note></td>
 					</tr>
 					<tr data-category="Activities">
 						<td data-date>2026-04-29</td>
@@ -2653,7 +2617,7 @@
 						<td data-qty-children></td>
 						<td class="row-total" data-total></td>
 						<td data-participants class="participants">ste,fra,car,raf,rom,chr,vin,gab</td>
-						<td data-note>Museum</td>
+						<td data-note></td>
 					</tr>
 					<tr data-category="Activities">
 						<td data-date>2026-04-29</td>
@@ -2670,7 +2634,7 @@
 						<td data-qty-children></td>
 						<td class="row-total" data-total></td>
 						<td data-participants class="participants">ste,fra,car,raf,rom,chr,vin,gab</td>
-						<td data-note>Free, donations welcome</td>
+						<td data-note></td>
 					</tr>
 					<tr data-category="Food">
 						<td data-date>2026-04-29</td>
@@ -2687,7 +2651,7 @@
 						<td data-qty-children></td>
 						<td class="row-total" data-total></td>
 						<td data-participants class="participants">ste,fra,car,raf,rom,chr,vin,gab</td>
-						<td data-note>Riverside</td>
+						<td data-note></td>
 					</tr>
 					
 					<!-- VIENTIANE - DAY 20 (April 30) -->
@@ -2723,7 +2687,7 @@
 						<td data-qty-children></td>
 						<td class="row-total" data-total></td>
 						<td data-participants class="participants">ste,fra,car,raf,rom,chr,vin,gab</td>
-						<td data-note>Quirky sculptures</td>
+						<td data-note></td>
 					</tr>
 					<tr data-category="Transport">
 						<td data-date>2026-04-30</td>
@@ -2731,7 +2695,7 @@
 						<td data-subcategory>Transfer</td>
 						<td data-country>🇱🇦 Laos</td>
 						<td data-city>Vientiane</td>
-						<td data-description>Tuk-tuk to Buddha Park</td>
+						<td data-description>Tuk-tuk to Buddha Park. 25km, round trip for group</td>
 						<td data-price-night>0.00</td>
 						<td data-price-adult>4.00</td>
 						<td data-price-child>0.00</td>
@@ -2740,7 +2704,7 @@
 						<td data-qty-children></td>
 						<td class="row-total" data-total></td>
 						<td data-participants class="participants">ste,fra,car,raf,rom,chr,vin,gab</td>
-						<td data-note>25km, round trip for group</td>
+						<td data-note></td>
 					</tr>
 					<tr data-category="Food">
 						<td data-date>2026-04-30</td>
@@ -2757,7 +2721,7 @@
 						<td data-qty-children></td>
 						<td class="row-total" data-total></td>
 						<td data-participants class="participants">ste,fra,car,raf,rom,chr,vin,gab</td>
-						<td data-note>Basic options</td>
+						<td data-note></td>
 					</tr>
 					<tr data-category="Food">
 						<td data-date>2026-04-30</td>
@@ -2774,7 +2738,7 @@
 						<td data-qty-children></td>
 						<td class="row-total" data-total></td>
 						<td data-participants class="participants">ste,fra,car,raf,rom,chr,vin,gab</td>
-						<td data-note>Upscale</td>
+						<td data-note></td>
 					</tr>
 					
 					<!-- VIENTIANE - DAY 21 (May 1) -->
@@ -2810,7 +2774,7 @@
 						<td data-qty-children></td>
 						<td class="row-total" data-total></td>
 						<td data-participants class="participants">ste,fra,car,raf,rom,chr,vin,gab</td>
-						<td data-note>Free browsing</td>
+						<td data-note></td>
 					</tr>
 					<tr data-category="Activities">
 						<td data-date>2026-05-01</td>
@@ -2827,7 +2791,7 @@
 						<td data-qty-children></td>
 						<td class="row-total" data-total></td>
 						<td data-participants class="participants">ste,fra,car,raf,rom,chr,vin,gab</td>
-						<td data-note>If interested</td>
+						<td data-note></td>
 					</tr>
 					<tr data-category="Food">
 						<td data-date>2026-05-01</td>
@@ -2844,7 +2808,7 @@
 						<td data-qty-children></td>
 						<td class="row-total" data-total></td>
 						<td data-participants class="participants">ste,fra,car,raf,rom,chr,vin,gab</td>
-						<td data-note>Farewell lunch</td>
+						<td data-note></td>
 					</tr>
 					<tr data-category="Food">
 						<td data-date>2026-05-01</td>
@@ -2861,7 +2825,7 @@
 						<td data-qty-children></td>
 						<td class="row-total" data-total></td>
 						<td data-participants class="participants">ste,fra,car,raf,rom,chr,vin,gab</td>
-						<td data-note>Farewell dinner, splurge</td>
+						<td data-note></td>
 					</tr>
 					
 					<!-- VIENTIANE - DAY 22 (May 2) - DEPARTURE -->
@@ -2897,7 +2861,24 @@
 						<td data-qty-children></td>
 						<td class="row-total" data-total></td>
 						<td data-participants class="participants">ste,fra</td>
-						<td data-note>Stéphane & Françoise only</td>
+						<td data-note></td>
+					</tr>
+					<tr data-category="Flights (🇫🇷)">
+						<td data-date>2026-05-02</td>
+						<td data-category><span class="category-flight">Flight</span></td>
+						<td data-subcategory>Flight (International)</td>
+						<td data-country>🇱🇦 Laos</td>
+						<td data-city>Vientiane</td>
+						<td data-description>20:00 - ✔️ Vientiane (VTE) - Marseille (MRS)</td>
+						<td data-price-night>0.00</td>
+						<td data-price-adult>0.00</td>
+						<td data-price-child>0.00</td>
+						<td data-qty-nights></td>
+						<td data-qty-adults></td>
+						<td data-qty-children></td>
+						<td class="row-total" data-total></td>
+						<td data-participants class="participants">ste,fra</td>
+						<td data-note>Paid</td>
 					</tr>
 
 				</tbody>

@@ -46,6 +46,7 @@ const TableFilter = {
     const cities = new Set();
     const subcategories = new Set();
     const participants = new Set();
+		const notes = new Set();
 
     this.allRows.forEach(row => {
       // Category
@@ -79,6 +80,12 @@ const TableFilter = {
           if (person) participants.add(`${p.trim()}:${person.label}`);
         });
       }
+			
+			// Notes
+      const notesCell = row.querySelector('[data-note]');
+      if (notesCell && notesCell.textContent.trim()) {
+        notes.add(notesCell.textContent.trim());
+      }
     });
 
     // Populate selects
@@ -94,6 +101,7 @@ const TableFilter = {
       return labelA.localeCompare(labelB);
     });
     this.populateSelect('filter-participant', participantOptions, true);
+		this.populateSelect('filter-note', Array.from(notes).sort());
   },
 
   populateSelect(selectId, options, isParticipant = false) {
@@ -117,7 +125,7 @@ const TableFilter = {
   attachEventListeners() {
 		// Filter inputs
 		['filter-date-from', 'filter-date-to', 'filter-category', 'filter-country', 'filter-city', 
-		 'filter-description', 'filter-subcategory', 'filter-participant'].forEach(id => {
+		 'filter-description', 'filter-subcategory', 'filter-participant', 'filter-note'].forEach(id => {
 			const element = document.getElementById(id);
 			if (element) {
 				element.addEventListener('input', () => this.applyFilters());
@@ -143,7 +151,8 @@ const TableFilter = {
 			city: document.getElementById('filter-city')?.value || '',
 			description: document.getElementById('filter-description')?.value.toLowerCase() || '',
 			subcategory: document.getElementById('filter-subcategory')?.value || '',
-			participant: document.getElementById('filter-participant')?.value || ''
+			participant: document.getElementById('filter-participant')?.value || '',
+			note: document.getElementById('filter-note')?.value || ''
 		};
 
 		this.filteredRows = this.allRows.filter(row => {
@@ -206,6 +215,14 @@ const TableFilter = {
         if (!partCell) return false;
         const participants = partCell.textContent.split(',').map(p => p.trim());
         if (!participants.includes(filters.participant)) {
+          return false;
+        }
+      }
+			
+			// Note filter
+      if (filters.note) {
+        const noteCell = row.querySelector('[data-note]');
+        if (!noteCell || noteCell.textContent.trim() !== filters.note) {
           return false;
         }
       }
@@ -390,6 +407,7 @@ const TableFilter = {
 		document.getElementById('filter-description').value = '';
 		document.getElementById('filter-subcategory').value = '';
 		document.getElementById('filter-participant').value = '';
+		document.getElementById('filter-note').value = '';
 		
 		this.applyFilters();
 	},

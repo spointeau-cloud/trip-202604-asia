@@ -130,6 +130,13 @@
   min-width: 100px;
 }
 
+/* Price/Child */
+#budget-table td:nth-child(9), 
+#budget-table th:nth-child(9) {
+  width: 10%;
+  min-width: 100px;
+}
+
 /* Total */
 #budget-table td:nth-child(13), 
 #budget-table th:nth-child(13) {
