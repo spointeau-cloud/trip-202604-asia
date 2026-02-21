@@ -10,9 +10,7 @@ const PEOPLE = {
   "rom": { label: 'Rommel', type: 'Adult', sex: 'Male', country: 'Philippines' },
   "chr": { label: 'Chris', type: 'Adult', sex: 'Female', country: 'Philippines' },
   "vin": { label: 'Vincent', type: 'Adult', sex: 'Male', country: 'Philippines' },
-  "gab": { label: 'Gabriel', type: 'Adult', sex: 'Male', country: 'Philippines' },
-	"pj":  { label: 'Paul John', type: 'Adult', sex: 'Male', country: 'Philippines' },
-	"pri": { label: 'Priyanka', type: 'Adult', sex: 'Female', country: 'Philippines' }
+  "gab": { label: 'Gabriel', type: 'Adult', sex: 'Male', country: 'Philippines' }
 };
 
 const CATEGORY_COLORS = {
@@ -28,8 +26,8 @@ const CATEGORY_COLORS = {
 
 const CURRENCIES = {
   EUR: { symbol: '€', rate: 1 },
-  USD: { symbol: '$', rate: 1.16 },
-  PHP: { symbol: '₱', rate: 68.77 }
+  USD: { symbol: '$', rate: 1.18 },
+  PHP: { symbol: '₱', rate: 68.43 }
 };
 
 // =====================
