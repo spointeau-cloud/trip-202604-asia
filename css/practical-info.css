@@ -1,0 +1,434 @@
+/* ============================================
+   practical-info.css
+   ============================================ */
+
+/* ---- Weather Cards ---- */
+.weather-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.weather-card {
+  background: #f0f4ff;
+  border: 1px solid #c7d3f5;
+  border-radius: 10px;
+  padding: 1rem;
+}
+
+.weather-card-hot {
+  background: #fff5f0;
+  border-color: #f5c6a8;
+}
+
+.weather-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 0.75rem;
+  border-bottom: 2px solid var(--color-primary);
+  padding-bottom: 0.5rem;
+}
+
+.weather-card-hot .weather-header {
+  border-bottom-color: var(--color-secondary);
+}
+
+.weather-city {
+  font-weight: 700;
+  font-size: 1rem;
+  color: var(--color-primary);
+}
+
+.weather-card-hot .weather-city {
+  color: #c0510a;
+}
+
+.weather-dates {
+  font-size: 0.78rem;
+  color: var(--color-text-muted);
+}
+
+.weather-stats {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  margin-bottom: 0.75rem;
+}
+
+.weather-stat {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  background: white;
+  border-radius: 8px;
+  padding: 0.4rem 0.65rem;
+  font-size: 0.82rem;
+  border: 1px solid var(--color-border);
+  flex: 1;
+  min-width: 90px;
+}
+
+.weather-icon {
+  font-size: 1.1rem;
+  flex-shrink: 0;
+}
+
+.weather-stat strong {
+  display: block;
+  font-size: 0.82rem;
+  line-height: 1.2;
+}
+
+.weather-label {
+  font-size: 0.72rem;
+  color: var(--color-text-muted);
+}
+
+.weather-desc {
+  font-size: 0.88rem;
+  color: var(--color-text-main);
+  line-height: 1.55;
+  margin-bottom: 0.75rem;
+}
+
+.weather-tips {
+  background: white;
+  border-radius: 6px;
+  padding: 0.65rem 0.8rem;
+  font-size: 0.83rem;
+  border-left: 3px solid var(--color-primary);
+  line-height: 1.5;
+}
+
+.weather-card-hot .weather-tips {
+  border-left-color: var(--color-secondary);
+}
+
+/* ---- Visa Table ---- */
+.visa-table-wrap {
+  overflow-x: auto;
+  margin-top: 1rem;
+}
+
+.visa-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.88rem;
+}
+
+.visa-table th,
+.visa-table td {
+  padding: 0.85rem 1rem;
+  border: 1px solid var(--color-border);
+  vertical-align: top;
+  text-align: left;
+}
+
+.visa-table th {
+  background: var(--color-primary);
+  color: white;
+  font-weight: 600;
+}
+
+.visa-table .table-sub {
+  font-weight: 400;
+  font-size: 0.8rem;
+  opacity: 0.85;
+}
+
+.visa-table tr:nth-child(even) td {
+  background: #f8f9ff;
+}
+
+.visa-badge {
+  display: inline-block;
+  padding: 3px 12px;
+  border-radius: 20px;
+  font-size: 0.82rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.visa-free {
+  background: #d4edda;
+  color: #155724;
+}
+
+.visa-required {
+  background: #fff3cd;
+  color: #856404;
+}
+
+.table-note {
+  margin: 0.25rem 0 0;
+  font-size: 0.83rem;
+  color: var(--color-text-muted);
+  line-height: 1.5;
+}
+
+.table-list {
+  margin: 0.4rem 0 0 1.1rem;
+  padding: 0;
+  font-size: 0.83rem;
+  color: var(--color-text-main);
+  line-height: 1.6;
+}
+
+/* ---- Health Cards ---- */
+.health-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+  margin: 0.75rem 0 1.25rem;
+}
+
+.health-card {
+  border-radius: 8px;
+  padding: 1rem;
+  border: 1px solid var(--color-border);
+}
+
+.health-card ul {
+  margin: 0.4rem 0 0 1.1rem;
+  padding: 0;
+}
+
+.health-card li {
+  font-size: 0.88rem;
+  margin: 0.3rem 0;
+  color: var(--color-text-main);
+}
+
+.health-card-title {
+  font-weight: 700;
+  font-size: 0.88rem;
+  margin-bottom: 0.25rem;
+}
+
+.health-essential {
+  background: #fff8f0;
+  border-color: #f5c6a8;
+}
+
+.health-essential .health-card-title { color: #c0510a; }
+
+.health-consider {
+  background: #fffbf0;
+  border-color: #ffd77a;
+}
+
+.health-consider .health-card-title { color: #856404; }
+
+.health-standard {
+  background: #f0f8f0;
+  border-color: #a8d5a8;
+}
+
+.health-standard .health-card-title { color: #155724; }
+
+/* ---- Packing Checklist ---- */
+.checklist-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.cl-tab {
+  padding: 0.45rem 1.1rem;
+  border: 1px solid var(--color-border);
+  border-radius: 20px;
+  background: white;
+  cursor: pointer;
+  font-family: var(--font-base);
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--color-text-muted);
+  transition: background 0.2s, color 0.2s, border-color 0.2s;
+}
+
+.cl-tab:hover {
+  border-color: var(--color-primary);
+  color: var(--color-primary);
+}
+
+.cl-tab.active {
+  background: var(--color-primary);
+  color: white;
+  border-color: var(--color-primary);
+  font-weight: 600;
+}
+
+.checklist-panel {
+  display: none;
+}
+
+.checklist-panel.active {
+  display: block;
+}
+
+.checklist-group {
+  margin-bottom: 1.25rem;
+}
+
+.checklist-category {
+  font-weight: 700;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: var(--color-primary);
+  margin-bottom: 0.5rem;
+  padding-bottom: 0.3rem;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.checklist-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.6rem;
+  padding: 0.4rem 0.5rem;
+  border-radius: 6px;
+  font-size: 0.88rem;
+  cursor: pointer;
+  transition: background 0.15s;
+  line-height: 1.45;
+  color: var(--color-text-main);
+  margin-bottom: 0.1rem;
+}
+
+.checklist-item:hover {
+  background: var(--color-background);
+}
+
+.checklist-item input[type="checkbox"] {
+  margin-top: 2px;
+  flex-shrink: 0;
+  accent-color: var(--color-primary);
+  width: 15px;
+  height: 15px;
+  cursor: pointer;
+}
+
+.checklist-item:has(input:checked) {
+  color: var(--color-text-muted);
+  text-decoration: line-through;
+  background: #f5f5f5;
+}
+
+/* ---- Responsive ---- */
+@media (max-width: 600px) {
+  .weather-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .visa-table th,
+  .visa-table td {
+    padding: 0.6rem 0.75rem;
+    font-size: 0.82rem;
+  }
+
+  .checklist-tabs {
+    gap: 0.4rem;
+  }
+
+  .cl-tab {
+    font-size: 0.78rem;
+    padding: 0.4rem 0.75rem;
+  }
+}
+
+/* ── Weather chart specific ── */
+
+/* City legend pills */
+.city-legend {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.5rem;
+	margin: 1rem 0 0.75rem;
+}
+
+.city-pill {
+	display: flex;
+	align-items: center;
+	gap: 6px;
+	padding: 4px 12px;
+	border-radius: 20px;
+	font-size: 0.78rem;
+	font-weight: 600;
+	border: 1px solid transparent;
+}
+
+.city-pill-dot {
+	width: 10px; height: 10px;
+	border-radius: 50%;
+	flex-shrink: 0;
+}
+
+/* Chart containers */
+#weatherChart {
+	width: 100%;
+	height: 520px;
+}
+
+/* Series legend (below chart) */
+.series-legend {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 1rem;
+	justify-content: center;
+	margin: 0.75rem 0 0;
+	padding: 0.75rem 1rem;
+	background: var(--color-background);
+	border-radius: 8px;
+	border: 1px solid var(--color-border);
+}
+
+.series-legend-item {
+	display: flex;
+	align-items: center;
+	gap: 6px;
+	font-size: 0.8rem;
+	color: var(--color-text-muted);
+}
+
+.legend-line {
+	width: 24px; height: 3px; border-radius: 2px; flex-shrink: 0;
+}
+
+.legend-line-dashed {
+	background: repeating-linear-gradient(
+		90deg,
+		currentColor 0, currentColor 5px,
+		transparent 5px, transparent 9px
+	);
+	border-radius: 0;
+}
+
+.legend-line-dotted {
+	background: repeating-linear-gradient(
+		90deg,
+		currentColor 0, currentColor 3px,
+		transparent 3px, transparent 6px
+	);
+}
+
+.legend-bar {
+	width: 12px; height: 14px; border-radius: 2px 2px 0 0; flex-shrink: 0;
+}
+
+.legend-band {
+	width: 24px; height: 12px; border-radius: 3px; flex-shrink: 0;
+	background: linear-gradient(135deg, rgba(234,100,60,0.65), rgba(102,126,234,0.45));
+}
+
+.legend-sun {
+	width: 24px; height: 12px; border-radius: 3px; flex-shrink: 0;
+	background: linear-gradient(90deg, rgba(251,191,36,0.9), rgba(251,146,60,0.85));
+}
+
+/* Responsive */
+@media (max-width: 640px) {
+	#weatherChart { height: 440px; }
+}

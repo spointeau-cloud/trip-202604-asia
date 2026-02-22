@@ -1,0 +1,280 @@
+/* ============================================
+   destinations.css
+   ============================================ */
+
+/* Section wrapper */
+.dest-section {
+  padding: 0 !important;
+  overflow: hidden;
+}
+
+/* ---- Country tabs ---- */
+.country-tabs-bar {
+  display: flex;
+  border-bottom: 2px solid var(--color-border);
+  background: var(--color-background);
+}
+
+.country-tab-btn {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+  padding: 1rem 1.5rem;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  font-family: var(--font-base);
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--color-text-muted);
+  border-bottom: 3px solid transparent;
+  margin-bottom: -2px;
+  transition: color 0.2s, border-color 0.2s, background 0.2s;
+}
+
+.country-tab-btn .country-flag {
+  font-size: 1.6rem;
+}
+
+.country-tab-btn .country-dates {
+  font-size: 0.75rem;
+  font-weight: 400;
+  color: var(--color-text-muted);
+}
+
+.country-tab-btn:hover {
+  background: var(--color-surface);
+  color: var(--color-primary);
+}
+
+.country-tab-btn.active {
+  background: var(--color-surface);
+  color: var(--color-primary);
+  border-bottom-color: var(--color-primary);
+}
+
+.country-tab-btn.active .country-dates {
+  color: var(--color-primary);
+}
+
+/* ---- Country content ---- */
+.country-content {
+  display: none;
+  background: var(--color-surface);
+}
+
+.country-content.active {
+  display: block;
+}
+
+/* ---- City tabs ---- */
+.city-tabs-bar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0;
+  background: var(--color-background);
+  border-bottom: 2px solid var(--color-border);
+  padding: 0 1rem;
+}
+
+.city-tab-btn {
+  padding: 0.65rem 1.1rem;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  font-family: var(--font-base);
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--color-text-muted);
+  border-bottom: 3px solid transparent;
+  margin-bottom: -2px;
+  transition: color 0.2s, border-color 0.2s;
+  white-space: nowrap;
+}
+
+.city-tab-btn:hover {
+  color: var(--color-primary);
+}
+
+.city-tab-btn.active {
+  color: var(--color-secondary);
+  border-bottom-color: var(--color-secondary);
+  font-weight: 600;
+}
+
+/* ---- City content panels ---- */
+.city-content {
+  display: none;
+  padding: 1.5rem;
+}
+
+.city-content.active {
+  display: block;
+}
+
+/* ---- City header ---- */
+.city-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 1.25rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 2px solid var(--color-primary);
+}
+
+.city-name {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--color-primary);
+}
+
+.city-dates {
+  font-size: 0.85rem;
+  color: var(--color-text-muted);
+  margin-top: 3px;
+}
+
+.city-description h3 {
+  color: var(--color-primary);
+  margin-top: 1.25rem;
+  margin-bottom: 0.4rem;
+}
+
+/* ---- Attraction Spotlights ---- */
+.attraction-spotlight {
+  margin: 1.75rem 0;
+  border-radius: 12px;
+  border: 1px solid var(--color-border);
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+}
+
+.spotlight-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem 1.25rem;
+  background: linear-gradient(135deg, #f0f3ff 0%, #fdf6ee 100%);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.spotlight-icon {
+  font-size: 2rem;
+  flex-shrink: 0;
+}
+
+.spotlight-title {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--color-primary);
+}
+
+.spotlight-subtitle {
+  font-size: 0.8rem;
+  color: var(--color-text-muted);
+  margin-top: 2px;
+}
+
+.spotlight-badge {
+  margin-left: auto;
+  flex-shrink: 0;
+  padding: 4px 14px;
+  border-radius: 20px;
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.badge-unmissable {
+  background: #fff3cd;
+  color: #856404;
+  border: 1px solid #ffc107;
+}
+
+.badge-cultural {
+  background: #d1ecf1;
+  color: #0c5460;
+  border: 1px solid #bee5eb;
+}
+
+.spotlight-body {
+  padding: 1.25rem;
+}
+
+.spotlight-body > p {
+  margin-bottom: 1rem;
+  line-height: 1.65;
+  color: var(--color-text-main);
+}
+
+.spotlight-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+  margin: 1rem 0;
+}
+
+.spotlight-info-box {
+  background: var(--color-background);
+  border-radius: 8px;
+  padding: 1rem;
+  border: 1px solid var(--color-border);
+}
+
+.spotlight-info-box .info-label {
+  font-weight: 700;
+  font-size: 0.9rem;
+  color: var(--color-primary);
+  margin-bottom: 0.4rem;
+}
+
+.spotlight-info-box p {
+  font-size: 0.88rem;
+  color: var(--color-text-muted);
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* ---- tip-box / highlight-box (local overrides) ---- */
+.city-content .highlight-box,
+.spotlight-body .highlight-box {
+  margin-top: 1rem;
+}
+
+.city-content .tip-box,
+.spotlight-body .tip-box {
+  margin-top: 1rem;
+}
+
+.spotlight-body .tip-box {
+  background: #eef2ff;
+  border-left-color: var(--color-primary);
+}
+
+.spotlight-body .tip-box .tip-title {
+  color: var(--color-primary);
+}
+
+/* ---- Responsive ---- */
+@media (max-width: 600px) {
+  .country-tab-btn {
+    padding: 0.75rem 0.5rem;
+    font-size: 0.85rem;
+  }
+
+  .city-tab-btn {
+    padding: 0.5rem 0.75rem;
+    font-size: 0.78rem;
+  }
+
+  .spotlight-header {
+    flex-wrap: wrap;
+  }
+
+  .spotlight-badge {
+    margin-left: 0;
+  }
+}

@@ -5,9 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="robots" content="noindex" />
   <title>Asia Trip – April 2026</title>
-	<link rel="icon" type="image/x-icon" href="../images/favicon.png">
+  <link rel="icon" type="image/x-icon" href="../images/favicon.png">
   <link rel="stylesheet" href="../css/style.css">
-	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="../css/practical-info.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<script src="https://cdn.jsdelivr.net/npm/echarts@5/dist/echarts.min.js"></script>
 </head>
 
 <body>
@@ -15,33 +17,612 @@
   <header>
     <h1>Southeast Asia Family Adventure</h1>
     <p>Vietnam • Laos</p>
-		<p><strong>April 11 - May 2, 2026</strong></p>
+    <p><strong>April 11 - May 2, 2026</strong></p>
   </header>
-  
+
   <nav class="main-nav">
-		<ul>
-			<li><a href="../index.html" title="Home"><i class="material-icons">home</i></a></li>
-			<li><a href="./itinerary.html" title="Itinerary"><i class="material-icons">route</i></a></li>
-			<li><a href="./destinations.html" title="Destinations"><i class="material-icons">map</i></a></li>
-			<li><a href="./food.html" title="Food"><i class="material-icons">ramen_dining</i></a></li>
-			<li><a href="./budget.html" title="Budget"><i class="material-icons">savings</i></a></li>
-			<li><a href="./practical-info.html" class="active" title="Practical information" aria-current="page"><i class="material-icons">info</i></a></li>
-		</ul>
-	</nav>
+    <ul>
+      <li><a href="../index.html" title="Home"><i class="material-icons">home</i></a></li>
+      <li><a href="./itinerary.html" title="Itinerary"><i class="material-icons">route</i></a></li>
+      <li><a href="./destinations.html" title="Destinations"><i class="material-icons">map</i></a></li>
+      <li><a href="./food.html" title="Food"><i class="material-icons">ramen_dining</i></a></li>
+      <li><a href="./budget.html" title="Budget"><i class="material-icons">savings</i></a></li>
+      <li><a href="./practical-info.html" class="active" title="Practical information" aria-current="page"><i class="material-icons">info</i></a></li>
+    </ul>
+  </nav>
 
   <main>
 
-    <section>
-      <h2>About this page</h2>
-      <p>This page will give practical information about each destination.</p>
+    <!-- ======================== -->
+    <!-- WEATHER                 -->
+    <!-- ======================== -->
+    <section aria-labelledby="weather-title">
+      <h2 id="weather-title">🌤️ Weather by Destination</h2>
+      <p>April and early May fall at the transition between dry and wet seasons across both countries. Expect warm to very hot temperatures, high humidity, and occasional tropical showers — but overall excellent travel conditions.</p>
+
+      <div class="weather-grid">
+
+        <div class="weather-card">
+          <div class="weather-header">
+            <div class="weather-city">🏙️ Ho Chi Minh City</div>
+            <div class="weather-dates">April 11–13</div>
+          </div>
+          <div class="weather-stats">
+            <div class="weather-stat">
+              <span class="weather-icon">🌡️</span>
+              <div><strong>30–35°C</strong><div class="weather-label">Day / feels hotter</div></div>
+            </div>
+            <div class="weather-stat">
+              <span class="weather-icon">🌧️</span>
+              <div><strong>Low–Medium</strong><div class="weather-label">Rain risk</div></div>
+            </div>
+            <div class="weather-stat">
+              <span class="weather-icon">💧</span>
+              <div><strong>Very high</strong><div class="weather-label">Humidity</div></div>
+            </div>
+          </div>
+          <p class="weather-desc">Southern Vietnam's dry season is ending — expect mostly sunny skies with some short afternoon thunderstorms building in. Extremely humid and hot. Ideal time for sightseeing in the morning; rest or stay indoors in the peak heat (12–3pm).</p>
+          <div class="weather-tips">
+            <strong>👕 What to wear:</strong> Ultra-light breathable fabrics (linen, moisture-wicking). Light layers for heavily air-conditioned restaurants. Sun hat and sunglasses essential.
+          </div>
+        </div>
+
+        <div class="weather-card">
+          <div class="weather-header">
+            <div class="weather-city">🏖️ Da Nang &amp; Hoi An</div>
+            <div class="weather-dates">April 13–19</div>
+          </div>
+          <div class="weather-stats">
+            <div class="weather-stat">
+              <span class="weather-icon">🌡️</span>
+              <div><strong>26–32°C</strong><div class="weather-label">Day</div></div>
+            </div>
+            <div class="weather-stat">
+              <span class="weather-icon">🌧️</span>
+              <div><strong>Low</strong><div class="weather-label">Rain risk</div></div>
+            </div>
+            <div class="weather-stat">
+              <span class="weather-icon">☀️</span>
+              <div><strong>Excellent</strong><div class="weather-label">Sunshine</div></div>
+            </div>
+          </div>
+          <p class="weather-desc">April is one of the best months for central Vietnam — the rainy season hasn't started and the summer heat is building pleasantly. Beautiful beach weather. Ba Na Hills will be noticeably cooler (~15–20°C at the summit). My Son may have light showers.</p>
+          <div class="weather-tips">
+            <strong>👕 What to wear:</strong> Light summer clothes. <strong>Bring a warm layer</strong> for Ba Na Hills — it can feel cold on the cable car and at the summit. Modest clothing for temple visits (shoulders and knees covered).
+          </div>
+        </div>
+
+        <div class="weather-card">
+          <div class="weather-header">
+            <div class="weather-city">🏛️ Hanoi &amp; Ha Long Bay</div>
+            <div class="weather-dates">April 19–24</div>
+          </div>
+          <div class="weather-stats">
+            <div class="weather-stat">
+              <span class="weather-icon">🌡️</span>
+              <div><strong>22–28°C</strong><div class="weather-label">Day</div></div>
+            </div>
+            <div class="weather-stat">
+              <span class="weather-icon">🌧️</span>
+              <div><strong>Low–Medium</strong><div class="weather-label">Rain risk</div></div>
+            </div>
+            <div class="weather-stat">
+              <span class="weather-icon">🌫️</span>
+              <div><strong>Possible</strong><div class="weather-label">Mist / drizzle</div></div>
+            </div>
+          </div>
+          <p class="weather-desc">Northern Vietnam has a distinct spring climate — pleasant and warm, sometimes with light drizzle. Ha Long Bay can have atmospheric mist which actually adds to the drama of the karsts. Cooler evenings are possible, especially at sea.</p>
+          <div class="weather-tips">
+            <strong>👕 What to wear:</strong> Light to mid-weight layers. A light jacket or cardigan for evenings and for the Ha Long cruise (sea breeze at night). Rain jacket recommended.
+          </div>
+        </div>
+
+        <div class="weather-card weather-card-hot">
+          <div class="weather-header">
+            <div class="weather-city">🕉️ Luang Prabang</div>
+            <div class="weather-dates">April 24–28</div>
+          </div>
+          <div class="weather-stats">
+            <div class="weather-stat">
+              <span class="weather-icon">🌡️</span>
+              <div><strong>30–38°C</strong><div class="weather-label">Day / very hot!</div></div>
+            </div>
+            <div class="weather-stat">
+              <span class="weather-icon">🌧️</span>
+              <div><strong>Low</strong><div class="weather-label">Rain risk</div></div>
+            </div>
+            <div class="weather-stat">
+              <span class="weather-icon">🏜️</span>
+              <div><strong>Dry season</strong><div class="weather-label">Ending soon</div></div>
+            </div>
+          </div>
+          <p class="weather-desc">Late April in Luang Prabang is very hot — among the hottest months of the year. Mornings are glorious for the Tak Bat ceremony and temple visits. Kuang Si Waterfalls are perfect for a refreshing swim. Pace yourself and hydrate constantly.</p>
+          <div class="weather-tips">
+            <strong>👕 What to wear:</strong> Lightest possible fabrics. Swim gear for Kuang Si. Head cover and high-SPF sunscreen essential. Plan outdoor activities before 10am or after 4pm.
+          </div>
+        </div>
+
+        <div class="weather-card weather-card-hot">
+          <div class="weather-header">
+            <div class="weather-city">🏛️ Vientiane</div>
+            <div class="weather-dates">April 28 – May 2</div>
+          </div>
+          <div class="weather-stats">
+            <div class="weather-stat">
+              <span class="weather-icon">🌡️</span>
+              <div><strong>32–38°C</strong><div class="weather-label">Day / hottest time!</div></div>
+            </div>
+            <div class="weather-stat">
+              <span class="weather-icon">🌧️</span>
+              <div><strong>Medium</strong><div class="weather-label">First rains building</div></div>
+            </div>
+            <div class="weather-stat">
+              <span class="weather-icon">⚡</span>
+              <div><strong>Possible</strong><div class="weather-label">Thunderstorms</div></div>
+            </div>
+          </div>
+          <p class="weather-desc">April–May is the absolute hottest period in Vientiane. The rainy season is approaching so dramatic afternoon thunderstorms are possible — they typically bring brief, heavy downpours that cool things down quickly. Buddha Park excursion best done in the morning.</p>
+          <div class="weather-tips">
+            <strong>👕 What to wear:</strong> Ultra-light, loose clothing. Stay hydrated constantly — water and electrolytes. Afternoons best spent indoors or poolside. The riverside is lovely in the late evening breeze.
+          </div>
+        </div>
+
+      </div>
+
+      <div class="info-item" style="margin-top: 1rem; background: #fff3cd; border-color: #ffc107;">
+        <div class="info-label">🧴 Sun &amp; Heat essentials for the whole trip</div>
+        <p style="margin:0.25rem 0 0">SPF 50+ sunscreen (reapply every 2h), wide-brim hat, UV-protective sunglasses, light scarf (temple visits + sun), electrolyte sachets or sports drinks, portable fan (for outdoor queues). Heat exhaustion is a real risk in Laos — drink 2–3 L of water per day minimum.</p>
+      </div>
+    </section>
+		<section aria-labelledby="weather-chart-title">
+      <h2 id="weather-chart-title">🌤️ Weather Day by Day</h2>
+      <p>
+        Day-by-day forecast across the full trip — temperature range, rain probability, humidity,
+        and daylight hours. Hover or tap any day for full details including sunrise &amp; sunset times.
+        Data is a reliable April/May climatic average for each location.
+      </p>
+
+      <!-- City color legend -->
+      <div class="city-legend" id="cityLegend">
+        <!-- populated by JS -->
+      </div>
+
+      <!-- Main chart -->
+      <div id="weatherChart" role="img" aria-label="Weather chart for the Asia trip"></div>
+
+      <!-- Series legend -->
+      <div class="series-legend">
+        <div class="series-legend-item">
+          <div class="legend-band"></div>
+          <span>Temperature range (min – max)</span>
+        </div>
+        <div class="series-legend-item">
+          <div class="legend-line" style="background:#d97050; height:2.5px;"></div>
+          <span>Max °C</span>
+        </div>
+        <div class="series-legend-item">
+          <div class="legend-line" style="background:#667eea; height:1.5px; opacity:0.8;" class="legend-line-dashed"></div>
+          <span>Min °C</span>
+        </div>
+        <div class="series-legend-item">
+          <div class="legend-bar" style="background:rgba(80,140,220,0.7);"></div>
+          <span>Rain risk %</span>
+        </div>
+        <div class="series-legend-item">
+          <div class="legend-line" style="background:#3366aa; height:2px;"></div>
+          <span>Humidity %</span>
+        </div>
+        <div class="series-legend-item">
+          <div class="legend-sun"></div>
+          <span>Daylight hours</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================== -->
+    <!-- VISA & ENTRY            -->
+    <!-- ======================== -->
+    <section aria-labelledby="visa-title">
+      <h2 id="visa-title">🛂 Visa &amp; Entry Requirements</h2>
+
+      <div class="visa-table-wrap">
+        <table class="visa-table">
+          <thead>
+            <tr>
+              <th>Destination</th>
+              <th>🇫🇷 Stéphane &amp; Françoise<br><span class="table-sub">French passport</span></th>
+              <th>🇵🇭 Caroline, Rafael &amp; family<br><span class="table-sub">Philippine passport</span></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>🇻🇳 Vietnam</strong></td>
+              <td>
+                <span class="visa-badge visa-free">✅ Visa-free · 45 days</span>
+                <p class="table-note">Since 2023, French citizens enjoy 45-day visa-free entry. No action needed — just your passport.</p>
+              </td>
+              <td>
+                <span class="visa-badge visa-free">✅ Visa-free · 30 days</span>
+                <p class="table-note">Philippine citizens enter Vietnam visa-free for up to 30 days. Passport must be valid 6 months beyond departure.</p>
+              </td>
+            </tr>
+            <tr>
+              <td><strong>🇱🇦 Laos</strong></td>
+              <td>
+                <span class="visa-badge visa-required">⚠️ Visa required</span>
+                <p class="table-note">French citizens need a visa. Two easy options:</p>
+                <ul class="table-list">
+                  <li><strong>E-Visa (recommended):</strong> Apply online at laoevisa.gov.la · ~$50 USD · Up to 30 days · Single entry · Approved in 3 business days. Apply at least 2 weeks before departure.</li>
+                  <li><strong>Visa on Arrival:</strong> Available at Wattay Airport (Vientiane) · ~$35 USD · Bring 2 passport photos. Queues can be long.</li>
+                </ul>
+              </td>
+              <td>
+                <span class="visa-badge visa-free">✅ Visa-free · 30 days</span>
+                <p class="table-note">As ASEAN members, Philippine citizens enjoy visa-free entry to Laos for up to 30 days. No action needed.</p>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="info-item" style="background: #fff3cd; border-color: #ffc107; margin-top: 1rem;">
+        <div class="info-label">⚠️ Action required for Stéphane &amp; Françoise</div>
+        <p style="margin: 0.25rem 0 0">Apply for your Laos e-Visa online at <strong>laoevisa.gov.la</strong> as soon as possible (and at least 2 weeks before April 24). Have your passport, a digital photo, and a credit card ready. The process takes about 15 minutes and costs ~$30 per person. You'll receive approval by email.</p>
+      </div>
+
+      <h3>📋 General Entry Requirements (Everyone)</h3>
+      <div class="checklist-group">
+        <label class="checklist-item"><input type="checkbox"> Passport valid for at least 6 months beyond May 2, 2026 (i.e., valid until at least November 2026)</label>
+        <label class="checklist-item"><input type="checkbox"> At least 2 blank pages in passport for stamps</label>
+        <label class="checklist-item"><input type="checkbox"> Return / onward ticket (may be requested at entry)</label>
+        <label class="checklist-item"><input type="checkbox"> Proof of accommodation for first night (hotel confirmation printout or screenshot)</label>
+        <label class="checklist-item"><input type="checkbox"> (Stéphane &amp; Françoise) Laos e-Visa approval letter — printed and digital copy</label>
+      </div>
+    </section>
+
+    <!-- ======================== -->
+    <!-- HEALTH                  -->
+    <!-- ======================== -->
+    <section aria-labelledby="health-title">
+      <h2 id="health-title">🏥 Health &amp; Medical</h2>
+
+      <h3>💉 Vaccinations</h3>
+      <p>Consult your doctor or a travel medicine clinic at least 6–8 weeks before departure. Standard recommendations for Southeast Asia include:</p>
+      <div class="health-grid">
+        <div class="health-card health-essential">
+          <div class="health-card-title">Essential (if not up to date)</div>
+          <ul>
+            <li>Hepatitis A</li>
+            <li>Typhoid</li>
+            <li>Tetanus / Diphtheria / Polio booster</li>
+            <li>Hepatitis B</li>
+          </ul>
+        </div>
+        <div class="health-card health-consider">
+          <div class="health-card-title">Consider (depending on activities)</div>
+          <ul>
+            <li>Japanese Encephalitis (rural &amp; Laos)</li>
+            <li>Rabies (if trekking / remote areas)</li>
+            <li>Malaria prophylaxis — generally not needed for the cities on our route, but discuss Luang Prabang region with your doctor</li>
+          </ul>
+        </div>
+        <div class="health-card health-standard">
+          <div class="health-card-title">Standard (always recommended)</div>
+          <ul>
+            <li>COVID-19 (up to date)</li>
+            <li>Influenza (seasonal)</li>
+          </ul>
+        </div>
+      </div>
+
+      <h3>🦟 Mosquitoes &amp; Dengue</h3>
+      <p>Dengue fever is present across Vietnam and Laos, especially during the wet season transition in April–May. There is no vaccine available in most countries — prevention is key.</p>
+      <div class="checklist-group">
+        <label class="checklist-item"><input type="checkbox"> Pack DEET-based insect repellent (30–50% DEET) — apply morning and evening</label>
+        <label class="checklist-item"><input type="checkbox"> Wear long sleeves and trousers at dawn and dusk (peak mosquito activity)</label>
+        <label class="checklist-item"><input type="checkbox"> Use hotel room mosquito nets if provided, especially in Laos</label>
+        <label class="checklist-item"><input type="checkbox"> Extra repellent for Ninh Binh, Kuang Si Falls, and rural excursions</label>
+      </div>
+
+      <h3>💊 Travel Medicine Kit</h3>
+      <div class="checklist-group">
+        <label class="checklist-item"><input type="checkbox"> Prescription medications (bring full supply + extra)</label>
+        <label class="checklist-item"><input type="checkbox"> Paracetamol / ibuprofen</label>
+        <label class="checklist-item"><input type="checkbox"> Oral rehydration salts (essential for heat and traveler's diarrhea)</label>
+        <label class="checklist-item"><input type="checkbox"> Imodium / loperamide (traveler's diarrhea)</label>
+        <label class="checklist-item"><input type="checkbox"> Antihistamines (allergies and insect bites)</label>
+        <label class="checklist-item"><input type="checkbox"> Antifungal cream (humidity-related skin issues)</label>
+        <label class="checklist-item"><input type="checkbox"> Antiseptic cream / plasters / bandages</label>
+        <label class="checklist-item"><input type="checkbox"> Blister plasters (lots of walking!)</label>
+        <label class="checklist-item"><input type="checkbox"> Thermometer</label>
+        <label class="checklist-item"><input type="checkbox"> Travel insurance documents — including emergency contact number</label>
+      </div>
+
+      <div class="info-item" style="background: #d4edda; border-color: #28a745; margin-top: 1rem;">
+        <div class="info-label">🍽️ Food &amp; Water Safety</div>
+        <p style="margin:0.25rem 0 0">Drink <strong>bottled or filtered water only</strong> — tap water is not safe in Vietnam or Laos. Ice in reputable restaurants is generally fine (made from filtered water). Be cautious with raw salads at street stalls. Well-cooked street food is usually safer than it looks — go where locals eat! If in doubt: boil it, cook it, peel it, or forget it.</p>
+      </div>
+    </section>
+
+    <!-- ======================== -->
+    <!-- MONEY                   -->
+    <!-- ======================== -->
+    <section aria-labelledby="money-title">
+      <h2 id="money-title">💰 Money &amp; Currency</h2>
+
+      <div class="info-grid">
+        <div class="info-item">
+          <div class="info-label">🇻🇳 Vietnam — Vietnamese Dong (VND)</div>
+          <p>Approximate rate: <strong>1 EUR ≈ 27,000 VND · 1 USD ≈ 25,000 VND</strong><br>
+          Large numbers are normal — a bowl of phở costs ~40,000–80,000 VND (~€1.50–3). Cash is king for street food and local markets. Cards accepted in hotels, restaurants, and tourist sites in cities.</p>
+        </div>
+        <div class="info-item">
+          <div class="info-label">🇱🇦 Laos — Lao Kip (LAK) &amp; USD</div>
+          <p>Approximate rate: <strong>1 EUR ≈ 23,000 LAK · 1 USD ≈ 21,500 LAK</strong><br>
+          USD is widely accepted alongside Kip for larger purchases (hotels, activities). Thai Baht is also accepted near the border. Have a mix of small USD bills and Kip for daily expenses.</p>
+        </div>
+        <div class="info-item">
+          <div class="info-label">🏧 ATMs</div>
+          <p>Available in all cities we visit. Withdraw from bank ATMs (not airport ATMs which charge higher fees). Vietnam ATMs typically dispense up to 3,000,000 VND (~€110) per transaction. Laos ATMs often have low limits too. Notify your bank of your travel dates to avoid card blocks.</p>
+        </div>
+        <div class="info-item">
+          <div class="info-label">💳 Credit Cards</div>
+          <p>Visa and Mastercard accepted at hotels, tourist restaurants, and larger stores. A fee of 2–3% is common. Carry cash for markets, street food, tuk-tuks, and small guesthouses. American Express has limited acceptance.</p>
+        </div>
+        <div class="info-item">
+          <div class="info-label">💱 Money Exchange</div>
+          <p>Best rates at local exchange bureaux or banks — avoid airports and hotels. In Vietnam, Vietcombank and BIDV offer good rates. In Laos, BCEL Bank is reliable. Never exchange with unauthorized street money changers.</p>
+        </div>
+        <div class="info-item">
+          <div class="info-label">🤝 Tipping</div>
+          <p>Not mandatory but appreciated: Restaurant servers: 10–15% (if no service charge). Tour guides: $3–5/person/day. Drivers: $2–3/day. Massage therapists: 20–30,000 VND / 20,000 LAK. Always tip in local currency when possible.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================== -->
+    <!-- COMMUNICATION           -->
+    <!-- ======================== -->
+    <section aria-labelledby="comms-title">
+      <h2 id="comms-title">📱 Communication &amp; Connectivity</h2>
+
+      <div class="info-grid">
+        <div class="info-item">
+          <div class="info-label">📶 SIM Cards — Vietnam</div>
+          <p>Buy a local SIM at the airport on arrival or at any phone shop. Best networks: <strong>Viettel</strong> (best rural coverage), <strong>Vinaphone</strong>, <strong>Mobifone</strong>. A tourist SIM with 10–20 GB data costs ~$5–10 USD for 30 days. Bring your unlocked phone.</p>
+        </div>
+        <div class="info-item">
+          <div class="info-label">📶 SIM Cards — Laos</div>
+          <p>Buy a Laos SIM at Vientiane or Luang Prabang airport. Best network: <strong>Unitel</strong> or <strong>TPLUS</strong>. Data SIM with 10 GB costs ~$5–8 USD. Coverage is good in cities; more limited in rural areas. Note: your Vietnam SIM won't work in Laos.</p>
+        </div>
+        <div class="info-item">
+          <div class="info-label">🌐 eSIM (Alternative)</div>
+          <p>If your phone supports eSIM, consider buying a regional Southeast Asia eSIM before departure (e.g., Airalo, Holafly). These cover both Vietnam and Laos with one plan. Convenient but slightly more expensive than local SIMs.</p>
+        </div>
+        <div class="info-item">
+          <div class="info-label">📡 WiFi</div>
+          <p>Free WiFi is widely available in hotels, restaurants, and cafés in Vietnam and Laos. Quality varies — expect it to be slow or unreliable in rural areas and on excursions (Ha Long Bay, Kuang Si, Ninh Binh). Download offline maps (Google Maps or maps.me) before excursions!</p>
+        </div>
+        <div class="info-item">
+          <div class="info-label">🚕 Grab App</div>
+          <p><strong>Download Grab before you go</strong> — it's the Uber of Southeast Asia and works in all cities on our route in both Vietnam and Laos. Much safer and fairer than negotiating with tuk-tuk drivers. Add a payment method in advance. Essential for getting around in cities.</p>
+        </div>
+        <div class="info-item">
+          <div class="info-label">🗺️ Offline Maps</div>
+          <p>Download offline maps for all cities in <strong>Google Maps</strong> before each leg of the trip. Also consider <strong>maps.me</strong> as a backup. Very useful in areas with poor connectivity (Ninh Binh, rural Laos) or when roaming data is expensive.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================== -->
+    <!-- CULTURAL TIPS           -->
+    <!-- ======================== -->
+    <section aria-labelledby="culture-title">
+      <h2 id="culture-title">🙏 Cultural Etiquette</h2>
+
+      <div class="info-grid">
+        <div class="info-item">
+          <div class="info-label">👗 Temple Dress Code</div>
+          <p>Shoulders and knees must be covered at all temples and pagodas. Many sites provide sarongs to borrow at the entrance. Bring a light scarf or a pair of lightweight trousers that can go over shorts quickly.</p>
+        </div>
+        <div class="info-item">
+          <div class="info-label">🥿 Shoes Off</div>
+          <p>Always remove shoes before entering temples, pagodas, and many traditional homes. Slip-on shoes or sandals save a lot of time — avoid shoes with complex laces for temple-heavy days.</p>
+        </div>
+        <div class="info-item">
+          <div class="info-label">📸 Photography</div>
+          <p>Always ask permission before photographing people, especially monks and worshippers. At the Tak Bat ceremony in Luang Prabang, observe from a respectful distance without flash. Many temples prohibit photography inside — look for signs.</p>
+        </div>
+        <div class="info-item">
+          <div class="info-label">🧘 Monk Etiquette</div>
+          <p>Women should never touch monks or hand anything directly to them. If you wish to give something to a monk, place it on a cloth in front of him. Don't block their path during morning alms rounds. Keep your voice low near temples.</p>
+        </div>
+        <div class="info-item">
+          <div class="info-label">💆 Bargaining</div>
+          <p>Expected at markets and for tuk-tuks — always friendly and with a smile! Counter-offer at about 50–60% of the opening price and negotiate from there. Accept the price gracefully and never be aggressive. Don't bargain in proper restaurants or shops with fixed prices.</p>
+        </div>
+        <div class="info-item">
+          <div class="info-label">🤲 Greetings</div>
+          <p>Vietnamese: "Xin chào" (sin chow) — hello. Lao: "Sabaidee" (sa-bai-dee) with hands pressed together in a slight bow (the nop gesture). A few words of the local language go a very long way and will delight locals.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================== -->
+    <!-- PACKING CHECKLIST       -->
+    <!-- ======================== -->
+    <section aria-labelledby="checklist-title">
+      <h2 id="checklist-title">🧳 Packing Checklist</h2>
+      <p>A 22-day trip through hot, humid climates with lots of walking, temple visits, boat trips, and occasional mountain excursions. Pack light — laundry services are cheap and available everywhere!</p>
+
+      <div class="checklist-tabs">
+        <button class="cl-tab active" onclick="switchChecklist('cl-clothes', this)">👗 Clothing</button>
+        <button class="cl-tab" onclick="switchChecklist('cl-toiletries', this)">🧴 Toiletries</button>
+        <button class="cl-tab" onclick="switchChecklist('cl-electronics', this)">🔌 Electronics</button>
+        <button class="cl-tab" onclick="switchChecklist('cl-docs', this)">📄 Documents</button>
+        <button class="cl-tab" onclick="switchChecklist('cl-misc', this)">🎒 Misc</button>
+      </div>
+
+      <!-- CLOTHING -->
+      <div id="cl-clothes" class="checklist-panel active">
+        <div class="checklist-group">
+          <div class="checklist-category">Tops &amp; Bottoms (pack light, re-wear, launder)</div>
+          <label class="checklist-item"><input type="checkbox"> 5–6 lightweight t-shirts / tops (moisture-wicking or linen)</label>
+          <label class="checklist-item"><input type="checkbox"> 1–2 nicer shirts/blouses for evenings out in Hanoi / Luang Prabang</label>
+          <label class="checklist-item"><input type="checkbox"> 3–4 pairs of lightweight trousers or shorts</label>
+          <label class="checklist-item"><input type="checkbox"> 1 pair of smart trousers (doubles as temple-appropriate attire)</label>
+          <label class="checklist-item"><input type="checkbox"> 1 light jacket or thin fleece — essential for Ba Na Hills summit and Ha Long Bay evenings</label>
+          <label class="checklist-item"><input type="checkbox"> Light scarf / sarong (temple visits, sun protection, airplane blanket)</label>
+          <label class="checklist-item"><input type="checkbox"> Swimwear (beach in Da Nang, Kuang Si Falls swimming)</label>
+        </div>
+        <div class="checklist-group">
+          <div class="checklist-category">Footwear</div>
+          <label class="checklist-item"><input type="checkbox"> Comfortable walking shoes / sneakers (lots of walking on cobblestones and uneven ground)</label>
+          <label class="checklist-item"><input type="checkbox"> Sandals / flip-flops — essential! Easy to remove for temples</label>
+          <label class="checklist-item"><input type="checkbox"> Water shoes (optional, for Kuang Si Falls and boat activities)</label>
+        </div>
+        <div class="checklist-group">
+          <div class="checklist-category">Accessories</div>
+          <label class="checklist-item"><input type="checkbox"> Wide-brim sun hat (non-negotiable for Laos!)</label>
+          <label class="checklist-item"><input type="checkbox"> UV-protective sunglasses</label>
+          <label class="checklist-item"><input type="checkbox"> Money belt or secure travel wallet</label>
+          <label class="checklist-item"><input type="checkbox"> Small day backpack for excursions</label>
+        </div>
+      </div>
+
+      <!-- TOILETRIES -->
+      <div id="cl-toiletries" class="checklist-panel">
+        <div class="checklist-group">
+          <div class="checklist-category">Sun &amp; Insect</div>
+          <label class="checklist-item"><input type="checkbox"> SPF 50+ sunscreen — bring enough, local brands may not suit all skin types</label>
+          <label class="checklist-item"><input type="checkbox"> After-sun / aloe vera gel</label>
+          <label class="checklist-item"><input type="checkbox"> DEET-based insect repellent (30–50%) — 2+ bottles for the group</label>
+          <label class="checklist-item"><input type="checkbox"> Insect repellent wristbands (optional, good for kids)</label>
+        </div>
+        <div class="checklist-group">
+          <div class="checklist-category">Personal Care</div>
+          <label class="checklist-item"><input type="checkbox"> Toothbrush &amp; toothpaste</label>
+          <label class="checklist-item"><input type="checkbox"> Deodorant (hard to find Western brands locally)</label>
+          <label class="checklist-item"><input type="checkbox"> Shampoo &amp; conditioner (small travel sizes — hotels provide basics)</label>
+          <label class="checklist-item"><input type="checkbox"> Moisturizer (air conditioning is very drying)</label>
+          <label class="checklist-item"><input type="checkbox"> Lip balm with SPF</label>
+          <label class="checklist-item"><input type="checkbox"> Feminine hygiene products if needed</label>
+          <label class="checklist-item"><input type="checkbox"> Hand sanitizer (small bottle for street food dining)</label>
+          <label class="checklist-item"><input type="checkbox"> Wet wipes / facial wipes (lifesaver in hot weather)</label>
+          <label class="checklist-item"><input type="checkbox"> Small microfibre towel (Ha Long Bay, Kuang Si)</label>
+        </div>
+      </div>
+
+      <!-- ELECTRONICS -->
+      <div id="cl-electronics" class="checklist-panel">
+        <div class="checklist-group">
+          <div class="checklist-category">Devices &amp; Power</div>
+          <label class="checklist-item"><input type="checkbox"> Smartphone (unlocked for local SIM)</label>
+          <label class="checklist-item"><input type="checkbox"> Camera (Vietnam and Laos are incredibly photogenic)</label>
+          <label class="checklist-item"><input type="checkbox"> Extra camera batteries / memory cards</label>
+          <label class="checklist-item"><input type="checkbox"> Power bank (5,000–10,000 mAh) — for long travel days and excursions</label>
+          <label class="checklist-item"><input type="checkbox"> Universal travel adapter (Vietnam uses A/C/F plugs; Laos uses A/B/C/F)</label>
+          <label class="checklist-item"><input type="checkbox"> Charging cables for all devices</label>
+          <label class="checklist-item"><input type="checkbox"> Earphones / headphones</label>
+          <label class="checklist-item"><input type="checkbox"> E-reader or tablet (long flights and lazy evenings)</label>
+        </div>
+        <div class="checklist-group">
+          <div class="checklist-category">Apps to install before departure</div>
+          <label class="checklist-item"><input type="checkbox"> Google Maps — download offline maps for all cities</label>
+          <label class="checklist-item"><input type="checkbox"> Grab — Southeast Asia ride-hailing app</label>
+          <label class="checklist-item"><input type="checkbox"> Google Translate — download Vietnamese and Lao for offline use</label>
+          <label class="checklist-item"><input type="checkbox"> XE Currency — offline currency converter</label>
+          <label class="checklist-item"><input type="checkbox"> WhatsApp / Messenger — for group coordination</label>
+        </div>
+      </div>
+
+      <!-- DOCUMENTS -->
+      <div id="cl-docs" class="checklist-panel">
+        <div class="checklist-group">
+          <div class="checklist-category">Travel Documents (physical + digital copies of everything)</div>
+          <label class="checklist-item"><input type="checkbox"> Passport — valid until at least November 2026</label>
+          <label class="checklist-item"><input type="checkbox"> (🇫🇷 only) Laos e-Visa approval letter — printed + phone photo backup</label>
+          <label class="checklist-item"><input type="checkbox"> Travel insurance certificate + emergency phone number</label>
+          <label class="checklist-item"><input type="checkbox"> All flight booking confirmations (print + digital)</label>
+          <label class="checklist-item"><input type="checkbox"> All hotel booking confirmations</label>
+          <label class="checklist-item"><input type="checkbox"> Tour / activity confirmations (Ha Long cruise, Ba Na Hills tickets, etc.)</label>
+          <label class="checklist-item"><input type="checkbox"> Emergency contacts list (written on paper, not just in phone)</label>
+          <label class="checklist-item"><input type="checkbox"> Photocopies of passport data page (keep separately from passport)</label>
+          <label class="checklist-item"><input type="checkbox"> European Health Insurance Card (EHIC) — for 🇫🇷 travelers</label>
+        </div>
+        <div class="checklist-group">
+          <div class="checklist-category">Financial</div>
+          <label class="checklist-item"><input type="checkbox"> Credit card(s) — notify bank of travel dates before departure</label>
+          <label class="checklist-item"><input type="checkbox"> Debit card for ATM withdrawals</label>
+          <label class="checklist-item"><input type="checkbox"> Some USD cash for visa fees, emergencies, early exchanges</label>
+        </div>
+      </div>
+
+      <!-- MISC -->
+      <div id="cl-misc" class="checklist-panel">
+        <div class="checklist-group">
+          <div class="checklist-category">Practical Extras</div>
+          <label class="checklist-item"><input type="checkbox"> Reusable water bottle with filter (reduces plastic waste — important in Laos)</label>
+          <label class="checklist-item"><input type="checkbox"> Zip-lock bags (protect electronics from humidity and sudden downpours)</label>
+          <label class="checklist-item"><input type="checkbox"> Portable umbrella or lightweight rain jacket</label>
+          <label class="checklist-item"><input type="checkbox"> Small padlock for hostel/guesthouse lockers</label>
+          <label class="checklist-item"><input type="checkbox"> Luggage locks for checked bags</label>
+          <label class="checklist-item"><input type="checkbox"> Clothes pegs (for drying laundry at guesthouses)</label>
+          <label class="checklist-item"><input type="checkbox"> Silk or cotton sleep sack (some guesthouses in Laos have thin sheets)</label>
+          <label class="checklist-item"><input type="checkbox"> Small gifts from France / Philippines for local interactions (always appreciated!)</label>
+        </div>
+        <div class="checklist-group">
+          <div class="checklist-category">For the Excursions</div>
+          <label class="checklist-item"><input type="checkbox"> Dry bag / waterproof bag (Ha Long Bay, Kuang Si, river boat trips)</label>
+          <label class="checklist-item"><input type="checkbox"> Underwater camera or waterproof phone case (Kuang Si swimming)</label>
+          <label class="checklist-item"><input type="checkbox"> Trekking shoes or grip sandals (My Son uneven ground, Bích Động pagoda climb)</label>
+          <label class="checklist-item"><input type="checkbox"> Sea-sickness medication if prone (Ha Long Bay cruise)</label>
+        </div>
+      </div>
+
     </section>
 
   </main>
 
   <footer>
-		<p>This itinerary prepared with care for the family adventure of a lifetime.</p>
+    <p>This itinerary prepared with care for the family adventure of a lifetime.</p>
     <p>© 2026 – Asia Trip Planning</p>
   </footer>
+
+  <script>
+    function switchChecklist(panelId, btn) {
+      document.querySelectorAll('.checklist-panel').forEach(el => el.classList.remove('active'));
+      document.querySelectorAll('.cl-tab').forEach(el => el.classList.remove('active'));
+      document.getElementById(panelId).classList.add('active');
+      btn.classList.add('active');
+    }
+
+    // Persist checkbox states via localStorage
+    function saveChecks() {
+      const state = {};
+      document.querySelectorAll('.checklist-item input[type="checkbox"]').forEach((cb, i) => {
+        state[i] = cb.checked;
+      });
+      try { localStorage.setItem('tripChecklist', JSON.stringify(state)); } catch(e) {}
+    }
+
+    function loadChecks() {
+      try {
+        const state = JSON.parse(localStorage.getItem('tripChecklist') || '{}');
+        document.querySelectorAll('.checklist-item input[type="checkbox"]').forEach((cb, i) => {
+          if (state[i]) cb.checked = true;
+        });
+      } catch(e) {}
+    }
+
+    document.querySelectorAll('.checklist-item input[type="checkbox"]').forEach(cb => {
+      cb.addEventListener('change', saveChecks);
+    });
+
+    loadChecks();
+  </script>
+	
+	<script src="../js/weather.js"></script>
 
 </body>
 </html>
