@@ -2,7 +2,7 @@
 // DATA
 // ═══════════════════════════════════════════════════════
 const days = [
-	{ date:'Apr 10', city:'Marseille', flag:'🇻🇳', min:12, max:16, rain:30, humidity:75, sunrise:'07:05', sunset:'20:15' },
+	{ date:'Apr 10', city:'Marseille', flag:'🇫🇷', min:12, max:16, rain:30, humidity:75, sunrise:'07:05', sunset:'20:15' },
 	
   // Vietnam — Ho Chi Minh City (Apr 11–12)
   { date:'Apr 11', city:'Ho Chi Minh City', flag:'🇻🇳', min:25, max:34, rain:20, humidity:78, sunrise:'05:44', sunset:'18:09' },
@@ -38,12 +38,12 @@ const days = [
   { date:'May 1',  city:'Vientiane',        flag:'🇱🇦', min:26, max:38, rain:30, humidity:70, sunrise:'05:49', sunset:'18:31' },
   { date:'May 2',  city:'Vientiane',        flag:'🇱🇦', min:25, max:37, rain:28, humidity:69, sunrise:'05:48', sunset:'18:31' },
 	
-	{ date:'May 3', city:'Marseille', flag:'🇻🇳', min:18, max:21, rain:20, humidity:60, sunrise:'06:28', sunset:'20:42' },
+	{ date:'May 3', city:'Marseille', flag:'🇫🇷', min:18, max:21, rain:20, humidity:60, sunrise:'06:28', sunset:'20:42' },
 ];
 
 // ── City metadata (colour, date range for markArea & legend) ──
 const cities = [
-  { name:'Marseille', flag:'🇻🇳', start:'Apr 10', end:'Apr 10', color:'rgba(100,200,100,0.13)',  pill:'#ef7350', label:'Marseille' },
+  { name:'Marseille', flag:'🇫🇷', start:'Apr 10', end:'Apr 10', color:'rgba(100,200,100,0.13)',  pill:'#ef7350', label:'Marseille' },
   { name:'Ho Chi Minh City', flag:'🇻🇳', start:'Apr 11', end:'Apr 12', color:'rgba(239,115,80,0.13)',  pill:'#ef7350', label:'Ho Chi Minh' },
   { name:'Da Nang',          flag:'🇻🇳', start:'Apr 13', end:'Apr 15', color:'rgba(255,178,80,0.13)',  pill:'#ffb250', label:'Da Nang'     },
   { name:'Hoi An',           flag:'🇻🇳', start:'Apr 16', end:'Apr 18', color:'rgba(255,215,60,0.13)',  pill:'#ffd73c', label:'Hoi An'      },
