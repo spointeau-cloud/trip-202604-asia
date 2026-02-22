@@ -371,6 +371,9 @@
 	width: 100%;
 	height: 520px;
 }
+#weather-chart {
+	overflow-x: hidden;
+}
 
 /* Series legend (below chart) */
 .series-legend {

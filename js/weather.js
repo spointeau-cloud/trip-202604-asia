@@ -2,6 +2,8 @@
 // DATA
 // ═══════════════════════════════════════════════════════
 const days = [
+	{ date:'Apr 10', city:'Marseille', flag:'🇻🇳', min:12, max:16, rain:30, humidity:75, sunrise:'07:05', sunset:'20:15' },
+	
   // Vietnam — Ho Chi Minh City (Apr 11–12)
   { date:'Apr 11', city:'Ho Chi Minh City', flag:'🇻🇳', min:25, max:34, rain:20, humidity:78, sunrise:'05:44', sunset:'18:09' },
   { date:'Apr 12', city:'Ho Chi Minh City', flag:'🇻🇳', min:26, max:35, rain:25, humidity:79, sunrise:'05:44', sunset:'18:09' },
@@ -35,10 +37,13 @@ const days = [
   { date:'Apr 30', city:'Vientiane',        flag:'🇱🇦', min:26, max:38, rain:25, humidity:68, sunrise:'05:49', sunset:'18:31' },
   { date:'May 1',  city:'Vientiane',        flag:'🇱🇦', min:26, max:38, rain:30, humidity:70, sunrise:'05:49', sunset:'18:31' },
   { date:'May 2',  city:'Vientiane',        flag:'🇱🇦', min:25, max:37, rain:28, humidity:69, sunrise:'05:48', sunset:'18:31' },
+	
+	{ date:'May 3', city:'Marseille', flag:'🇻🇳', min:18, max:21, rain:20, humidity:60, sunrise:'06:28', sunset:'20:42' },
 ];
 
 // ── City metadata (colour, date range for markArea & legend) ──
 const cities = [
+  { name:'Marseille', flag:'🇻🇳', start:'Apr 10', end:'Apr 10', color:'rgba(100,200,100,0.13)',  pill:'#ef7350', label:'Marseille' },
   { name:'Ho Chi Minh City', flag:'🇻🇳', start:'Apr 11', end:'Apr 12', color:'rgba(239,115,80,0.13)',  pill:'#ef7350', label:'Ho Chi Minh' },
   { name:'Da Nang',          flag:'🇻🇳', start:'Apr 13', end:'Apr 15', color:'rgba(255,178,80,0.13)',  pill:'#ffb250', label:'Da Nang'     },
   { name:'Hoi An',           flag:'🇻🇳', start:'Apr 16', end:'Apr 18', color:'rgba(255,215,60,0.13)',  pill:'#ffd73c', label:'Hoi An'      },
@@ -68,7 +73,7 @@ cities.forEach(c => {
 // HELPERS
 // ═══════════════════════════════════════════════════════
 // Convert "HH:MM" → decimal hours relative to a base (default 5am)
-const toH = (t, base = 5) => { const [h,m] = t.split(':').map(Number); return h + m/60 - base; };
+const toH = (t, base = 0) => { const [h,m] = t.split(':').map(Number); return h + m/60 - base; };
 
 // Compute series arrays
 const dates      = days.map(d => d.date);
@@ -228,8 +233,8 @@ const option = {
       gridIndex: 1,
       name: '',
       min: 0,
-      max: 15,    // 5am (0) → 8pm (15)
-      splitNumber: 3,
+      max: 23,    // 5am (0) → 8pm (15)
+      splitNumber: 7,
       axisLine:  { show: false },
       axisTick:  { show: false },
       splitLine: { lineStyle: { color: '#f5f5f5', type: 'dashed' } },
@@ -237,7 +242,7 @@ const option = {
         fontSize: 9,
         color: '#aaa',
         formatter: v => {
-          const h = Math.floor(v + 5);
+          const h = Math.floor(v);
           return (h < 10 ? '0' : '') + h + ':00';
         },
       },
